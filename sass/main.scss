@@ -54,6 +54,10 @@ p {
     margin: 0;
 }
 
+a {
+	text-decoration: none;
+}
+
 input,
 button,
 textarea,
@@ -221,6 +225,22 @@ ul {
 .bg-nude {
 	position: relative;
 	background-color: #f6f4f1;
+} 
+
+.bg-top-geometr {
+	&:before {
+		display: block;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        content: "";
+        background: url(../img/border-waves.png) repeat-x;
+    }
+}
+
+.bg-bottom-geometr {
 	&:after {
 		display: block;
         position: absolute;
@@ -231,7 +251,7 @@ ul {
         content: "";
         background: url(../img/border-waves-bottom.png) repeat-x;
     }
-} 
+}
 
 .title-section {
 	padding-top: 35px;
@@ -347,4 +367,46 @@ ul {
 .icon {
 	@include inline-block;
 	
+}
+
+/* ==========================================================================
+    ICONS
+========================================================================== */
+
+.list-round-rectangles {
+	li {
+		float: left;
+		margin-left: 20px;
+		margin-bottom: 30px;
+
+		.img-service {
+			@include inline-block;
+			@include border-radius(65px);
+			width: 262px;
+			height: 130px;
+			border: 2px solid #dcdbd8;
+			background-position: center center;
+		}
+
+		p {
+			margin-top: 10px;
+			color: $mineShaft;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	li:first-child {
+		margin-left: 0;
+	}
+}
+
+.list-benefits {
+	li {
+		float: left;
+		margin-left: 80px;
+	}
+
+
 }

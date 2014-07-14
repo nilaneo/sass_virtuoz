@@ -35,6 +35,9 @@ ul,
 p {
   margin: 0; }
 
+a {
+  text-decoration: none; }
+
 input,
 button,
 textarea,
@@ -169,15 +172,26 @@ ul {
 .bg-nude {
   position: relative;
   background-color: #f6f4f1; }
-  .bg-nude:after {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 4px;
-    content: "";
-    background: url(../img/border-waves-bottom.png) repeat-x; }
+
+.bg-top-geometr:before {
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background: url(../img/border-waves.png) repeat-x; }
+
+.bg-bottom-geometr:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  content: "";
+  background: url(../img/border-waves-bottom.png) repeat-x; }
 
 .title-section {
   padding-top: 35px;
@@ -286,3 +300,39 @@ ul {
   *vertical-align: auto;
   zoom: 1;
   *display: inline; }
+
+/* ==========================================================================
+    ICONS
+========================================================================== */
+.list-round-rectangles li {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 30px; }
+  .list-round-rectangles li .img-service {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    -webkit-border-radius: 65px;
+    -moz-border-radius: 65px;
+    -ms-border-radius: 65px;
+    -o-border-radius: 65px;
+    border-radius: 65px;
+    width: 262px;
+    height: 130px;
+    border: 2px solid #dcdbd8;
+    background-position: center center; }
+  .list-round-rectangles li p {
+    margin-top: 10px;
+    color: #222222;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; }
+.list-round-rectangles li:first-child {
+  margin-left: 0; }
+
+.list-benefits li {
+  float: left;
+  margin-left: 80px; }
