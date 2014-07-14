@@ -95,8 +95,10 @@ ul {
 
 .slide-1 {
   height: 645px;
-  background: url(../img/slide-1.jpg) no-repeat;
-  background-size: cover; }
+  background-image: url(../img/slide-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
 
 .logo-container {
   width: 580px;
@@ -307,7 +309,7 @@ ul {
 /* ==========================================================================
     ICONS
 ========================================================================== */
-.icon {
+.icon, .list-service-steps li:before {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -403,7 +405,7 @@ ul {
   width: 40px;
   height: 40px; }
 
-.btn-right-orange {
+.btn-right-orange, .list-service-steps li:before {
   background-position: -200px -97px;
   width: 50px;
   height: 49px; }
@@ -499,3 +501,98 @@ ul {
     .list-requsts a:hover h4 {
       color: #59b200;
       text-decoration: underline; }
+
+.list-service-steps {
+  margin-top: 30px; }
+  .list-service-steps li {
+    float: left;
+    position: relative;
+    width: 200px;
+    margin-left: 108px; }
+    .list-service-steps li img {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #fae0d1;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%; }
+    .list-service-steps li p {
+      width: 150px;
+      margin: 15px auto;
+      font-size: 18px;
+      line-height: 20px;
+      padding-left: 20px;
+      font-family: "metapro_condnorm", sans-serif;
+      color: #202020;
+      text-transform: uppercase; }
+      .list-service-steps li p span {
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        zoom: 1;
+        *display: inline;
+        float: left;
+        border-bottom: 3px solid #fae0d1;
+        margin-right: 10px;
+        margin-top: -8px;
+        color: #444;
+        font-size: 30px;
+        line-height: 33px;
+        font-weight: bold;
+        font-family: 'Exo 2', sans-serif; }
+  .list-service-steps li:before {
+    position: absolute;
+    top: 88px;
+    left: -76px;
+    display: block;
+    content: ''; }
+  .list-service-steps li:first-child {
+    margin-left: 0; }
+  .list-service-steps li:first-child:before {
+    display: none; }
+
+/* ==========================================================================
+    FOOTER
+========================================================================== */
+.footer {
+  padding: 50px 0;
+  background-color: #b0543c;
+  color: white; }
+
+.nav-footer {
+  float: left;
+  width: 25%;
+  padding-right: 10px;
+  font-size: 16px;
+  font-weight: bold; }
+  .nav-footer a {
+    color: white; }
+
+.title-footer {
+  font-size: 24px;
+  font-weight: bold; }
+
+.statistics {
+  float: left;
+  width: 25%;
+  padding-right: 10px; }
+  .statistics .title-footer {
+    margin-bottom: 20px; }
+  .statistics li {
+    font-size: 15px; }
+
+.contacts {
+  width: 48%;
+  float: left; }
+  .contacts .title-footer {
+    margin-bottom: 15px; }
+  .contacts li {
+    margin-top: 10px; }
+    .contacts li ins {
+      margin-right: 10px; }
+
+.license {
+  margin-top: 20px; }

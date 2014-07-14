@@ -35,6 +35,7 @@ $black: #000;
 $grenadier: #d83500;
 $mineShaft: #222;
 $limeade: #59B200;
+$brownRust: #B0543C;
 
 
 /* ==========================================================================
@@ -127,8 +128,10 @@ ul {
 
 .slide-1 {
 	height: 645px;
-	background: url(../img/slide-1.jpg) no-repeat;
+	background-image: url(../img/slide-2.jpg);
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .logo-container {
@@ -613,4 +616,119 @@ ul {
 			text-decoration: underline;
 		}
 	}	
+}
+
+.list-service-steps {
+	margin-top: 30px;
+	li {
+		float: left;
+		position: relative;
+		width: 200px;
+		margin-left: 108px;
+		img {
+			width: 200px;
+			height: 200px;
+			border: 2px solid #fae0d1;
+			@include border-radius(50%);
+		}
+
+		p {
+			width: 150px;
+			margin: 15px auto;
+			font-size: 18px;
+			line-height: 20px;
+			padding-left: 20px;
+			font-family: "metapro_condnorm", sans-serif;
+			color: #202020;
+			text-transform: uppercase;
+			span {
+				@include inline-block;
+				float: left;
+				border-bottom: 3px solid #fae0d1;
+				margin-right: 10px;
+				margin-top: -8px;
+				color: #444;
+				font-size: 30px;
+				line-height: 33px;
+				font-weight: bold;
+				font-family: 'Exo 2', sans-serif;
+			}
+		}
+	}
+
+	li:before {
+		position: absolute;
+		top: 88px;
+		left: -76px;
+		display: block;
+		content: '';
+		@extend .icon;
+		@extend .btn-right-orange;
+	}
+
+	li:first-child {
+		margin-left: 0;
+	}
+
+	li:first-child:before {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+    FOOTER
+========================================================================== */
+
+.footer {
+	padding: 50px 0;
+	background-color: $brownRust;
+	color: $white;
+}
+
+.nav-footer {
+	float: left;
+	width: 25%;
+	padding-right: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	a {
+		color: $white;
+	}
+}
+
+.title-footer {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.statistics {
+	float: left;
+	width: 25%;
+	padding-right: 10px;
+	.title-footer {
+		margin-bottom: 20px;
+	}
+
+	li {
+		font-size: 15px;
+	}
+}
+
+.contacts {
+	width: 48%;
+	float: left;
+	.title-footer  {
+		margin-bottom: 15px;
+	}
+
+	li {
+		margin-top: 10px;
+		ins {
+			margin-right: 10px;
+		}
+	}
+}
+
+.license {
+	margin-top: 20px;
 }
