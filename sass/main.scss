@@ -32,7 +32,7 @@
 
 $white: #fff;
 $black: #000;
-$grenadier: #d83500;
+$grenadier: #ec4f15;
 $mineShaft: #222;
 $limeade: #59B200;
 $brownRust: #B0543C;
@@ -57,6 +57,7 @@ p {
 
 a {
 	text-decoration: none;
+	@include transition(color .2s);
 }
 
 input,
@@ -228,7 +229,7 @@ ul {
 }
 
 .bg-green {
-	background-color: #90ca57;
+	background-color: #92cc58;
 }
 
 .bg-nude {
@@ -286,6 +287,10 @@ ul {
 	font-weight: bold;
 	text-align: center;
 	text-decoration: underline !important;
+	
+	&:hover {
+		color: $limeade;
+	}
 }
 
 /* ==========================================================================
@@ -309,6 +314,7 @@ ul {
 }
 
 .nav-main {
+	position: relative;
 	height: 58px;
 	@include box-shadow(rgba(34, 34, 34, .1) 0 0 0 3px);
 }
@@ -354,12 +360,14 @@ ul {
 }
 
 .btn-login {
-	border-bottom: 1px dotted #444;
-	color: #444;
-	font-size: 15px;
-	line-height: 60px;
-	font-family: "metapro_condnorm", sans-serif;
-	text-decoration: none;
+	span {
+		border-bottom: 1px dotted #444;
+		color: #444;
+		font-size: 15px;
+		line-height: 60px;
+		font-family: "metapro_condnorm", sans-serif;
+		text-decoration: none;
+	}
 }
 
 .btn-make-request {
@@ -482,6 +490,7 @@ ul {
 	background-position: -152px -152px ;
 	width: 30px;
 	height: 30px;
+	margin-right: 10px;
 }
 
 .number1{
@@ -542,6 +551,7 @@ ul {
 }
 
 .list-benefits {
+	margin-top: 30px;
 	li {
 		float: left;
 		margin-left: 85px;
@@ -731,4 +741,8 @@ ul {
 
 .license {
 	margin-top: 20px;
+}
+
+.slider-small {
+	margin-top: 30px;
 }

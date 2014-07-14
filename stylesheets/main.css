@@ -36,7 +36,11 @@ p {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s; }
 
 input,
 button,
@@ -110,12 +114,12 @@ ul {
     font-weight: 200; }
 
 .logo {
-  color: #d83500;
+  color: #ec4f15;
   font-size: 32px;
   font-weight: 200;
   font-style: italic; }
   .logo a {
-    color: #d83500;
+    color: #ec4f15;
     text-decoration: none;
     font-size: 48px;
     font-weight: bold;
@@ -163,7 +167,7 @@ ul {
     line-height: 22px;
     font-family: "metapro_condnorm", sans-serif; }
   .phone-container .phone {
-    color: #d83500;
+    color: #ec4f15;
     font-size: 53px;
     line-height: 74px;
     font-weight: normal; }
@@ -175,7 +179,7 @@ ul {
   background-color: white; }
 
 .bg-green {
-  background-color: #90ca57; }
+  background-color: #92cc58; }
 
 .bg-nude {
   position: relative;
@@ -213,7 +217,7 @@ ul {
   color: #59b200; }
 
 .text-red {
-  color: #d83500; }
+  color: #ec4f15; }
 
 .lnk-watch-all {
   display: block;
@@ -222,6 +226,8 @@ ul {
   font-weight: bold;
   text-align: center;
   text-decoration: underline !important; }
+  .lnk-watch-all:hover {
+    color: #59b200; }
 
 /* ==========================================================================
     NAVIGATION
@@ -237,6 +243,7 @@ ul {
     float: right; }
 
 .nav-main {
+  position: relative;
   height: 58px;
   -webkit-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
   -moz-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
@@ -285,7 +292,7 @@ ul {
   -o-border-radius: 50px;
   border-radius: 50px; }
 
-.btn-login {
+.btn-login span {
   border-bottom: 1px dotted #444;
   color: #444;
   font-size: 15px;
@@ -303,7 +310,7 @@ ul {
     vertical-align: text-top; }
 
 .btn-registration {
-  background-color: #d83500;
+  background-color: #ec4f15;
   text-shadow: rgba(217, 54, 0, 0.64) 0 -1px 0; }
 
 /* ==========================================================================
@@ -398,7 +405,8 @@ ul {
 .icon-user {
   background-position: -152px -152px;
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin-right: 10px; }
 
 .number1 {
   background-position: -254px -55px;
@@ -452,11 +460,13 @@ ul {
 .list-round-rectangles li:first-child {
   margin-left: 0; }
 
-.list-benefits li {
-  float: left;
-  margin-left: 85px; }
-.list-benefits li:first-child {
-  margin-left: 0; }
+.list-benefits {
+  margin-top: 30px; }
+  .list-benefits li {
+    float: left;
+    margin-left: 85px; }
+  .list-benefits li:first-child {
+    margin-left: 0; }
 
 .list-requsts {
   margin-top: 40px; }
@@ -596,3 +606,6 @@ ul {
 
 .license {
   margin-top: 20px; }
+
+.slider-small {
+  margin-top: 30px; }
