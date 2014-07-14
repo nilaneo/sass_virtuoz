@@ -115,8 +115,6 @@ ul {
     margin: 0 auto;
 }
 
-
-
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -218,6 +216,14 @@ ul {
 	}
 }
 
+.section {
+	padding: 30px 0;
+}
+
+.bg-white {
+	background-color: $white;
+}
+
 .bg-green {
 	background-color: #90ca57;
 }
@@ -254,10 +260,10 @@ ul {
 }
 
 .title-section {
-	padding-top: 35px;
 	margin-bottom: 15px;
 	color: $white;
 	font-size: 44px;
+	line-height: 44px;
 	font-weight: 200;
 	text-align: center;
 }
@@ -268,6 +274,15 @@ ul {
 
 .text-red {
 	color: $grenadier;
+}
+
+.lnk-watch-all {
+	display: block;
+	color: darken($limeade, 10%);
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: underline !important;
 }
 
 /* ==========================================================================
@@ -366,11 +381,132 @@ ul {
 
 .icon {
 	@include inline-block;
-	
+	background-image: url(../img/sprite-icons.png);
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+.btn-left{
+	background-position: -2px 0;
+	width: 66px;
+	height: 65px;
+}
+
+.btn-right{
+	background-position: -99px 0;
+	width: 66px;
+	height: 65px;
+}
+
+.btn-left-unactive{
+	background-position: -4px -74px ;
+	width: 66px;
+	height: 65px;
+}
+
+.btn-right-unactive{
+	background-position: -100px -74px ;
+	width: 66px;
+	height: 65px;
+}
+
+.icon-calendar{
+	background-position: 0 -154px ;
+	width: 33px;
+	height: 32px;
+}
+
+.icon-clock-small{
+	background-position: 0 -200px ;
+	width: 25px;
+	height: 30px;
+	margin-right: 6px;
+}
+
+.icon-date-small{
+	background-position: -50px -202px ;
+	width: 23px;
+	height: 25px;
+	margin-right: 6px;
+	margin-top: -4px;
+}
+
+.icon-money-small{
+	background-position: -99px -205px ;
+	width: 25px;
+	height: 18px;
+	margin-right: 6px;
+	vertical-align: baseline;
+}
+
+.icon-mail{
+	background-position: -301px -2px ;
+	width: 42px;
+	height: 30px;
+}
+
+.icon-map{
+	background-position: -200px 0;
+	width: 38px;
+	height: 30px;
+}
+
+.icon-phone{
+	background-position: -250px 0;
+	width: 34px;
+	height: 32px;
+}
+
+.icon-purse{
+	background-position: -52px -151px ;
+	width: 33px;
+	height: 31px;
+}
+
+.icon-search{
+	background-position: -200px -49px ;
+	width: 26px;
+	height: 26px;
+}
+
+.icon-timer{
+	background-position: -100px -150px ;
+	width: 32px;
+	height: 32px;
+}
+
+.icon-user{
+	background-position: -152px -152px ;
+	width: 30px;
+	height: 30px;
+}
+
+.number1{
+	background-position: -254px -55px ;
+	width: 40px;
+	height: 40px;
+}
+
+.btn-right-orange{
+	background-position: -200px -97px ;
+	width: 50px;
+	height: 49px;
+}
+
+.user-add{
+	background-position: -315px -52px ;
+	width: 25px;
+	height: 19px;
+}
+
+.icon-bag{
+	background-position: -200px -160px ;
+	width: 54px;
+	height: 61px;
 }
 
 /* ==========================================================================
-    ICONS
+    LISTS
 ========================================================================== */
 
 .list-round-rectangles {
@@ -405,8 +541,76 @@ ul {
 .list-benefits {
 	li {
 		float: left;
-		margin-left: 80px;
+		margin-left: 85px;
 	}
 
+	li:first-child {
+		margin-left: 0;
+	}
 
+}
+
+.list-requsts {
+	margin-top: 40px;
+	a {
+		display: block;
+		height: 134px;
+		overflow: hidden;
+		padding: 30px 35px;
+		border: 1px solid #ddd;
+		margin-bottom: 15px;
+		background-color: $white;
+
+		.left {
+			width: 344px;
+		}
+
+		.right {
+			width: 130px;
+			padding-left: 10px;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+
+		p {
+			margin-top: 10px;
+			color: #444;
+			font-size: 16px;
+		}
+
+		.reguest-time {
+			font-size: 24px;
+		}
+
+		.reguest-budget {
+			color: $limeade;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.budget-sum {
+			font-size: 32px;
+			line-height: 16px;
+		}
+		
+		h4 {
+			color: #444;
+			font-size: 24px;
+			line-height: 32px;
+			font-weight: bold;
+			font-family: "metapro_condnorm", sans-serif;
+		}
+	}
+
+	a:hover {
+		border: 2px solid #b0d685;
+		padding: 29px 34px;
+		background-color: #fefefe;
+
+		h4 {
+			color: $limeade;
+			text-decoration: underline;
+		}
+	}	
 }
