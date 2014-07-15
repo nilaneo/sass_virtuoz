@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	/* Custom radiobutton
 	========================================================================== */
 
@@ -7,5 +8,13 @@ $(document).ready(function(){
 			groupName = $this.data("name");
 		$(".custom-radio[data-name=" + groupName + "]").removeClass("is-checked");
 		$this.toggleClass("is-checked");
+	});
+
+	/* Catalogue dropdown
+	========================================================================== */
+
+	$(".j-catalogue").on("click", function (e) {
+		e.preventDefault();
+		$(".catalogue-container").slideToggle("fast");
 	});
 })
