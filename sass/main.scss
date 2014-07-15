@@ -37,6 +37,7 @@ $mineShaft: #222;
 $limeade: #59B200;
 $brownRust: #B0543C;
 $vividTangerine: #FF9673;
+$atlantisapprox: #78BF2F;
 
 
 /* ==========================================================================
@@ -78,10 +79,6 @@ a:focus {
 ul {
     list-style-type: none;
     padding-left: 0;
-}
-
-* {
-	@include box-sizing(content-box);
 }
 
 .left {
@@ -265,7 +262,7 @@ ul {
 }
 
 .title-section {
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 	color: $white;
 	font-size: 44px;
 	line-height: 44px;
@@ -315,10 +312,145 @@ ul {
 		color: $vividTangerine;
 		font-size: 24px;
 	}
+}
 
-	button {
+/* ==========================================================================
+    REQUEST STEPS
+========================================================================== */
 
+.request-steps {
+	padding: 0 90px;
+}
+
+.request-step {
+	position: relative;	
+}
+
+.step-number,
+.step-count {
+	position: absolute;
+	z-index: 100;
+}
+
+.step-number {
+	top: -20px;
+	left: -24px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: $white;
+	border: 3px solid darken($limeade, 5%);
+	color: darken($limeade, 5%);
+	text-align: center;
+	font-size: 21px;
+	line-height: 40px;
+	@include border-radius(50%);
+}
+
+.step-count {
+	right: 5px;
+	bottom: 0;
+	color: $white;
+	font-size: 15px;
+}
+
+.btn-next-step {
+	height: 50px;
+	margin-right: 5px;
+	margin-bottom: 30px;
+	span {
+		@include inline-block;
+		line-height: 50px;
 	}
+	.text {
+		height: 50px;
+		padding: 0 20px;
+		background-color: $limeade;
+		color: $white;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.square {
+		width: 50px;
+		height: 50px;
+		background-color: darken($limeade, 5%);
+		text-align: center;
+		ins {
+			@include inline-block;
+			width: 0;
+			height: 0;
+			line-height: 50px;
+			border-style: solid;
+			border-width: 6px 0 6px 10px;
+			border-color: transparent transparent transparent $white;
+		}
+	}
+
+	&:hover {
+		.text {
+			background-color: darken($limeade, 3%);
+		}
+
+		.square {
+			background-color: darken($limeade, 8%);
+		}
+	}
+}
+
+.field-required {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		content: "*";
+		color: $white;
+		font-size: 24px;
+		top: -15px;
+		right: -15px;
+	}
+}
+
+.input-primary {
+	@include box-sizing(border-box);
+	height: 54px;
+	padding: 10px 30px;
+	border: 2px solid $atlantisapprox;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	color: darken($limeade, 5%);
+	font-size: 22px;
+	font-family: "metapro_condnorm", sans-serif;
+}
+
+.input-long {
+	width: 450px;
+}
+
+.input-half-long {
+	width: 203px;
+}
+
+.input-date {
+	padding-right: 60px;
+	background-image: url(../img/icon-calendar.png);
+	background-repeat: no-repeat;
+	background-position: 97% center;
+}
+
+.input-time {
+	padding-right: 60px;
+	background-image: url(../img/icon-timer.png);
+	background-repeat: no-repeat;
+	background-position: 94% center;
+}
+
+.input-budget {
+	padding-right: 60px;
+	background-image: url(../img/icon-purse.png);
+	background-repeat: no-repeat;
+	background-position: 94% center;
+	margin-right: 0 !important;
 }
 
 /* ==========================================================================
@@ -595,7 +727,6 @@ ul {
 }
 
 .list-benefits {
-	margin-top: 30px;
 	li {
 		float: left;
 		margin-left: 85px;
@@ -607,7 +738,7 @@ ul {
 
 }
 
-.list-requsts {
+.list-requests {
 	margin-top: 40px;
 	a {
 		display: block;
@@ -673,7 +804,6 @@ ul {
 }
 
 .list-service-steps {
-	margin-top: 30px;
 	li {
 		float: left;
 		position: relative;
@@ -787,10 +917,6 @@ ul {
 	margin-top: 20px;
 }
 
-.slider-small {
-	margin-top: 30px;
-}
-
 /* ==========================================================================
     Custom select box
 ========================================================================== */
@@ -801,16 +927,11 @@ ul {
 }
 
 .select-city {
-    width: 200px;
+    width: 210px;
 }
 
-.select-pages-quantity {
-    width: 46px;
-}
-
-.select-delivery {
-    width: 220px;
-    margin-bottom: 10px;
+.select-performer {
+	margin-right: 40px;
 }
 
 .sl-button {
@@ -831,7 +952,6 @@ ul {
     float: left;
     width: 100%;
     height: 100%;
-    background: red;
 
     .sl-placeholder-container {
         position: relative;
@@ -863,7 +983,7 @@ ul {
     top: 50px !important;
     left: -1px !important;
     width: 100%;
-    padding: 0;
+    padding: 10px 0;
     max-height: 200px;
     margin: 0;
     border: 1px solid $vividTangerine;
@@ -891,7 +1011,6 @@ ul {
     }
 
     li:hover {
-        background-color: $black;
         background-color: rgba(0, 0, 0, .01);
         a {
             color: darken($vividTangerine, 20%);
@@ -904,4 +1023,44 @@ ul {
     .sl-button {
         border-color: darken($vividTangerine, 20%) transparent transparent;
     }
+}
+
+.select-performer,
+.select-category {
+	width: 450px;
+	margin-bottom: 40px;
+
+	.sl-button {
+		border-color: $limeade transparent transparent transparent;
+	}
+
+	.sl-placeholder-container {
+		padding: 4px 30px 4px 30px;
+		border: 2px solid $atlantisapprox;
+	}
+
+	.sl-placeholder {
+		width: 400px !important;
+		color: darken($limeade, 5%);
+		font-family: "metapro_condnorm", sans-serif;
+	}
+
+	.sl-container .sl-options {
+		border: 2px solid $atlantisapprox;
+		a {
+			color: $limeade;
+			font-family: "metapro_condnorm", sans-serif;
+		}
+
+		li:hover a {		        
+           color: darken($limeade, 5%);
+	    }
+	}
+
+	.sl-container:hover,
+	.sl-open {
+	    .sl-button {
+	        border-color: darken($limeade, 5%) transparent transparent;
+	    }
+	}
 }

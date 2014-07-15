@@ -31,12 +31,14 @@
                             <span class="text-2">ищу</span>
                             <span class="text-3">...в городе</span>
                             <div class="search-box clearfix">
-                                <input type="text">
+                                <input type="text" placeholder="Визажиста на дом">
                                 <div class="select-box select-city">
                                     <select>
                                         <option selected value="Киев">Киев</option>
                                         <option value="Львов">Львов</option>
                                         <option value="Одесса">Одесса</option>
+                                        <option value="Винница">Винница</option>
+                                        <option value="Днепропетровск">Днепропетровск</option>
                                     </select>
                                 </div>
                                 <button type="submit" class="btn-search"><ins class="icon icon-search"></ins></button>
@@ -66,19 +68,32 @@
             <section class="section bg-green zt">
                 <div class="container">
                     <h3 class="title-section">Подайте заявку на услугу</h3>
-                    <img src="img/zagl-1.png" alt="">
-                    <!-- <div class="requst-steps">
-                        <div class="requst-step requst-step-1">
+                    <div class="request-steps">
+                        <div class="request-step request-step-1">
                             <span class="step-number">1</span>
                             <span class="step-count">шаг 2/3</span>
-                            <select></select>
-                            <select></select>
-                            <input type="text">
-                            <input type="text">
-                            <input type="text">
-                            <button class="btn-next-step">Далее<span><ins></ins></span></button>
+                            <div class="select-box select-performer">
+                                <select>
+                                    <option selected value="Исполнитель - Частное лицо">Исполнитель - Частное лицо</option>
+                                    <option value="Исполнитель - компания">Исполнитель - компания</option>
+                                    <option value="Исполнитель - кто-то">Исполнитель - кто-то</option>
+                                </select>
+                            </div>
+                            <div class="select-box select-category field-required">
+                                <select>
+                                    <option selected value="Выберите категорию услуг">Выберите категорию услуг</option>
+                                    <option value="Категория 1">Категория 1</option>
+                                    <option value="Категория 2">Категория 2</option>
+                                </select>
+                            </div>
+                            <input type="text" class="input-primary input-long input-date" placeholder="Назовите дату исполнения...">
+                            <input type="text" class="input-primary input-half-long input-time"placeholder="и время">
+                            <input type="text" class="input-primary input-half-long input-budget" placeholder="Бюджет">
+                            <div class="clearfix">
+                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
+                            </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div><!-- end of container -->
             </section>
             <section class="section bg-nude bg-bottom-geometr">
@@ -133,7 +148,7 @@
             <section class="section bg-nude bg-top-geometr bg-bottom-geometr">
                 <div class="container">
                     <h3 class="title-section text-green">Свежие заявки</h3>
-                    <div class="list-requsts clearfix">
+                    <div class="list-requests clearfix">
                         <div class="row clearfix">
                             <a href="#0" class="left clearfix">
                                 <div class="left">
@@ -260,7 +275,7 @@
                                 </div>
                             </a>
                         </div><!-- end of row -->                       
-                    </div><!-- end of list-requsts clearfix -->
+                    </div><!-- end of list-requests clearfix -->
                     <a href="#0" class="lnk-watch-all">Смотреть все заявки >></a>
                 </div><!-- end of container -->
             </section>
