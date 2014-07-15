@@ -93,6 +93,10 @@ ul {
     margin: 0 !important;
 }
 
+.mgr-0 {
+	margin-right: 0 !important;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: ".";
@@ -180,12 +184,12 @@ ul {
 
 	.text-1 {
 		top: -40px;
-		left: 30px;
+		left: 20px;
 	}
 
 	.text-2 {
 		top: -40px;
-		right: 20px;
+		right: 3px;
 	}
 
 	.text-3 {
@@ -398,8 +402,23 @@ ul {
 	}
 }
 
+.btn-request {
+	@extend .btn-next-step;
+	.text {
+		width: 185px;
+		text-align: center;
+	}
+}
+
 .field-required {
 	position: relative;
+	@include inline-block;
+	vertical-align: top;
+	margin-right: 40px;
+
+	input {
+		margin-right: 0;
+	}
 
 	&:after {
 		position: absolute;
@@ -413,6 +432,7 @@ ul {
 
 .input-primary {
 	@include box-sizing(border-box);
+	vertical-align: top;
 	height: 54px;
 	padding: 10px 30px;
 	border: 2px solid $atlantisapprox;
@@ -423,11 +443,22 @@ ul {
 	font-family: "metapro_condnorm", sans-serif;
 }
 
-.input-long {
+.textarea-primary {
+	@extend .input-primary;
+	height: 90px;
+	resize: none;
+}
+
+.input-1 {
+	width: 946px;
+	margin-right: 0;
+}
+
+.input-2 {
 	width: 450px;
 }
 
-.input-half-long {
+.input-4 {
 	width: 203px;
 }
 
@@ -451,6 +482,34 @@ ul {
 	background-repeat: no-repeat;
 	background-position: 94% center;
 	margin-right: 0 !important;
+}
+
+.performers-radios {
+	p {
+		width: 450px;
+		margin: 0 40px 10px 0;
+	}
+}
+
+.custom-radio {
+    font-size: 16px;
+    line-height: 16px;
+    color: $white;
+    &:before {
+    	@include inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: text-bottom;
+        margin-right: 15px;
+        background-image: url(../img/radios.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        content: '';
+    }
+}
+
+.custom-radio.is-checked:before {
+    background-position: 0 -21px;
 }
 
 /* ==========================================================================
@@ -528,6 +587,12 @@ ul {
 		font-family: "metapro_condnorm", sans-serif;
 		text-decoration: none;
 	}
+
+	&:hover {
+		span {
+			color: $limeade;
+		}
+	}
 }
 
 .btn-make-request {
@@ -539,11 +604,18 @@ ul {
 		margin-right: 20px;
 		vertical-align: text-top;
 	}
+
+	&:hover {
+		background-color: darken(#fc0, 3%);
+	}
 }
 
 .btn-registration {
 	background-color: $grenadier;
 	@include text-shadow(rgba(217, 54, 0, .64) 0 -1px 0);
+	&:hover {
+		background-color: darken($grenadier, 5%);
+	}
 }
 
 .btn-search {
@@ -673,6 +745,13 @@ ul {
 	width: 40px;
 	height: 40px;
 	margin: 0 10px 0 5px;
+}
+
+.icon-info {
+	background-position: 0 -241px ;
+	width: 25px;
+	height: 25px;
+	margin-bottom: 5px;
 }
 
 .btn-right-orange{

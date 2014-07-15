@@ -70,27 +70,33 @@
                     <h3 class="title-section">Подайте заявку на услугу</h3>
                     <div class="request-steps">
                         <div class="request-step request-step-1">
-                            <span class="step-number">1</span>
-                            <span class="step-count">шаг 2/3</span>
-                            <div class="select-box select-performer">
-                                <select>
-                                    <option selected value="Исполнитель - Частное лицо">Исполнитель - Частное лицо</option>
-                                    <option value="Исполнитель - компания">Исполнитель - компания</option>
-                                    <option value="Исполнитель - кто-то">Исполнитель - кто-то</option>
-                                </select>
+                            <span class="step-number">3</span>
+                            <input type="text" class="input-primary input-2" placeholder="Представтесь, пожалуйста">
+                            <div class="field-required mgr-0">
+                                <input type="text" class="input-primary input-2"placeholder="Ваш номер телефона (желательно личный)">                                
                             </div>
-                            <div class="select-box select-category field-required mgr-0">
-                                <select>
-                                    <option selected value="Выберите категорию услуг">Выберите категорию услуг</option>
-                                    <option value="Категория 1">Категория 1</option>
-                                    <option value="Категория 2">Категория 2</option>
-                                </select>
+                            <div class="field-required">
+                                <input type="text" class="input-primary input-2" placeholder="Ваш адрес электронной почты (email)">                                
                             </div>
-                            <input type="text" class="input-primary input-2 input-date" placeholder="Назовите дату исполнения...">
-                            <input type="text" class="input-primary input-4 input-time"placeholder="и время">
-                            <input type="text" class="input-primary input-4 input-budget" placeholder="Бюджет">
+                            <input type="text" class="input-primary input-2 mgr-0" placeholder="Почтовый адрес (город, улица, дом, кв.)"> 
                             <div class="clearfix">
-                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
+                                <div class="performers-radios left">
+                                    <p>
+                                        <a href="#0" class="custom-radio" data-name="radios-1">Я хочу открыть контактную информацию для всех</a>
+                                    </p>
+                                    <p>
+                                       <a href="#0" class="custom-radio" data-name="radios-1">Я хочу сам выбрать исполнителя моей заявки</a> 
+                                    </p>                                    
+                                </div>
+                                <div class="left">
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                </div>
+                                <a href="#0" class="btn-request right"><span class="text">Подать заявку</span></a>
                             </div>
                         </div>
                     </div>

@@ -67,6 +67,9 @@ ul {
 .no-mg {
   margin: 0 !important; }
 
+.mgr-0 {
+  margin-right: 0 !important; }
+
 .clearfix:before,
 .clearfix:after {
   content: ".";
@@ -140,10 +143,10 @@ ul {
     font-weight: 200; }
   .search-container .text-1 {
     top: -40px;
-    left: 30px; }
+    left: 20px; }
   .search-container .text-2 {
     top: -40px;
-    right: 20px; }
+    right: 3px; }
   .search-container .text-3 {
     bottom: -35px;
     right: 160px; }
@@ -282,11 +285,11 @@ ul {
   color: white;
   font-size: 15px; }
 
-.btn-next-step {
+.btn-next-step, .btn-request {
   height: 50px;
   margin-right: 5px;
   margin-bottom: 30px; }
-  .btn-next-step span {
+  .btn-next-step span, .btn-request span {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
@@ -294,19 +297,19 @@ ul {
     zoom: 1;
     *display: inline;
     line-height: 50px; }
-  .btn-next-step .text {
+  .btn-next-step .text, .btn-request .text {
     height: 50px;
     padding: 0 20px;
     background-color: #59b200;
     color: white;
     font-size: 20px;
     font-weight: bold; }
-  .btn-next-step .square {
+  .btn-next-step .square, .btn-request .square {
     width: 50px;
     height: 50px;
     background-color: #4c9900;
     text-align: center; }
-    .btn-next-step .square ins {
+    .btn-next-step .square ins, .btn-request .square ins {
       display: -moz-inline-stack;
       display: inline-block;
       vertical-align: middle;
@@ -319,13 +322,27 @@ ul {
       border-style: solid;
       border-width: 6px 0 6px 10px;
       border-color: transparent transparent transparent white; }
-  .btn-next-step:hover .text {
+  .btn-next-step:hover .text, .btn-request:hover .text {
     background-color: #51a300; }
-  .btn-next-step:hover .square {
+  .btn-next-step:hover .square, .btn-request:hover .square {
     background-color: #458900; }
 
+.btn-request .text {
+  width: 185px;
+  text-align: center; }
+
 .field-required {
-  position: relative; }
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  margin-right: 40px; }
+  .field-required input {
+    margin-right: 0; }
   .field-required:after {
     position: absolute;
     content: "*";
@@ -334,10 +351,11 @@ ul {
     top: -15px;
     right: -15px; }
 
-.input-primary {
+.input-primary, .textarea-primary {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  vertical-align: top;
   height: 54px;
   padding: 10px 30px;
   border: 2px solid #78bf2f;
@@ -347,10 +365,18 @@ ul {
   font-size: 22px;
   font-family: "metapro_condnorm", sans-serif; }
 
-.input-long {
+.textarea-primary {
+  height: 90px;
+  resize: none; }
+
+.input-1 {
+  width: 946px;
+  margin-right: 0; }
+
+.input-2 {
   width: 450px; }
 
-.input-half-long {
+.input-4 {
   width: 203px; }
 
 .input-date {
@@ -371,6 +397,33 @@ ul {
   background-repeat: no-repeat;
   background-position: 94% center;
   margin-right: 0 !important; }
+
+.performers-radios p {
+  width: 450px;
+  margin: 0 40px 10px 0; }
+
+.custom-radio {
+  font-size: 16px;
+  line-height: 16px;
+  color: white; }
+  .custom-radio:before {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 15px;
+    background-image: url(../img/radios.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: ''; }
+
+.custom-radio.is-checked:before {
+  background-position: 0 -21px; }
 
 /* ==========================================================================
     NAVIGATION
@@ -442,6 +495,8 @@ ul {
   line-height: 60px;
   font-family: "metapro_condnorm", sans-serif;
   text-decoration: none; }
+.btn-login:hover span {
+  color: #59b200; }
 
 .btn-make-request {
   background-color: #fc0;
@@ -451,10 +506,14 @@ ul {
     line-height: 20px;
     margin-right: 20px;
     vertical-align: text-top; }
+  .btn-make-request:hover {
+    background-color: #f0c000; }
 
 .btn-registration {
   background-color: #ec4f15;
   text-shadow: rgba(217, 54, 0, 0.64) 0 -1px 0; }
+  .btn-registration:hover {
+    background-color: #d64611; }
 
 .btn-search {
   border: none;
@@ -569,6 +628,12 @@ ul {
   width: 40px;
   height: 40px;
   margin: 0 10px 0 5px; }
+
+.icon-info {
+  background-position: 0 -241px;
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px; }
 
 .btn-right-orange, .list-service-steps li:before {
   background-position: -200px -97px;
