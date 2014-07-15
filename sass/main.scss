@@ -36,6 +36,7 @@ $grenadier: #ec4f15;
 $mineShaft: #222;
 $limeade: #59B200;
 $brownRust: #B0543C;
+$vividTangerine: #FF9673;
 
 
 /* ==========================================================================
@@ -181,18 +182,18 @@ ul {
 	}
 
 	.text-1 {
-		top: -30px;
+		top: -40px;
 		left: 30px;
 	}
 
 	.text-2 {
-		top: -30px;
+		top: -40px;
 		right: 20px;
 	}
 
 	.text-3 {
-		bottom: -20px;
-		right: 100px;
+		bottom: -35px;
+		right: 160px;
 	}
 }
 
@@ -293,6 +294,33 @@ ul {
 	}
 }
 
+.search-box {
+	height: 50px;
+	border: 1px solid $vividTangerine;
+	@include box-shadow(0 0 0 10px rgba(255, 150, 115, .5));
+	background-color: $white;
+
+	input,
+	.select-box,
+	button {
+		float: left;
+	}
+
+	input {
+		width: 320px;
+		height: 30px;
+		border: none;
+		border-right: 1px solid $vividTangerine;
+		padding: 10px 20px;
+		color: $vividTangerine;
+		font-size: 24px;
+	}
+
+	button {
+
+	}
+}
+
 /* ==========================================================================
     NAVIGATION
 ========================================================================== */
@@ -384,6 +412,21 @@ ul {
 .btn-registration {
 	background-color: $grenadier;
 	@include text-shadow(rgba(217, 54, 0, .64) 0 -1px 0);
+}
+
+.btn-search {
+	border: none;
+	background-color: $grenadier;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	ins {
+		line-height: 50px;
+	}
+
+	&:hover {
+		background-color: darken($grenadier, 5%);
+	}
 }
 
 /* ==========================================================================
@@ -493,10 +536,11 @@ ul {
 	margin-right: 10px;
 }
 
-.number1{
+.icon-number-1{
 	background-position: -254px -55px ;
 	width: 40px;
 	height: 40px;
+	margin: 0 10px 0 5px;
 }
 
 .btn-right-orange{
@@ -745,4 +789,119 @@ ul {
 
 .slider-small {
 	margin-top: 30px;
+}
+
+/* ==========================================================================
+    Custom select box
+========================================================================== */
+
+.select-box {
+    height: 42px;
+    @include inline-block;
+}
+
+.select-city {
+    width: 200px;
+}
+
+.select-pages-quantity {
+    width: 46px;
+}
+
+.select-delivery {
+    width: 220px;
+    margin-bottom: 10px;
+}
+
+.sl-button {
+    @include inline-block;
+    width: 0px;
+    height: 0px;
+    margin: 22px 10px 0;
+    width: 0;
+	height: 0 !important;
+	border-style: solid;
+	border-width: 10px 6px 0 6px;
+	border-color: $vividTangerine transparent transparent transparent;
+    font-size: 0;
+    line-height: 0;
+}
+
+.sl-container {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: red;
+
+    .sl-placeholder-container {
+        position: relative;
+        display: block;
+        height: 100%;
+        padding: 4px 22px 4px 14px;
+        background: $white;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.sl-placeholder {
+    height: 42px;
+    background: $white;
+    color: $vividTangerine;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 42px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.sl-container .sl-options {
+    top: 50px !important;
+    left: -1px !important;
+    width: 100%;
+    padding: 0;
+    max-height: 200px;
+    margin: 0;
+    border: 1px solid $vividTangerine;
+    background-color: white;
+    list-style: none outside none;
+    overflow: auto;
+    z-index: 1;
+
+    li {
+        margin: 0;
+        padding: 0 12px;
+        overflow: hidden;
+        line-height: 30px;
+
+        a {
+            display: block;
+            color: $vividTangerine;
+            font-size: 20px;
+            font-weight: normal;
+            height: 30px;
+            line-height: 30px;
+            text-decoration: none;
+            text-align: left;
+        }
+    }
+
+    li:hover {
+        background-color: $black;
+        background-color: rgba(0, 0, 0, .01);
+        a {
+            color: darken($vividTangerine, 20%);
+        }
+    }
+}
+
+.sl-container:hover,
+.sl-open {
+    .sl-button {
+        border-color: darken($vividTangerine, 20%) transparent transparent;
+    }
 }

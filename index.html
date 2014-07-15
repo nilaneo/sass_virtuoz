@@ -30,8 +30,16 @@
                             <span class="text-1">я хочу...</span>
                             <span class="text-2">ищу</span>
                             <span class="text-3">...в городе</span>
-                            <div class="search-box">
-                                <img src="img/searchbox.jpg" alt="">
+                            <div class="search-box clearfix">
+                                <input type="text">
+                                <div class="select-box select-city">
+                                    <select>
+                                        <option selected value="Киев">Киев</option>
+                                        <option value="Львов">Львов</option>
+                                        <option value="Одесса">Одесса</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-search"><ins class="icon icon-search"></ins></button>
                             </div>
                         </div>
                         <div class="phone-container">
@@ -334,10 +342,16 @@
                     © 2014 <strong>ВИРТУОЗ</strong> Сервис ваших грёз. Копирование материалов сайта запрещено согласно закону Украины о защите авторских прав.
                 </p>
             </div><!-- end of container -->
-        </footer>        
+        </footer>               
 
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/jquery.selectify.js"></script>
+        <script>
+            $(function(){
+                $("select").selectify();
+            });
+        </script>
 
     </body>
 </html>
