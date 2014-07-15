@@ -21,4 +21,19 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+$(function(){
+    $("select").selectify();
+
+    $('.jcarousel')
+        .jcarousel({wrap: "circular"})
+        .jcarouselAutoscroll({interval: 5000});
+
+    $('.jcarousel-control-prev').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-control-next').jcarouselControl({target: "+=1"});
+
+    $('.jcarousel-control-prev-small').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-control-next-small').jcarouselControl({target: "+=1"});
+
+});
