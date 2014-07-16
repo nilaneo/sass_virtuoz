@@ -283,11 +283,10 @@ ul {
 .header {
   height: 288px;
   background-image: url(../img/bg-orange.jpg);
-  background-size: cover;
-  overflow: hidden; }
+  background-size: cover; }
 
 .header-bg {
-  width: 1300px;
+  width: 1200px;
   margin: 0 auto;
   height: 100%;
   background-repeat: no-repeat;
@@ -515,7 +514,8 @@ ul {
   height: 58px;
   -webkit-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
   -moz-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
-  box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px; }
+  box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
+  z-index: 10; }
 
 .nav-menu li {
   padding-top: 15px;
@@ -1151,7 +1151,7 @@ ul {
   background-color: white;
   list-style: none outside none;
   overflow: auto;
-  z-index: 1; }
+  z-index: 100; }
   .sl-container .sl-options li {
     margin: 0;
     padding: 0 12px;

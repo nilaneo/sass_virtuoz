@@ -350,11 +350,12 @@ ul {
 	height: 288px;
 	background-image: url(../img/bg-orange.jpg);
 	background-size: cover;
-	overflow: hidden;
+	// overflow-x: hidden;
+	// overflow-y: visible;
 }
 
 .header-bg {
-	width: 1300px;
+	width: 1200px;
 	margin: 0 auto;
 	height: 100%;
 	background-repeat: no-repeat;
@@ -625,6 +626,7 @@ ul {
 	position: relative;
 	height: 58px;
 	@include box-shadow(rgba(34, 34, 34, .1) 0 0 0 3px);
+	z-index: 10;
 }
 
 .nav-menu {
@@ -1378,7 +1380,7 @@ ul {
     background-color: white;
     list-style: none outside none;
     overflow: auto;
-    z-index: 1;
+    z-index: 100;
 
     li {
         margin: 0;
