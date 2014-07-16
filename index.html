@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/normalize.css">
         <link rel="stylesheet" href="stylesheets/main.css">
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -55,8 +56,8 @@
             <nav class="nav-main">
                 <div class="container clearfix">
                     <ul class="nav nav-menu nav-left clearfix">
-                        <li class="catalogue j-catalogue">
-                            <a href="#0">Каталог услуг</a>
+                        <li class="catalogue">
+                            <a href="#0" class="nav-link j-catalogue">Каталог услуг</a>
                             <div class="catalogue-container clearfix">
                                 <div class="col">
                                     <ul>
@@ -114,7 +115,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#0">Все заявки</a></li>
+                        <li><a href="#0" class="nav-link">Все заявки</a></li>
                     </ul>
                     <ul class="nav nav-user nav-right clearfix">
                         <li><a href="#0" class="btn btn-registration"><span></span>Регистрация</a></li>
@@ -127,6 +128,10 @@
                 <div class="container">
                     <h3 class="title-section">Подайте заявку на услугу</h3>
                     <div class="request-steps">
+                        <div class="request-steps-control">
+                            <a href="#0" class="btn-step-prev"></a>
+                            <a href="#0" class="btn-step-next"></a>
+                        </div>
                         <div class="request-step request-step-1">
                             <span class="step-number">1</span>
                             <span class="step-count">шаг 2/3</span>
@@ -144,14 +149,57 @@
                                     <option value="Категория 2">Категория 2</option>
                                 </select>
                             </div>
-                            <input type="text" class="input-primary input-2 input-date" placeholder="Назовите дату исполнения...">
+                            <input type="text" class="input-primary input-2 input-date" id="datepicker" placeholder="Назовите дату исполнения...">
                             <input type="text" class="input-primary input-4 input-time"placeholder="и время">
                             <input type="text" class="input-primary input-4 input-budget" placeholder="Бюджет">
                             <div class="clearfix">
                                 <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="request-step request-step-2">
+                            <span class="step-number">2</span>
+                            <span class="step-count">шаг 3/3</span> 
+                            <div class="field-required mgr-0">
+                                <input type="text" class="input-primary input-1" placeholder="Заголовок объявления">
+                            </div>                           
+                            <textarea class="textarea-primary input-1" placeholder="Опишите, что необходимо сделать"></textarea>
+                            <div class="clearfix">
+                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
+                            </div>
+                        </div>
+
+                        <div class="request-step request-step-3">
+                            <span class="step-number">3</span>
+                            <input type="text" class="input-primary input-2" placeholder="Представтесь, пожалуйста">
+                            <div class="field-required mgr-0">
+                                <input type="text" class="input-primary input-2"placeholder="Ваш номер телефона (желательно личный)">                                
+                            </div>
+                            <div class="field-required">
+                                <input type="text" class="input-primary input-2" placeholder="Ваш адрес электронной почты (email)">                                
+                            </div>
+                            <input type="text" class="input-primary input-2 mgr-0" placeholder="Почтовый адрес (город, улица, дом, кв.)"> 
+                            <div class="clearfix">
+                                <div class="performers-radios left">
+                                    <p>
+                                        <a href="#0" class="custom-radio" data-name="radios-1">Я хочу открыть контактную информацию для всех</a>
+                                    </p>
+                                    <p>
+                                       <a href="#0" class="custom-radio" data-name="radios-1">Я хочу сам выбрать исполнителя моей заявки</a> 
+                                    </p>                                    
+                                </div>
+                                <div class="left">
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                </div>
+                                <a href="#0" class="btn-request right"><span class="text">Подать заявку</span></a>
+                            </div>
+                        </div>
+                    </div><!-- end of request-steps -->
                 </div><!-- end of container -->
             </section>
             <section class="section bg-nude bg-bottom-geometr">
@@ -199,10 +247,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <a href="#0" class="jcarousel-control-prev-small">
+                            <a href="#0" class="jcarousel-control-small jcarousel-control-prev-small inactive">
                                 <span><i></i></span>
                             </a>
-                            <a href="#0" class="jcarousel-control-next-small">
+                            <a href="#0" class="jcarousel-control-small jcarousel-control-next-small">
                                 <span><i></i></span>
                             </a>
                         </div><!-- end of jcarousel-wrapper -->
@@ -440,6 +488,8 @@
         <script src="js/jquery.selectify.js"></script>
         <script src="js/jquery.jcarousel.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="js/datepicker-ru.js"></script>
 
     </body>
 </html>

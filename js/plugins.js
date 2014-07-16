@@ -24,9 +24,9 @@
 $(function(){
     $("select").selectify();
 
-    $('.jcarousel')
-        .jcarousel({wrap: "circular"})
-        .jcarouselAutoscroll({interval: 5000});
+    $( "#datepicker" ).datepicker();
+
+    $('.jcarousel').jcarousel();
 
     $('.jcarousel-control-prev').jcarouselControl({target: "-=1"});
 
@@ -35,5 +35,13 @@ $(function(){
     $('.jcarousel-control-prev-small').jcarouselControl({target: "-=1"});
 
     $('.jcarousel-control-next-small').jcarouselControl({target: "+=1"});
+
+    $('.jcarousel-control-small').on('jcarouselcontrol:inactive', function() {
+        $(this).addClass("inactive");
+    });
+
+    $('.jcarousel-control-small').on('jcarouselcontrol:active', function() {
+        $(this).removeClass("inactive");
+    });
 
 });

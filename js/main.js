@@ -15,6 +15,7 @@ $(document).ready(function(){
 
 	$(".j-catalogue").on("click", function (e) {
 		e.preventDefault();
+		$(this).toggleClass("is-open");
 		$(".catalogue-container").slideToggle("fast");
 	});
 })
