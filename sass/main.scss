@@ -726,6 +726,51 @@ ul {
 	}
 }
 
+.bag {
+	position: absolute;
+	top: 178px;
+	left: 10px;
+
+	ins {
+		@extend .icon;
+		@extend .icon-bag;
+	}
+
+	.services {
+		position: relative;
+		@include inline-block;
+		padding: 10px;
+		border: 1px solid #ff9775;
+		background: $white;
+		font-size: 18px;
+		color: #444;
+	}
+
+	.services:after,
+	.services:before {
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		width: 0;
+		height: 0;
+		border: solid transparent;
+		content: " ";
+		pointer-events: none;
+	}
+
+	.services:after {
+		border-right-color: $white;
+		border-width: 8px;
+		margin-top: -8px;
+	}
+
+	.services:before {
+		border-right-color: #ea6031;
+		border-width: 9px;
+		margin-top: -9px;
+	}
+}
+
 .catalogue-list {
 	li {
 		margin-right: 20px;
@@ -1033,6 +1078,8 @@ ul {
 	background-position: -200px -160px ;
 	width: 54px;
 	height: 61px;
+	margin-right: 15px;
+	vertical-align: bottom;
 }
 
 /* ==========================================================================

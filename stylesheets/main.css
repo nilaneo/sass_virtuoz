@@ -610,6 +610,42 @@ ul {
     .catalogue-container a:hover {
       color: #264c00; }
 
+.bag {
+  position: absolute;
+  top: 178px;
+  left: 10px; }
+  .bag .services {
+    position: relative;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    padding: 10px;
+    border: 1px solid #ff9775;
+    background: white;
+    font-size: 18px;
+    color: #444; }
+  .bag .services:after,
+  .bag .services:before {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    content: " ";
+    pointer-events: none; }
+  .bag .services:after {
+    border-right-color: white;
+    border-width: 8px;
+    margin-top: -8px; }
+  .bag .services:before {
+    border-right-color: #ea6031;
+    border-width: 9px;
+    margin-top: -9px; }
+
 .catalogue-list li {
   margin-right: 20px;
   margin-bottom: 30px; }
@@ -723,7 +759,7 @@ ul {
     ICONS
 ========================================================================== */
 .icon, .btn-step-prev,
-.btn-step-next, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
+.btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
 .jcarousel-control-next span,
 .slider-small .jcarousel-control-next-small span {
   display: -moz-inline-stack;
@@ -862,10 +898,12 @@ ul {
   margin-top: 4px;
   margin-right: 10px; }
 
-.icon-bag {
+.icon-bag, .bag ins {
   background-position: -200px -160px;
   width: 54px;
-  height: 61px; }
+  height: 61px;
+  margin-right: 15px;
+  vertical-align: bottom; }
 
 /* ==========================================================================
     LISTS
