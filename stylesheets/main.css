@@ -132,6 +132,19 @@ ul {
       margin-right: 10px;
       vertical-align: sub; }
 
+.logo-narrow {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  font-size: 28px; }
+  .logo-narrow span {
+    display: block;
+    padding-left: 84px;
+    margin-top: -15px; }
+
 .search-container {
   position: absolute;
   top: 270px;
@@ -164,11 +177,31 @@ ul {
     font-size: 15px;
     line-height: 22px;
     font-family: "metapro_condnorm", sans-serif; }
-  .phone-container .phone {
-    color: #ec4f15;
-    font-size: 53px;
-    line-height: 74px;
-    font-weight: normal; }
+
+.phone {
+  color: #ec4f15;
+  font-size: 53px;
+  line-height: 74px;
+  font-weight: normal; }
+
+.phone-container-small {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-top: 20px;
+  margin-left: 40px;
+  text-align: center; }
+  .phone-container-small .phone {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 10px; }
+  .phone-container-small p {
+    font-size: 21px;
+    font-weight: 200; }
 
 .section {
   padding: 30px 0; }
@@ -246,6 +279,26 @@ ul {
     padding: 10px 20px;
     color: #ff9673;
     font-size: 24px; }
+
+.header {
+  height: 288px;
+  background-image: url(../img/bg-orange.jpg);
+  background-size: cover;
+  overflow: hidden; }
+
+.header-bg {
+  width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 95% center; }
+  .header-bg .container {
+    position: relative; }
+  .header-bg .logo-container {
+    width: 100%; }
+  .header-bg .search-container {
+    top: 190px;
+    left: 200px; }
 
 /* ==========================================================================
     REQUEST STEPS
@@ -525,7 +578,7 @@ ul {
   opacity: 0; }
 
 .nav-user li {
-  margin-left: 15px; }
+  margin-left: 20px; }
 
 .catalogue {
   position: relative; }
@@ -562,6 +615,48 @@ ul {
   margin-bottom: 30px; }
 .catalogue-list li:nth-child(4n) {
   margin-right: 0; }
+
+.list-wtih-dropdowns > li {
+  position: relative;
+  width: 266px;
+  height: 160px; }
+.list-wtih-dropdowns .service-type {
+  position: absolute;
+  z-index: 10; }
+.list-wtih-dropdowns .submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  padding: 180px 20px 20px;
+  width: 266px;
+  border: 2px solid #dcdbd8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  -ms-border-radius: 65px;
+  -o-border-radius: 65px;
+  border-radius: 65px;
+  background-color: white; }
+  .list-wtih-dropdowns .submenu li {
+    margin-bottom: 15px; }
+  .list-wtih-dropdowns .submenu a {
+    color: #222;
+    font-size: 16px;
+    font-weight: bold; }
+  .list-wtih-dropdowns .submenu a:hover {
+    color: #ec4f15; }
+  .list-wtih-dropdowns .submenu .lnk-all {
+    color: #ec4f15; }
+.list-wtih-dropdowns > li:hover .service-type {
+  z-index: 12; }
+  .list-wtih-dropdowns > li:hover .service-type p {
+    color: #ec4f15; }
+.list-wtih-dropdowns > li:hover .submenu {
+  display: block; }
 
 /* ==========================================================================
     BUTTONS
@@ -602,7 +697,7 @@ ul {
   .btn-make-request span {
     font-size: 40px;
     line-height: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     vertical-align: text-top; }
   .btn-make-request:hover {
     background-color: #f0c000; }
@@ -628,7 +723,7 @@ ul {
     ICONS
 ========================================================================== */
 .icon, .btn-step-prev,
-.btn-step-next, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
+.btn-step-next, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
 .jcarousel-control-next span,
 .slider-small .jcarousel-control-next-small span {
   display: -moz-inline-stack;
@@ -759,10 +854,13 @@ ul {
   width: 50px;
   height: 49px; }
 
-.user-add {
+.icon-user-add, .btn-registration span {
   background-position: -315px -52px;
   width: 25px;
-  height: 19px; }
+  height: 19px;
+  vertical-align: text-top;
+  margin-top: 4px;
+  margin-right: 10px; }
 
 .icon-bag {
   background-position: -200px -160px;

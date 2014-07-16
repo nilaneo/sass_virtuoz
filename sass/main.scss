@@ -170,6 +170,16 @@ ul {
 	}
 }
 
+.logo-narrow {
+	@include inline-block;
+	font-size: 28px;
+	span {
+		display: block;
+		padding-left: 84px;
+		margin-top: -15px;
+	}
+}
+
 .search-container {
 	position: absolute;
 	top: 270px;
@@ -212,13 +222,31 @@ ul {
 		font-size: 15px;
 		line-height: 22px;
 		font-family: "metapro_condnorm", sans-serif;
+	}	
+}
+
+.phone {
+	color: $grenadier;
+	font-size: 53px;
+	line-height: 74px;
+	font-weight: normal;
+}
+
+.phone-container-small {
+	@include inline-block;
+	margin-top: 20px;	
+	margin-left: 40px;
+	text-align: center;
+	.phone {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 36px;
+		margin-bottom: 10px;
 	}
 
-	.phone {
-		color: $grenadier;
-		font-size: 53px;
-		line-height: 74px;
-		font-weight: normal;
+	p {
+		font-size: 21px;
+		font-weight: 200;
 	}
 }
 
@@ -315,6 +343,33 @@ ul {
 		padding: 10px 20px;
 		color: $vividTangerine;
 		font-size: 24px;
+	}
+}
+
+.header {
+	height: 288px;
+	background-image: url(../img/bg-orange.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+
+.header-bg {
+	width: 1300px;
+	margin: 0 auto;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: 95% center;
+	.container {
+		position: relative;
+	}
+
+	.logo-container {
+		width: 100%;
+	}
+
+	.search-container {
+		top: 190px;
+		left: 200px;
 	}
 }
 
@@ -628,7 +683,7 @@ ul {
 
 .nav-user {
 	li {
-		margin-left: 15px;
+		margin-left: 20px;
 	}
 }
 
@@ -681,6 +736,63 @@ ul {
 	}
 }
 
+.list-wtih-dropdowns {
+	> li {
+		position: relative;
+		width: 266px;
+		height: 160px;
+	}
+
+	.service-type {
+		position: absolute;
+		z-index: 10;
+	}
+
+	.submenu {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 11;
+		padding: 180px 20px 20px;
+		width: 266px;
+		border: 2px solid #dcdbd8;
+		@include box-sizing(border-box);
+		@include border-radius(65px);
+		background-color: $white;
+
+		li {
+			margin-bottom: 15px;
+		}
+
+		a {
+			color: #222;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		a:hover {
+			color: $grenadier;
+		}
+
+		.lnk-all {
+			color: $grenadier;
+		}
+	}
+
+	> li:hover {
+		.service-type {
+			z-index: 12;
+			p {
+				color: $grenadier;
+			}
+		}
+		.submenu {
+			display: block;
+		}
+	}
+}
+
 /* ==========================================================================
     BUTTONS
 ========================================================================== */
@@ -720,7 +832,7 @@ ul {
 	span {
 		font-size: 40px;
 		line-height: 20px;
-		margin-right: 20px;
+		margin-right: 10px;
 		vertical-align: text-top;
 	}
 
@@ -734,6 +846,11 @@ ul {
 	@include text-shadow(rgba(217, 54, 0, .64) 0 -1px 0);
 	&:hover {
 		background-color: darken($grenadier, 5%);
+	}
+
+	span {
+		@extend .icon;
+		@extend .icon-user-add;
 	}
 }
 
@@ -903,10 +1020,13 @@ ul {
 	height: 49px;
 }
 
-.user-add{
+.icon-user-add{
 	background-position: -315px -52px ;
 	width: 25px;
 	height: 19px;
+	vertical-align: text-top;
+	margin-top: 4px;
+	margin-right: 10px;
 }
 
 .icon-bag{

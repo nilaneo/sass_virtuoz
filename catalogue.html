@@ -19,19 +19,19 @@
     </head>
     <body>
         <main>
-            <div class="slider">
-                <div class="slide slide-1">
+            <header class="header">
+                <div class="header-bg" style="background-image: url(img/team.png);">
                     <div class="container">
                         <div class="logo-container">
-                            <h1 class="logo"><a href="#0"><img src="img/logo-main.png" alt="">виртуоз</a> Сервис ваших грёз</h1>   
-                            <h3>Сервис услуг <span class="icon icon-number-1"></span>в Украине</h3>    
+                            <h1 class="logo logo-narrow"><a href="#0"><img src="img/logo-main.png" alt="">виртуоз</a><span>Сервис ваших грёз</span></h1>   
+                            <div class="phone-container-small">
+                                <p class="phone">+380 (44) 380 80 80</p>
+                                <p>24 часа в сутки / 7 дней в неделю</p>
+                            </div>
                         </div> 
                         <div class="search-container">
-                            <span class="text-1">я хочу...</span>
-                            <span class="text-2">ищу</span>
-                            <span class="text-3">...в городе</span>
                             <div class="search-box clearfix">
-                                <input type="text" placeholder="Визажиста на дом">
+                                <input type="text" placeholder="чего желаете?">
                                 <div class="select-box select-city">
                                     <select>
                                         <option selected value="Киев">Киев</option>
@@ -43,15 +43,10 @@
                                 </div>
                                 <button type="submit" class="btn-search"><ins class="icon icon-search"></ins></button>
                             </div>
-                        </div>
-                        <div class="phone-container">
-                            или звоню по телефону
-                            <p class="phone">+380 (44) 380 80 80</p>
-                            <p class="small-info">После звонка оператор позаботится, чтобы исполнитель<br> сам связался с вами для уточнения всех деталей</p>
-                        </div>
+                        </div>                        
                     </div><!-- end of container -->            
-                </div><!-- end of slide -->
-            </div><!-- end of slider -->
+                </div><!-- end of header-bg -->
+            </header>
             <nav class="nav-main">
                 <div class="container clearfix">
                     <ul class="nav nav-menu nav-left clearfix">
@@ -128,117 +123,126 @@
                 <div class="container">
                     <h3 class="title-section text-green">Каталог услуг</h3>
                     <div class="catalogue-list">
-                        <ul class="list-round-rectangles clearfix">
+                        <ul class="list-round-rectangles list-wtih-dropdowns clearfix">
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li><a href="#0">Автоматизация водо-, газо-, теплообеспечения</a></li>
+                                        <li><a href="#0">Монтаж объектов водо-, газо-, теплообеспечения</a></li>
+                                        <li><a href="#0">Работы по очистке и подготовке воды</a></li>
+                                        <li><a href="#0">Ремонт объектов водо-, газо-, теплообеспечения</a></li>
+                                    </ul>
+                                    <a href="#0" class="lnk-all right">Все услуги >></a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
@@ -254,49 +258,49 @@
                     <div class="catalogue-list">
                         <ul class="list-round-rectangles clearfix">
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#3">
+                                <a href="#3" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-3.jpg);"></span>
                                     <p>Услуги доставки</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#1">
+                                <a href="#1" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-1.jpg);"></span>
                                     <p>Бытовые услуги</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="#2">
+                                <a href="#2" class="service-type">
                                     <span class="img-service" style="background-image: url(img/service-2.jpg);"></span>
                                     <p>Образовательные услуги</p>
                                 </a>
