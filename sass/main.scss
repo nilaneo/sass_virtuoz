@@ -314,6 +314,13 @@ ul {
 	margin: 15px 0;
 }
 
+.title-article {
+	font-size: 20px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
 .text-green {
 	color: $limeade;
 }
@@ -419,6 +426,10 @@ ul {
 	background-position: center center;
 }
 
+img.round-rectangle {
+	height: auto;
+}
+
 .has-star {
 	position: relative;
 
@@ -444,6 +455,24 @@ ul {
 	margin-top: 95px;
 	ins {
 		margin-right: 5px;
+	}
+}
+
+.article {
+	img.left {
+		margin: 0 30px 30px 0;
+	}
+
+	img.right {
+		margin: 0 30px 0 30px 30px;
+		margin-right: 0;
+	}
+
+	p {
+		margin-bottom: 30px;
+		font-size: 18px;
+		line-height: 24px;
+		font-weight: 200;
 	}
 }
 
