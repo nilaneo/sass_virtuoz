@@ -283,7 +283,7 @@ ul {
     *display: inline;
     margin-left: 35px;
     font-weight: normal; }
-    .filter > div .icon, .filter > div .btn-step-prev,
+    .filter > div .icon, .filter > div .has-star:before, .filter > div .btn-step-prev,
     .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
     .filter > div .jcarousel-control-next span,
     .jcarousel-control-next .filter > div span,
@@ -307,7 +307,7 @@ ul {
   width: 35px;
   margin-right: 5px;
   text-align: center; }
-  .icon-wrapper .icon, .icon-wrapper .btn-step-prev,
+  .icon-wrapper .icon, .icon-wrapper .has-star:before, .icon-wrapper .btn-step-prev,
   .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
   .icon-wrapper .jcarousel-control-next span,
   .jcarousel-control-next .icon-wrapper span,
@@ -360,6 +360,26 @@ ul {
   height: 130px;
   border: 2px solid #dcdbd8;
   background-position: center center; }
+
+.has-star {
+  position: relative; }
+  .has-star:before {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    content: ""; }
+
+.has-rating {
+  position: relative; }
+
+.rating-stars {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -76px;
+  margin-top: 95px; }
+  .rating-stars ins {
+    margin-right: 5px; }
 
 .search-box {
   height: 50px;
@@ -870,7 +890,7 @@ ul {
 /* ==========================================================================
     ICONS
 ========================================================================== */
-.icon, .btn-step-prev,
+.icon, .has-star:before, .btn-step-prev,
 .btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
 .jcarousel-control-next span,
 .slider-small .jcarousel-control-next-small span {
@@ -1080,18 +1100,18 @@ ul {
   height: 18px;
   margin: 15px 10px 0 0 !important; }
 
-.star-big {
-  background-position: -151px -281px;
+.star-big, .has-star:before {
+  background-position: -151px -240px;
   width: 39px;
   height: 36px; }
 
 .star-small {
-  background-position: -201px -281px;
+  background-position: -201px -240px;
   width: 26px;
   height: 24px; }
 
 .star-small-empty {
-  background-position: -249px -281px;
+  background-position: -249px -240px;
   width: 26px;
   height: 24px; }
 

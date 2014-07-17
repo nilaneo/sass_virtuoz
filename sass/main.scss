@@ -419,6 +419,34 @@ ul {
 	background-position: center center;
 }
 
+.has-star {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		content: "";
+		@extend .icon;
+		@extend .star-big;
+	}
+}
+
+.has-rating {
+	position: relative;
+}
+
+.rating-stars {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	margin-left: -76px;
+	margin-top: 95px;
+	ins {
+		margin-right: 5px;
+	}
+}
+
 .search-box {
 	height: 50px;
 	border: 1px solid $vividTangerine;
@@ -1271,19 +1299,19 @@ ul {
 }
 
 .star-big{
-	background-position: -151px -281px;
+	background-position: -151px -240px;
 	width: 39px;
 	height: 36px;
 }
 
 .star-small{
-	background-position: -201px -281px;
+	background-position: -201px -240px;
 	width: 26px;
 	height: 24px;
 }
 
 .star-small-empty{
-	background-position: -249px -281px;
+	background-position: -249px -240px;
 	width: 26px;
 	height: 24px;
 }
