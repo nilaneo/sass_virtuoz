@@ -381,6 +381,7 @@ ul {
 	margin-top: 20px;
 	width: 100%;
 	padding: 15px;
+	cursor: pointer;
 
 	.cell-1 {
 		width: 290px;
@@ -473,6 +474,31 @@ img.round-rectangle {
 		font-size: 18px;
 		line-height: 24px;
 		font-weight: 200;
+	}
+}
+
+.article-preview {
+	@extend .service;
+
+	.round-rectangle {
+		width: 140px;
+		height: 70px;
+	}
+
+	.cell-1 {
+		width: 200px;
+	}
+
+	.cell-2 {
+		width: 620px;
+	}
+
+	&:hover {
+		border: none;
+		padding: 15px;
+		h3 {
+			text-decoration: underline;
+		}
 	}
 }
 
