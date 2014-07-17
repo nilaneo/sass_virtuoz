@@ -29,6 +29,7 @@ body {
   width: 100%;
   height: 100%;
   min-width: 1200px;
+  color: #444444;
   font-family: 'Exo 2', sans-serif; }
 
 ul,
@@ -120,6 +121,7 @@ ul {
     color: #ec4f15;
     text-decoration: none;
     font-size: 48px;
+    line-height: 48px;
     font-weight: bold;
     font-style: italic; }
     .logo a img {
@@ -130,7 +132,8 @@ ul {
       zoom: 1;
       *display: inline;
       margin-right: 10px;
-      vertical-align: sub; }
+      vertical-align: middle;
+      margin-top: -3px; }
 
 .logo-narrow {
   display: -moz-inline-stack;
@@ -191,7 +194,7 @@ ul {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  margin-top: 20px;
+  margin-top: 18px;
   margin-left: 40px;
   text-align: center; }
   .phone-container-small .phone {
@@ -244,6 +247,13 @@ ul {
   font-weight: 200;
   text-align: center; }
 
+.subtitle-section {
+  color: #444;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+  margin: 15px 0; }
+
 .text-green {
   color: #59b200; }
 
@@ -259,6 +269,97 @@ ul {
   text-decoration: underline !important; }
   .lnk-watch-all:hover {
     color: #59b200; }
+
+.filter {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bold; }
+  .filter > div {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    margin-left: 35px;
+    font-weight: normal; }
+    .filter > div .icon, .filter > div .btn-step-prev,
+    .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
+    .filter > div .jcarousel-control-next span,
+    .jcarousel-control-next .filter > div span,
+    .filter > div .slider-small .jcarousel-control-next-small span,
+    .slider-small .jcarousel-control-next-small .filter > div span {
+      margin: 0 5px; }
+  .filter .input-primary, .filter .textarea-primary {
+    margin-bottom: 0; }
+
+.cell {
+  display: table-cell;
+  vertical-align: top; }
+
+.icon-wrapper {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 35px;
+  margin-right: 5px;
+  text-align: center; }
+  .icon-wrapper .icon, .icon-wrapper .btn-step-prev,
+  .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
+  .icon-wrapper .jcarousel-control-next span,
+  .jcarousel-control-next .icon-wrapper span,
+  .icon-wrapper .slider-small .jcarousel-control-next-small span,
+  .slider-small .jcarousel-control-next-small .icon-wrapper span {
+    margin: 0 auto; }
+
+.service {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: table;
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px; }
+  .service .cell-1 {
+    width: 290px;
+    padding-right: 20px; }
+  .service .cell-2 {
+    width: 500px;
+    padding-right: 40px; }
+  .service .cell-3 p {
+    margin-bottom: 15px; }
+  .service .cell-3 p:last-of-type {
+    margin-bottom: 0; }
+  .service h3 {
+    color: #ec4f15;
+    font-size: 24px;
+    margin-bottom: 10px; }
+  .service:hover {
+    border: 1px solid #d93701;
+    padding: 14px; }
+
+.top-service {
+  background-color: #fff5e6; }
+
+.round-rectangle, .list-round-rectangles li .img-service {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  -ms-border-radius: 65px;
+  -o-border-radius: 65px;
+  border-radius: 65px;
+  width: 262px;
+  height: 130px;
+  border: 2px solid #dcdbd8;
+  background-position: center center; }
 
 .search-box {
   height: 50px;
@@ -305,7 +406,7 @@ ul {
 .request-steps {
   position: relative;
   padding: 0 90px;
-  height: 300px; }
+  height: 290px; }
 
 .request-step {
   position: absolute;
@@ -427,14 +528,25 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: top;
-  height: 50px;
-  padding: 10px 30px;
+  height: 42px;
+  padding: 5px 30px;
   border: 2px solid #78bf2f;
   margin-right: 40px;
   margin-bottom: 40px;
   color: #4c9900;
   font-size: 22px;
   font-family: "metapro_condnorm", sans-serif; }
+
+.input-samall {
+  font-size: 18px; }
+
+.input-transparent {
+  border: none; }
+
+.input-wrapper {
+  border: 2px solid #78bf2f; }
+  .input-wrapper input {
+    margin: 0; }
 
 .textarea-primary {
   height: 90px;
@@ -515,7 +627,7 @@ ul {
   -webkit-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
   -moz-box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
   box-shadow: rgba(34, 34, 34, 0.1) 0 0 0 3px;
-  z-index: 10; }
+  z-index: 1000; }
 
 .nav-menu li {
   padding-top: 15px;
@@ -626,7 +738,7 @@ ul {
     border: 1px solid #ff9775;
     background: white;
     font-size: 18px;
-    color: #444; }
+    color: #444444; }
   .bag .services:after,
   .bag .services:before {
     position: absolute;
@@ -718,8 +830,8 @@ ul {
   border-radius: 50px; }
 
 .btn-login span {
-  border-bottom: 1px dotted #444;
-  color: #444;
+  border-bottom: 1px dotted #444444;
+  color: #444444;
   font-size: 15px;
   line-height: 60px;
   font-family: "metapro_condnorm", sans-serif;
@@ -905,28 +1017,90 @@ ul {
   margin-right: 15px;
   vertical-align: bottom; }
 
+.icon-arrow-down {
+  background-position: -101px -292px;
+  width: 28px;
+  height: 16px; }
+
+.icon-arrow-down.is-active {
+  background-position: -100px -326px;
+  width: 28px;
+  height: 16px; }
+
+.icon-arrow-up {
+  background-position: -151px -291px;
+  width: 28px;
+  height: 16px; }
+
+.icon-arrow-up.is-active {
+  background-position: -150px -322px;
+  width: 28px;
+  height: 16px; }
+
+.icon-bag-arrow {
+  background-position: -102px -240px;
+  width: 33px;
+  height: 37px;
+  margin-top: -15px;
+  margin-right: 5px; }
+
+.icon-house {
+  background-position: 0 -239px;
+  width: 24px;
+  height: 24px; }
+
+.icon-phone-small {
+  background-position: -50px -240px;
+  width: 15px;
+  height: 24px; }
+
+.icon-price-down {
+  background-position: -49px -288px;
+  width: 38px;
+  height: 18px; }
+
+.icon-price-down.is-active {
+  background-position: -51px -327px;
+  width: 36px;
+  height: 18px; }
+
+.icon-price-up {
+  background-position: 0 -287px;
+  width: 38px;
+  height: 18px; }
+
+.icon-price-up.is-active {
+  background-position: 0 -329px;
+  width: 36px;
+  height: 18px; }
+
+.icon-search-small {
+  background-position: -300px -243px;
+  width: 18px;
+  height: 18px;
+  margin: 15px 10px 0 0 !important; }
+
+.star-big {
+  background-position: -151px -281px;
+  width: 39px;
+  height: 36px; }
+
+.star-small {
+  background-position: -201px -281px;
+  width: 26px;
+  height: 24px; }
+
+.star-small-empty {
+  background-position: -249px -281px;
+  width: 26px;
+  height: 24px; }
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
 .list-round-rectangles li {
   float: left;
   margin-bottom: 30px; }
-  .list-round-rectangles li .img-service {
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: middle;
-    *vertical-align: auto;
-    zoom: 1;
-    *display: inline;
-    -webkit-border-radius: 65px;
-    -moz-border-radius: 65px;
-    -ms-border-radius: 65px;
-    -o-border-radius: 65px;
-    border-radius: 65px;
-    width: 262px;
-    height: 130px;
-    border: 2px solid #dcdbd8;
-    background-position: center center; }
   .list-round-rectangles li p {
     margin-top: 10px;
     color: #222222;
@@ -961,19 +1135,10 @@ ul {
         margin-bottom: 20px; }
     .list-requests a p {
       margin-top: 10px;
-      color: #444;
+      color: #444444;
       font-size: 16px; }
-    .list-requests a .reguest-time {
-      font-size: 24px; }
-    .list-requests a .reguest-budget {
-      color: #59b200;
-      font-weight: bold;
-      text-transform: uppercase; }
-    .list-requests a .budget-sum {
-      font-size: 32px;
-      line-height: 16px; }
     .list-requests a h4 {
-      color: #444;
+      color: #444444;
       font-size: 24px;
       line-height: 32px;
       font-weight: bold;
@@ -985,6 +1150,30 @@ ul {
     .list-requests a:hover h4 {
       color: #59b200;
       text-decoration: underline; }
+
+.reguest-time {
+  font-size: 24px; }
+
+.reguest-budget {
+  color: #59b200;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.budget-sum {
+  font-size: 32px;
+  line-height: 16px; }
+
+.phone-numbers {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 170px; }
+
+.service-performer {
+  font-weight: bold; }
 
 .list-service-steps li {
   float: left;
@@ -1020,7 +1209,7 @@ ul {
       border-bottom: 3px solid #fae0d1;
       margin-right: 10px;
       margin-top: -8px;
-      color: #444;
+      color: #444444;
       font-size: 30px;
       line-height: 33px;
       font-weight: bold;
@@ -1035,6 +1224,47 @@ ul {
   margin-left: 0; }
 .list-service-steps li:first-child:before {
   display: none; }
+
+/* PAGINATION
+========================================================================== */
+.pagination {
+  text-align: right; }
+  .pagination ul {
+    margin: 20px 0;
+    text-align: center; }
+    .pagination ul li {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline; }
+  .pagination a {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    padding: 0 15px;
+    border: 1px solid #444444;
+    color: #444444;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 35px; }
+  .pagination a:hover,
+  .pagination li.is-current a {
+    color: #ec4f15;
+    border: 1px solid #ec4f15; }
+  .pagination .first-page,
+  .pagination .last-page {
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    width: 120px; }
 
 /* ==========================================================================
     FOOTER
@@ -1122,8 +1352,7 @@ ul {
   .sl-container .sl-placeholder-container {
     position: relative;
     display: block;
-    height: 100%;
-    padding: 4px 22px 4px 14px;
+    padding: 0 22px 0 14px;
     background: white; }
   .sl-container:hover {
     cursor: pointer; }
@@ -1151,7 +1380,7 @@ ul {
   background-color: white;
   list-style: none outside none;
   overflow: auto;
-  z-index: 100; }
+  z-index: 10000; }
   .sl-container .sl-options li {
     margin: 0;
     padding: 0 12px;
@@ -1185,7 +1414,7 @@ ul {
     border-color: #59b200 transparent transparent transparent; }
   .select-performer .sl-placeholder-container,
   .select-category .sl-placeholder-container {
-    padding: 1px 30px;
+    padding: 0 30px;
     border: 2px solid #78bf2f; }
   .select-performer .sl-placeholder,
   .select-category .sl-placeholder {
@@ -1207,6 +1436,13 @@ ul {
   .select-category .sl-container:hover .sl-button,
   .select-category .sl-open .sl-button {
     border-color: #4c9900 transparent transparent; }
+
+.select-narrow {
+  width: 170px;
+  margin: 0 5px; }
+  .select-narrow .sl-placeholder {
+    width: 110px !important;
+    font-size: 18px; }
 
 /* ==========================================================================
     SLIDER

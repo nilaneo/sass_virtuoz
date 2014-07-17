@@ -38,7 +38,8 @@ $limeade: #59B200;
 $brownRust: #B0543C;
 $vividTangerine: #FF9673;
 $atlantisapprox: #78BF2F;
-
+$tundora: #444;
+$serenadeapprox: #FFF5E6;
 
 /* ==========================================================================
     GENERAL STYLES
@@ -49,6 +50,7 @@ body {
     width: 100%;
     height: 100%;
     min-width: 1200px;
+    color: $tundora;
 	font-family: 'Exo 2', sans-serif;
 }
 
@@ -159,13 +161,15 @@ ul {
 		color: $grenadier;
 		text-decoration: none;
 		font-size: 48px;
+		line-height: 48px;
 		font-weight: bold;
 		font-style: italic;
 
 		img {
 			@include inline-block;
 			margin-right: 10px;
-			vertical-align: sub;
+			vertical-align: middle;
+			margin-top: -3px;
 		}
 	}
 }
@@ -234,7 +238,7 @@ ul {
 
 .phone-container-small {
 	@include inline-block;
-	margin-top: 20px;	
+	margin-top: 18px;	
 	margin-left: 40px;
 	text-align: center;
 	.phone {
@@ -302,6 +306,14 @@ ul {
 	text-align: center;
 }
 
+.subtitle-section {
+	color: #444;
+	font-size: 24px;
+	font-weight: normal;
+	text-align: center;
+	margin: 15px 0;
+}
+
 .text-green {
 	color: $limeade;
 }
@@ -321,6 +333,90 @@ ul {
 	&:hover {
 		color: $limeade;
 	}
+}
+
+.filter {
+	margin-top: 25px;
+	font-size: 18px;
+	font-weight: bold;
+	> div {
+		@include inline-block;
+		margin-left: 35px;	
+		font-weight: normal;
+		.icon {
+			margin: 0 5px;
+		}
+	}
+
+	.input-primary {
+		margin-bottom: 0;
+	}
+}
+
+.cell {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.icon-wrapper {
+	@include inline-block;
+	width: 35px;
+	margin-right: 5px;
+	text-align: center;
+	.icon {
+		margin: 0 auto;
+	}
+}
+
+.service {
+	@include box-sizing(border-box);
+	display: table;
+	margin-top: 20px;
+	width: 100%;
+	padding: 15px;
+
+	.cell-1 {
+		width: 290px;
+		padding-right: 20px;
+	}
+
+	.cell-2 {
+		width: 500px;
+		padding-right: 40px;
+	}
+
+	.cell-3 {
+		p {
+			margin-bottom: 15px;
+		}
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	h3 {
+		color: $grenadier;
+		font-size: 24px;margin-bottom: 10px;
+	}
+
+	&:hover {
+		border: 1px solid #d93701;
+		padding: 14px;
+	}
+}
+
+.top-service {
+	background-color: $serenadeapprox;
+}
+
+.round-rectangle {
+	@include inline-block;
+	@include border-radius(65px);
+	width: 262px;
+	height: 130px;
+	border: 2px solid #dcdbd8;
+	background-position: center center;
 }
 
 .search-box {
@@ -381,7 +477,7 @@ ul {
 .request-steps {
 	position: relative;
 	padding: 0 90px;
-	height: 300px;
+	height: 290px;
 }
 
 .request-step {
@@ -523,14 +619,29 @@ ul {
 .input-primary {
 	@include box-sizing(border-box);
 	vertical-align: top;
-	height: 50px;
-	padding: 10px 30px;
+	height: 42px;
+	padding: 5px 30px;
 	border: 2px solid $atlantisapprox;
 	margin-right: 40px;
 	margin-bottom: 40px;
 	color: darken($limeade, 5%);
 	font-size: 22px;
 	font-family: "metapro_condnorm", sans-serif;
+}
+
+.input-samall {
+	font-size: 18px;
+}
+
+.input-transparent {
+	border: none;
+}
+
+.input-wrapper {
+	border: 2px solid $atlantisapprox;
+	input {
+		margin: 0;
+	}
 }
 
 .textarea-primary {
@@ -626,7 +737,7 @@ ul {
 	position: relative;
 	height: 58px;
 	@include box-shadow(rgba(34, 34, 34, .1) 0 0 0 3px);
-	z-index: 10;
+	z-index: 1000;
 }
 
 .nav-menu {
@@ -745,7 +856,7 @@ ul {
 		border: 1px solid #ff9775;
 		background: $white;
 		font-size: 18px;
-		color: #444;
+		color: $tundora;
 	}
 
 	.services:after,
@@ -858,8 +969,8 @@ ul {
 
 .btn-login {
 	span {
-		border-bottom: 1px dotted #444;
-		color: #444;
+		border-bottom: 1px dotted $tundora;
+		color: $tundora;
 		font-size: 15px;
 		line-height: 60px;
 		font-family: "metapro_condnorm", sans-serif;
@@ -1084,6 +1195,99 @@ ul {
 	vertical-align: bottom;
 }
 
+.icon-arrow-down{
+	background-position: -101px -292px ;
+	width: 28px;
+	height: 16px;
+}
+
+.icon-arrow-down.is-active {
+	background-position: -100px -326px ;
+	width: 28px;
+	height: 16px;
+}
+
+.icon-arrow-up{
+	background-position: -151px -291px ;
+	width: 28px;
+	height: 16px;
+}
+
+.icon-arrow-up.is-active{
+	background-position: -150px -322px ;
+	width: 28px;
+	height: 16px;
+}
+
+.icon-bag-arrow{
+	background-position: -102px -240px;
+	width: 33px;
+	height: 37px;
+	margin-top: -15px;
+	margin-right: 5px;
+}
+
+.icon-house{
+	background-position: 0 -239px;
+	width: 24px;
+	height: 24px;
+}
+
+.icon-phone-small{
+	background-position: -50px -240px;
+	width: 15px;
+	height: 24px;
+}
+
+.icon-price-down{
+	background-position: -49px -288px ;
+	width: 38px;
+	height: 18px;
+}
+
+.icon-price-down.is-active{
+	background-position: -51px -327px ;
+	width: 36px;
+	height: 18px;
+}
+
+.icon-price-up{
+	background-position: 0 -287px ;
+	width: 38px;
+	height: 18px;
+}
+
+.icon-price-up.is-active{
+	background-position: 0 -329px ;
+	width: 36px;
+	height: 18px;
+}
+
+.icon-search-small{
+	background-position: -300px -243px ;
+	width: 18px;
+	height: 18px;
+	margin: 15px 10px 0 0 !important;
+}
+
+.star-big{
+	background-position: -151px -281px;
+	width: 39px;
+	height: 36px;
+}
+
+.star-small{
+	background-position: -201px -281px;
+	width: 26px;
+	height: 24px;
+}
+
+.star-small-empty{
+	background-position: -249px -281px;
+	width: 26px;
+	height: 24px;
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -1094,12 +1298,7 @@ ul {
 		margin-bottom: 30px;
 
 		.img-service {
-			@include inline-block;
-			@include border-radius(65px);
-			width: 262px;
-			height: 130px;
-			border: 2px solid #dcdbd8;
-			background-position: center center;
+			@extend .round-rectangle;
 		}
 
 		p {
@@ -1153,27 +1352,12 @@ ul {
 
 		p {
 			margin-top: 10px;
-			color: #444;
+			color: $tundora;
 			font-size: 16px;
-		}
-
-		.reguest-time {
-			font-size: 24px;
-		}
-
-		.reguest-budget {
-			color: $limeade;
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-
-		.budget-sum {
-			font-size: 32px;
-			line-height: 16px;
-		}
+		}		
 		
 		h4 {
-			color: #444;
+			color: $tundora;
 			font-size: 24px;
 			line-height: 32px;
 			font-weight: bold;
@@ -1191,6 +1375,30 @@ ul {
 			text-decoration: underline;
 		}
 	}	
+}
+
+.reguest-time {
+	font-size: 24px;
+}
+
+.reguest-budget {
+	color: $limeade;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.budget-sum {
+	font-size: 32px;
+	line-height: 16px;
+}
+
+.phone-numbers {
+	@include inline-block;
+	width: 170px;
+}
+
+.service-performer {
+	font-weight: bold;
 }
 
 .list-service-steps {
@@ -1221,7 +1429,7 @@ ul {
 				border-bottom: 3px solid #fae0d1;
 				margin-right: 10px;
 				margin-top: -8px;
-				color: #444;
+				color: $tundora;
 				font-size: 30px;
 				line-height: 33px;
 				font-weight: bold;
@@ -1247,6 +1455,42 @@ ul {
 	li:first-child:before {
 		display: none;
 	}
+}
+
+/* PAGINATION
+========================================================================== */
+
+.pagination {
+    text-align: right;
+    ul {
+    	margin: 20px 0;
+    	text-align: center;
+        li {
+	        @include inline-block;
+        }
+    }
+
+    a {
+	    @include inline-block;
+        padding: 0 15px;
+        border: 1px solid $tundora;
+        color: $tundora;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 35px;
+    }
+
+    a:hover,
+    li.is-current a {
+		color: $grenadier;
+        border: 1px solid $grenadier;
+    }
+
+    .first-page,
+    .last-page {
+        @include inline-block;
+        width: 120px;
+    }    
 }
 
 /* ==========================================================================
@@ -1346,8 +1590,8 @@ ul {
     .sl-placeholder-container {
         position: relative;
         display: block;
-        height: 100%;
-        padding: 4px 22px 4px 14px;
+        // height: 100%;
+        padding: 0 22px 0 14px;
         background: $white;
     }
 
@@ -1380,7 +1624,7 @@ ul {
     background-color: white;
     list-style: none outside none;
     overflow: auto;
-    z-index: 100;
+    z-index: 10000;
 
     li {
         margin: 0;
@@ -1426,7 +1670,7 @@ ul {
 	}
 
 	.sl-placeholder-container {
-		padding: 1px 30px;
+		padding: 0 30px;
 		border: 2px solid $atlantisapprox;
 	}
 
@@ -1453,6 +1697,16 @@ ul {
 	    .sl-button {
 	        border-color: darken($limeade, 5%) transparent transparent;
 	    }
+	}
+}
+
+.select-narrow {
+	width: 170px;
+	margin: 0 5px;
+
+	.sl-placeholder {
+		width: 110px !important;
+		font-size: 18px;
 	}
 }
 
