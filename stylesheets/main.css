@@ -288,7 +288,8 @@ ul {
     zoom: 1;
     *display: inline;
     margin-left: 35px;
-    font-weight: normal; }
+    font-weight: normal;
+    vertical-align: baseline; }
     .filter > div .icon, .filter > div .has-star:before, .filter > div .btn-step-prev,
     .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
     .filter > div .jcarousel-control-next span,
@@ -582,7 +583,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: top;
-  height: 42px;
+  height: 40px;
   padding: 5px 30px;
   border: 2px solid #78bf2f;
   margin-right: 40px;
@@ -600,7 +601,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 .input-wrapper {
   border: 2px solid #78bf2f; }
   .input-wrapper input {
-    margin: 0; }
+    margin: 0;
+    vertical-align: middle; }
 
 .textarea-primary {
   height: 90px;
@@ -1132,7 +1134,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   background-position: -300px -243px;
   width: 18px;
   height: 18px;
-  margin: 15px 10px 0 0 !important; }
+  margin: 4px 10px 0 0 !important; }
 
 .star-big, .has-star:before {
   background-position: -151px -240px;
@@ -1412,12 +1414,12 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     cursor: pointer; }
 
 .sl-placeholder {
-  height: 42px;
+  height: 50px;
   background: white;
   color: #ff9673;
   font-size: 20px;
   font-weight: normal;
-  line-height: 42px;
+  line-height: 50px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1474,7 +1476,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .select-category .sl-placeholder {
     width: 400px !important;
     color: #4c9900;
-    font-family: "metapro_condnorm", sans-serif; }
+    font-family: "metapro_condnorm", sans-serif;
+    height: 40px;
+    line-height: 40px; }
   .select-performer .sl-container .sl-options,
   .select-category .sl-container .sl-options {
     border: 2px solid #78bf2f; }

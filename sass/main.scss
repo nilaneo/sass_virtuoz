@@ -350,6 +350,7 @@ ul {
 		@include inline-block;
 		margin-left: 35px;	
 		font-weight: normal;
+		vertical-align: baseline;
 		.icon {
 			margin: 0 5px;
 		}
@@ -702,7 +703,7 @@ img.round-rectangle {
 .input-primary {
 	@include box-sizing(border-box);
 	vertical-align: top;
-	height: 42px;
+	height: 40px;
 	padding: 5px 30px;
 	border: 2px solid $atlantisapprox;
 	margin-right: 40px;
@@ -724,6 +725,7 @@ img.round-rectangle {
 	border: 2px solid $atlantisapprox;
 	input {
 		margin: 0;
+		vertical-align: middle;
 	}
 }
 
@@ -1350,7 +1352,7 @@ img.round-rectangle {
 	background-position: -300px -243px ;
 	width: 18px;
 	height: 18px;
-	margin: 15px 10px 0 0 !important;
+	margin: 4px 10px 0 0 !important;
 }
 
 .star-big{
@@ -1684,12 +1686,12 @@ img.round-rectangle {
 }
 
 .sl-placeholder {
-    height: 42px;
+    height: 50px;
     background: $white;
     color: $vividTangerine;
     font-size: 20px;
     font-weight: normal;
-    line-height: 42px;
+    line-height: 50px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1761,6 +1763,8 @@ img.round-rectangle {
 		width: 400px !important;
 		color: darken($limeade, 5%);
 		font-family: "metapro_condnorm", sans-serif;
+		height: 40px;
+		line-height: 40px;
 	}
 
 	.sl-container .sl-options {
