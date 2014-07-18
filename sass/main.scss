@@ -507,12 +507,13 @@ img.round-rectangle {
 
 .service-info {
 	display: table;
+	width: 100%;
 	.cell-1 {
 		width: 360px;
 		padding-right: 20px;
 		.round-rectangle {
 			width: 340px;
-			height: 230px;
+			height: 220px;
 		}
 	}
 
@@ -571,6 +572,53 @@ img.round-rectangle {
 	&:hover {
 		color: darken($limeade, 5%);
 	}
+}
+
+.comments {
+	display: table;
+	width: 100%;
+}
+
+.comment {
+	font-size: 16px;
+	font-weight: 200;
+	margin-bottom: 15px;
+	.cell-1 {
+		width: 110px;
+	}
+
+	.cell-2 {
+		width: 610px;
+		padding: 0 40px 0 20px;
+	}
+
+	.cell-3 {
+
+	}
+
+	.avatar {
+		width: 80px;
+		height: 80px;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		border: 2px solid $limeade;
+	}
+
+	.comment-author {
+		margin-bottom: 10px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.rating-stars {
+		position: static;
+		margin: 15px 0;
+	}
+}
+
+.circle {
+	@include border-radius(50%);
 }
 
 .article {
