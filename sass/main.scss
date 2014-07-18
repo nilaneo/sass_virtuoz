@@ -383,7 +383,7 @@ ul {
 .breadcrumb {
 	margin: 15px 0 30px;
 	li {
-		@include inline-block;
+		display: inline;
 		font-size: 24px;
 		margin-left: 10px;
 		&:before {
@@ -394,7 +394,7 @@ ul {
 			border-style: solid;
 			border-width: 6px 0 6px 10px;
 			border-color: transparent transparent transparent $tundora;
-			margin-right: 10px;
+			margin-right: 5px;
 		}
 
 		a {
@@ -445,8 +445,12 @@ ul {
 	}
 
 	h3 {
-		color: $grenadier;
-		font-size: 24px;margin-bottom: 10px;
+		margin-bottom: 10px;
+
+		a {
+			color: $grenadier;
+			font-size: 24px;
+		}
 	}
 
 	&:hover {
@@ -466,6 +470,7 @@ ul {
 	height: 130px;
 	border: 2px solid #dcdbd8;
 	background-position: center center;
+	background-size: cover;
 }
 
 img.round-rectangle {
@@ -497,6 +502,74 @@ img.round-rectangle {
 	margin-top: 95px;
 	ins {
 		margin-right: 5px;
+	}
+}
+
+.service-info {
+	display: table;
+	.cell-1 {
+		width: 360px;
+		padding-right: 20px;
+		.round-rectangle {
+			width: 340px;
+			height: 230px;
+		}
+	}
+
+	.cell-2 {
+		width: 210px;
+	}
+
+	.cell-3 {
+		width: 240px;
+		margin-right: 20px;
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.cell-4 {
+		width: 260px;
+	}
+
+	.thumbnails {
+		li {
+			@include inline-block;
+			float: left;
+			margin: 0 30px 15px 0;
+
+			.round-rectangle {
+				width: 70px;
+				height: 60px;
+				@include border-radius(20px);
+			}
+		}
+	}
+
+	.rating-stars {
+		position: static;
+		@include inline-block;
+		margin: 0 5px 15px 0;
+	}
+}
+
+.lnk-text {
+	color: $tundora;
+	font-size: 16px;
+	text-decoration: underline;
+	font-style: italic;
+	&:hover {
+		color: $limeade;
+	}
+}
+
+.lnk-green {
+	color: $limeade;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+	&:hover {
+		color: darken($limeade, 5%);
 	}
 }
 
@@ -1151,6 +1224,27 @@ img.round-rectangle {
 	&:hover {
 		background-color: darken($grenadier, 5%);
 	}
+}
+
+.btn-rectangle {
+	@include inline-block;
+	height: 50px;
+	margin: 20px 0;
+	color: $white;
+	font-size: 24px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.btn-red {
+	background-color: $grenadier;
+	&:hover {
+		background-color: darken($grenadier, 5%);
+	}
+}
+
+.btn-wide {
+	width: 100%;
 }
 
 /* ==========================================================================
