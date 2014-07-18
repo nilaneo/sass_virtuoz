@@ -99,6 +99,10 @@ ul {
 	margin-right: 0 !important;
 }
 
+.pdt-0 {
+	padding-top: 0 !important;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: ".";
@@ -373,6 +377,42 @@ ul {
 	text-align: center;
 	.icon {
 		margin: 0 auto;
+	}
+}
+
+.breadcrumb {
+	margin: 15px 0 30px;
+	li {
+		@include inline-block;
+		font-size: 24px;
+		margin-left: 10px;
+		&:before {
+			@include inline-block;
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6px 0 6px 10px;
+			border-color: transparent transparent transparent $tundora;
+			margin-right: 10px;
+		}
+
+		a {
+			color: $tundora;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: $limeade;
+		}
+	}
+
+	li:first-child {
+		margin-left: 0;
+
+		&:before {
+			display: none;
+		}
 	}
 }
 
@@ -1788,11 +1828,15 @@ img.round-rectangle {
 }
 
 .select-narrow {
-	width: 170px;
+	width: 182px;
 	margin: 0 5px;
 
 	.sl-placeholder {
 		width: 110px !important;
+		font-size: 18px;
+	}
+
+	.sl-container .sl-options li a {
 		font-size: 18px;
 	}
 }
