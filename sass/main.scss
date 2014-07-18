@@ -743,7 +743,7 @@ img.round-rectangle {
 .input-primary {
 	@include box-sizing(border-box);
 	vertical-align: top;
-	height: 40px;
+	height: 50px;
 	padding: 5px 30px;
 	border: 2px solid $atlantisapprox;
 	margin-right: 40px;
@@ -753,8 +753,9 @@ img.round-rectangle {
 	font-family: "metapro_condnorm", sans-serif;
 }
 
-.input-samall {
+.input-small {
 	font-size: 18px;
+	height: 40px;
 }
 
 .input-transparent {
@@ -1790,7 +1791,7 @@ img.round-rectangle {
 	margin-bottom: 40px;
 
 	.sl-button {
-		margin: 19px 10px 0;
+		margin: 22px 15px 0;
 		border-color: $limeade transparent transparent transparent;
 	}
 
@@ -1803,8 +1804,8 @@ img.round-rectangle {
 		width: 400px !important;
 		color: darken($limeade, 5%);
 		font-family: "metapro_condnorm", sans-serif;
-		height: 40px;
-		line-height: 40px;
+		height: 47px;
+		line-height: 47px;
 	}
 
 	.sl-container .sl-options {
@@ -1831,9 +1832,15 @@ img.round-rectangle {
 	width: 182px;
 	margin: 0 5px;
 
+	.sl-button {
+		margin: 19px 15px 0;
+	}
+
 	.sl-placeholder {
 		width: 110px !important;
 		font-size: 18px;
+		height: 40px;
+		line-height: 40px;
 	}
 
 	.sl-container .sl-options li a {

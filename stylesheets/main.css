@@ -621,7 +621,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: top;
-  height: 40px;
+  height: 50px;
   padding: 5px 30px;
   border: 2px solid #78bf2f;
   margin-right: 40px;
@@ -630,8 +630,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   font-size: 22px;
   font-family: "metapro_condnorm", sans-serif; }
 
-.input-samall {
-  font-size: 18px; }
+.input-small {
+  font-size: 18px;
+  height: 40px; }
 
 .input-transparent {
   border: none; }
@@ -1504,7 +1505,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   margin-bottom: 40px; }
   .select-performer .sl-button,
   .select-category .sl-button {
-    margin: 19px 10px 0;
+    margin: 22px 15px 0;
     border-color: #59b200 transparent transparent transparent; }
   .select-performer .sl-placeholder-container,
   .select-category .sl-placeholder-container {
@@ -1515,8 +1516,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     width: 400px !important;
     color: #4c9900;
     font-family: "metapro_condnorm", sans-serif;
-    height: 40px;
-    line-height: 40px; }
+    height: 47px;
+    line-height: 47px; }
   .select-performer .sl-container .sl-options,
   .select-category .sl-container .sl-options {
     border: 2px solid #78bf2f; }
@@ -1536,9 +1537,13 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 .select-narrow {
   width: 182px;
   margin: 0 5px; }
+  .select-narrow .sl-button {
+    margin: 19px 15px 0; }
   .select-narrow .sl-placeholder {
     width: 110px !important;
-    font-size: 18px; }
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px; }
   .select-narrow .sl-container .sl-options li a {
     font-size: 18px; }
 
