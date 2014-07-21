@@ -99,6 +99,10 @@ ul {
 	margin-right: 0 !important;
 }
 
+.mgl-0 {
+	margin-left: 0 !important;
+}
+
 .pdt-0 {
 	padding-top: 0 !important;
 }
@@ -571,6 +575,45 @@ img.round-rectangle {
 	text-decoration: underline;
 	&:hover {
 		color: darken($limeade, 5%);
+	}
+}
+
+.block-requests {
+
+	.service {
+		@extend .service;
+		.cell-1 {
+			width: 100px;
+			padding: 0;
+			padding-right: 15px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.cell-2 {
+			width: 170px;
+			padding: 0;
+		}
+
+		.cell-3 {
+			width: 580px;
+			padding: 0 40px;
+		}
+
+		.cell-4 {
+			p {
+				margin-bottom: 15px;
+			}
+
+			p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.round-rectangle {
+		width: 164px;
+		height: 132px;
 	}
 }
 
@@ -1556,6 +1599,24 @@ img.round-rectangle {
 	height: 24px;
 }
 
+.icon-status-waiting {
+	background-position: -315px -274px;
+	width: 56px;
+	height: 56px;
+}
+
+.icon-status-done {
+	background-position: -199px -274px;
+	width: 56px;
+	height: 56px;
+}
+
+.icon-status-closed {
+	background-position: -257px -274px;
+	width: 56px;
+	height: 56px;
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -1987,6 +2048,14 @@ img.round-rectangle {
 
 	.sl-container .sl-options li a {
 		font-size: 18px;
+	}
+}
+
+.select-longer {
+	width: 300px;
+
+	.sl-placeholder {
+		width: 230px !important;
 	}
 }
 
