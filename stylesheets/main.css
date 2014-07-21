@@ -358,7 +358,7 @@ ul {
     .breadcrumb li:first-child:before {
       display: none; }
 
-.service, .block-requests .service, .article-preview {
+.service, .offer, .block-requests .service, .article-preview {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -367,27 +367,47 @@ ul {
   width: 100%;
   padding: 15px;
   cursor: pointer; }
-  .service .cell-1, .article-preview .cell-1 {
+  .service .cell-1, .offer .cell-1, .article-preview .cell-1 {
     width: 290px;
     padding-right: 20px; }
-  .service .cell-2, .article-preview .cell-2 {
+  .service .cell-2, .offer .cell-2, .article-preview .cell-2 {
     width: 500px;
     padding-right: 40px; }
-  .service .cell-3 p, .article-preview .cell-3 p {
+  .service .cell-3 p, .offer .cell-3 p, .article-preview .cell-3 p {
     margin-bottom: 15px; }
-  .service .cell-3 p:last-of-type, .article-preview .cell-3 p:last-of-type {
+  .service .cell-3 p:last-of-type, .offer .cell-3 p:last-of-type, .article-preview .cell-3 p:last-of-type {
     margin-bottom: 0; }
-  .service h3, .block-requests .service h3, .article-preview h3 {
+  .service h3, .offer h3, .block-requests .service h3, .article-preview h3 {
     margin-bottom: 10px; }
-    .service h3 a, .block-requests .service h3 a, .article-preview h3 a {
+    .service h3 a, .offer h3 a, .block-requests .service h3 a, .article-preview h3 a {
       color: #ec4f15;
       font-size: 24px; }
-  .service:hover, .article-preview:hover {
+  .service:hover, .offer:hover, .article-preview:hover {
     border: 1px solid #d93701;
     padding: 14px; }
 
 .top-service {
   background-color: #fff5e6; }
+
+.offer {
+  border: 1px solid #dfdfdf;
+  padding: 14px; }
+  .offer h3 a {
+    color: #59b200; }
+  .offer .cell-3 p {
+    margin-bottom: 5px; }
+
+.offer-status {
+  color: #59b200;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 14px; }
+  .offer-status span {
+    vertical-align: middle; }
+
+.is-chosen {
+  background-color: #eaffd5;
+  border: 1px solid #59b200; }
 
 .round-rectangle, .list-round-rectangles li .img-service {
   display: -moz-inline-stack;
@@ -406,6 +426,19 @@ ul {
   border: 2px solid #dcdbd8;
   background-position: center center;
   background-size: cover; }
+
+.round-rectangle-small {
+  width: 164px;
+  height: 132px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+  -ms-border-radius: 55px;
+  -o-border-radius: 55px;
+  border-radius: 55px; }
+
+.round-rectangle-big {
+  width: 340px;
+  height: 220px; }
 
 img.round-rectangle, .list-round-rectangles li img.img-service {
   height: auto; }
@@ -430,25 +463,22 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .rating-stars ins {
     margin-right: 5px; }
 
-.service-info {
+.service-info, .request-info {
   display: table;
   width: 100%; }
-  .service-info .cell-1 {
+  .service-info .cell-1, .request-info .cell-1 {
     width: 360px;
     padding-right: 20px; }
-    .service-info .cell-1 .round-rectangle, .service-info .cell-1 .list-round-rectangles li .img-service, .list-round-rectangles li .service-info .cell-1 .img-service {
-      width: 340px;
-      height: 220px; }
-  .service-info .cell-2 {
+  .service-info .cell-2, .request-info .cell-2 {
     width: 210px; }
-  .service-info .cell-3 {
+  .service-info .cell-3, .request-info .cell-3 {
     width: 240px;
     margin-right: 20px; }
-    .service-info .cell-3 p {
+    .service-info .cell-3 p, .request-info .cell-3 p {
       margin-bottom: 10px; }
-  .service-info .cell-4 {
+  .service-info .cell-4, .request-info .cell-4 {
     width: 260px; }
-  .service-info .thumbnails li {
+  .service-info .thumbnails li, .request-info .thumbnails li {
     display: -moz-inline-stack;
     display: inline-block;
     vertical-align: middle;
@@ -457,7 +487,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     *display: inline;
     float: left;
     margin: 0 30px 15px 0; }
-    .service-info .thumbnails li .round-rectangle, .service-info .thumbnails .list-round-rectangles li .img-service, .list-round-rectangles .service-info .thumbnails li .img-service {
+    .service-info .thumbnails li .round-rectangle, .request-info .thumbnails li .round-rectangle, .service-info .thumbnails .list-round-rectangles li .img-service, .list-round-rectangles .service-info .thumbnails li .img-service, .request-info .thumbnails .list-round-rectangles li .img-service, .list-round-rectangles .request-info .thumbnails li .img-service {
       width: 70px;
       height: 60px;
       -webkit-border-radius: 20px;
@@ -465,7 +495,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
       -ms-border-radius: 20px;
       -o-border-radius: 20px;
       border-radius: 20px; }
-  .service-info .rating-stars {
+  .service-info .rating-stars, .request-info .rating-stars {
     position: static;
     display: -moz-inline-stack;
     display: inline-block;
@@ -474,6 +504,45 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     zoom: 1;
     *display: inline;
     margin: 0 5px 15px 0; }
+
+.request-info .request-author {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold; }
+.request-info .request-name {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 200; }
+.request-info .reguest-date,
+.request-info .request-status {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin-bottom: 10px; }
+.request-info .request-status {
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold; }
+  .request-info .request-status span {
+    margin: 0 5px;
+    vertical-align: middle; }
+.request-info .cell-1 {
+  width: 170px; }
+.request-info .cell-2 {
+  width: 660px;
+  padding: 0 20px; }
+.request-info .row {
+  display: tablez; }
+  .request-info .row .cell-big {
+    width: 500px;
+    padding-right: 10px; }
+  .request-info .row p {
+    margin-bottom: 10px; }
 
 .lnk-text {
   color: #444444;
@@ -491,53 +560,87 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .lnk-green:hover {
     color: #4c9900; }
 
-.block-requests .service .cell-1, .block-requests .article-preview .cell-1 {
+.block-requests .service .cell-1, .block-requests .offer .cell-1, .block-requests .article-preview .cell-1 {
   width: 100px;
   padding: 0;
   padding-right: 15px;
   text-align: center;
   vertical-align: middle; }
-.block-requests .service .cell-2, .block-requests .article-preview .cell-2 {
+.block-requests .service .cell-2, .block-requests .offer .cell-2, .block-requests .article-preview .cell-2 {
   width: 170px;
   padding: 0; }
-.block-requests .service .cell-3, .block-requests .article-preview .cell-3 {
+.block-requests .service .cell-3, .block-requests .offer .cell-3, .block-requests .article-preview .cell-3 {
   width: 580px;
   padding: 0 40px; }
-.block-requests .service .cell-4 p, .block-requests .article-preview .cell-4 p {
+.block-requests .service .cell-4 p, .block-requests .offer .cell-4 p, .block-requests .article-preview .cell-4 p {
   margin-bottom: 15px; }
-.block-requests .service .cell-4 p:last-of-type, .block-requests .article-preview .cell-4 p:last-of-type {
+.block-requests .service .cell-4 p:last-of-type, .block-requests .offer .cell-4 p:last-of-type, .block-requests .article-preview .cell-4 p:last-of-type {
   margin-bottom: 0; }
-.block-requests .round-rectangle, .block-requests .list-round-rectangles li .img-service, .list-round-rectangles li .block-requests .img-service {
-  width: 164px;
-  height: 132px; }
 
 .comments {
   display: table;
   width: 100%; }
 
-.comment {
+.comment, .offer-comment {
   font-size: 16px;
   font-weight: 200;
   margin-bottom: 15px; }
-  .comment .cell-1 {
+  .comment .cell-1, .offer-comment .cell-1 {
     width: 110px; }
-  .comment .cell-2 {
+  .comment .cell-2, .offer-comment .cell-2 {
     width: 610px;
     padding: 0 40px 0 20px; }
-  .comment .avatar {
+  .comment .avatar, .offer-comment .avatar {
     width: 80px;
     height: 80px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     border: 2px solid #59b200; }
-  .comment .comment-author {
+  .comment .comment-author, .offer-comment .comment-author {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold; }
-  .comment .rating-stars {
+  .comment .rating-stars, .offer-comment .rating-stars {
     position: static;
     margin: 15px 0; }
+
+.offer-comment {
+  position: relative;
+  background: #fff;
+  border: 1px solid #59B200;
+  padding: 15px;
+  margin-top: 15px;
+  margin-left: 150px; }
+  .offer-comment .cell-2 {
+    width: 500px; }
+  .offer-comment .cell-3 {
+    width: 250px; }
+  .offer-comment .rating-stars p {
+    margin-top: 5px; }
+
+.offer-comment:after,
+.offer-comment:before {
+  bottom: 100%;
+  left: 10%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.offer-comment:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 15px;
+  margin-left: -15px; }
+
+.offer-comment:before {
+  border-color: rgba(89, 178, 0, 0);
+  border-bottom-color: #59B200;
+  border-width: 16px;
+  margin-left: -16px; }
 
 .circle {
   -webkit-border-radius: 50%;
@@ -556,6 +659,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   font-size: 18px;
   line-height: 24px;
   font-weight: 200; }
+
+.article.no-mg p {
+  margin: 0; }
 
 .article-preview .round-rectangle, .article-preview .list-round-rectangles li .img-service, .list-round-rectangles li .article-preview .img-service {
   width: 140px;
@@ -1097,8 +1203,19 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .btn-red:hover {
     background-color: #d64611; }
 
+.btn-green {
+  background-color: #59b200; }
+  .btn-green:hover {
+    background-color: #4c9900; }
+
 .btn-wide {
   width: 100%; }
+
+.btn-thin {
+  height: 36px;
+  font-size: 18px;
+  line-height: 34px;
+  margin: 15px 0 0 !important; }
 
 /* ==========================================================================
     ICONS
@@ -1342,6 +1459,16 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   background-position: -257px -274px;
   width: 56px;
   height: 56px; }
+
+.icon-done-small {
+  background-position: -30px -355px;
+  width: 25px;
+  height: 25px; }
+
+.icon-comment {
+  background-position: 0 -358px;
+  width: 25px;
+  height: 27px; }
 
 /* ==========================================================================
     LISTS
