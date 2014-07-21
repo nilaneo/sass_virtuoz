@@ -711,6 +711,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   margin-top: 0; }
   .article-with-arrows .no-arrow:before {
     display: none !important; }
+.article-with-arrows .circle-with-number {
+  margin-top: -42px; }
 
 .article.no-mg p {
   margin: 0; }
