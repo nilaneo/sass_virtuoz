@@ -296,7 +296,7 @@ ul {
     margin-left: 35px;
     font-weight: normal;
     vertical-align: baseline; }
-    .filter > div .icon, .filter > div .has-star:before, .filter > div .btn-step-prev,
+    .filter > div .icon, .filter > div .has-star:before, .filter > div .article-with-arrows .title-article:before, .article-with-arrows .filter > div .title-article:before, .filter > div .btn-step-prev,
     .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
     .filter > div .jcarousel-control-next span,
     .jcarousel-control-next .filter > div span,
@@ -320,7 +320,7 @@ ul {
   width: 35px;
   margin-right: 5px;
   text-align: center; }
-  .icon-wrapper .icon, .icon-wrapper .has-star:before, .icon-wrapper .btn-step-prev,
+  .icon-wrapper .icon, .icon-wrapper .has-star:before, .icon-wrapper .article-with-arrows .title-article:before, .article-with-arrows .icon-wrapper .title-article:before, .icon-wrapper .btn-step-prev,
   .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
   .icon-wrapper .jcarousel-control-next span,
   .jcarousel-control-next .icon-wrapper span,
@@ -442,6 +442,41 @@ ul {
 
 img.round-rectangle, .list-round-rectangles li img.img-service {
   height: auto; }
+
+.circle-with-number {
+  position: relative;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 280px;
+  height: 280px;
+  border: 2px solid #dcdbd8;
+  background-position: center center;
+  background-size: cover; }
+  .circle-with-number span {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -5px;
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    padding: 0;
+    background-color: white;
+    color: #e59481;
+    font-size: 28px;
+    font-weight: bold; }
 
 .has-star {
   position: relative; }
@@ -649,16 +684,33 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   -o-border-radius: 50%;
   border-radius: 50%; }
 
-.article img.left {
+.article .left {
   margin: 0 30px 30px 0; }
-.article img.right {
-  margin: 0 30px 0 30px 30px;
+.article .right {
+  margin: 30px 0 30px 30px;
   margin-right: 0; }
 .article p {
   margin-bottom: 30px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 200; }
+
+.article-with-arrows .title-article {
+  position: relative;
+  margin-top: 120px; }
+  .article-with-arrows .title-article:before {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    margin-left: -40px;
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-position: 0 -388px; }
+.article-with-arrows .no-arrow {
+  margin-top: 0; }
+  .article-with-arrows .no-arrow:before {
+    display: none !important; }
 
 .article.no-mg p {
   margin: 0; }
@@ -1220,7 +1272,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 /* ==========================================================================
     ICONS
 ========================================================================== */
-.icon, .has-star:before, .btn-step-prev,
+.icon, .has-star:before, .article-with-arrows .title-article:before, .btn-step-prev,
 .btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
 .jcarousel-control-next span,
 .slider-small .jcarousel-control-next-small span {
