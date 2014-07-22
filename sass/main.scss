@@ -129,6 +129,19 @@ ul {
     margin: 0 auto;
 }
 
+.checkbox {
+	@include inline-block;
+	width: 18px;
+	height: 18px;
+	background-image: url(../img/checkbox.png);
+	background-repeat: no-repeat;
+	background-position: 0 -22px;
+
+	&.is-checked {
+		background-position: 0 0;
+	}
+}
+
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -350,6 +363,15 @@ ul {
 	}
 }
 
+.lnk-back {
+	@extend .lnk-watch-all;
+	text-align: left;
+	color: darken($grenadier, 10%);
+	&:hover {
+		color: $grenadier;
+	}
+}
+
 .filter {
 	margin-top: 25px;
 	font-size: 18px;
@@ -461,6 +483,31 @@ ul {
 		border: 1px solid #d93701;
 		padding: 14px;
 	}
+
+	.has-checkbox {
+		position: relative;
+		.checkbox {
+			position: absolute;
+			top: 60px;
+			right: 14px;
+		}
+	}
+}
+
+.services-case {
+	.service {
+		cursor: inherit;
+		&:hover {
+			border: none;
+			padding: 15px;
+		}
+	}
+}
+
+.btn-close-service {
+	position: absolute;
+	top: -10px;
+	right: 26px;
 }
 
 .top-service {
@@ -961,6 +1008,148 @@ img.round-rectangle {
 }
 
 /* ==========================================================================
+    FORMS
+========================================================================== */
+
+.forms {
+	margin: 30px 0;
+	> div {
+		@include box-sizing(border-box);
+		width: 540px;
+		padding: 30px;
+		border: 1px solid #bbb;
+		color: #888;
+
+		h5 {
+			margin-bottom: 40px;
+			font-size: 32px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		input {
+			width: 100%;
+			margin: 0;
+			margin-bottom: 30px;
+			border: 2px solid #bbb;
+			color: #888;
+		}
+
+		button {
+			display: block;
+			width: 350px;
+			height: 56px;
+			margin: 0 auto;
+			border: none;
+			background-color: #888;
+			color: $white;
+			font-size: 24px;
+			font-weight: bold;
+		}
+	}
+
+	> div:hover,
+	> div:focus {
+		background-color: #fff5ea;
+		border: 1px solid $grenadier;
+
+		h5 {
+			color: $grenadier;
+		}
+
+		input {
+			border-color: $grenadier;
+		}
+
+		button {
+			background-color: $grenadier;
+		}
+	}
+}
+
+.label {
+	font-style: 18px;
+	font-weight: bold;
+}
+
+.label-block {
+	display: block;
+	padding-left: 20px;
+	margin-bottom: 10px;	
+}
+
+.input-primary {
+	@include box-sizing(border-box);
+	vertical-align: top;
+	height: 50px;
+	padding: 5px 30px;
+	border: 2px solid $atlantisapprox;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	color: darken($limeade, 5%);
+	font-size: 22px;
+	font-family: "metapro_condnorm", sans-serif;
+}
+
+.input-small {
+	font-size: 18px;
+	height: 40px;
+}
+
+.input-transparent {
+	border: none;
+}
+
+.input-wrapper {
+	border: 2px solid $atlantisapprox;
+	input {
+		margin: 0;
+		vertical-align: middle;
+	}
+}
+
+.textarea-primary {
+	@extend .input-primary;
+	height: 90px;
+	resize: none;
+}
+
+.input-1 {
+	width: 946px;
+	margin-right: 0;
+}
+
+.input-2 {
+	width: 450px;
+}
+
+.input-4 {
+	width: 203px;
+}
+
+.input-date {
+	padding-right: 60px;
+	background-image: url(../img/icon-calendar.png);
+	background-repeat: no-repeat;
+	background-position: 97% center;
+}
+
+.input-time {
+	padding-right: 60px;
+	background-image: url(../img/icon-timer.png);
+	background-repeat: no-repeat;
+	background-position: 94% center;
+}
+
+.input-budget {
+	padding-right: 60px;
+	background-image: url(../img/icon-purse.png);
+	background-repeat: no-repeat;
+	background-position: 94% center;
+	margin-right: 0 !important;
+}
+
+/* ==========================================================================
     REQUEST STEPS
 ========================================================================== */
 
@@ -1104,77 +1293,6 @@ img.round-rectangle {
 		top: -15px;
 		right: -15px;
 	}
-}
-
-.input-primary {
-	@include box-sizing(border-box);
-	vertical-align: top;
-	height: 50px;
-	padding: 5px 30px;
-	border: 2px solid $atlantisapprox;
-	margin-right: 40px;
-	margin-bottom: 40px;
-	color: darken($limeade, 5%);
-	font-size: 22px;
-	font-family: "metapro_condnorm", sans-serif;
-}
-
-.input-small {
-	font-size: 18px;
-	height: 40px;
-}
-
-.input-transparent {
-	border: none;
-}
-
-.input-wrapper {
-	border: 2px solid $atlantisapprox;
-	input {
-		margin: 0;
-		vertical-align: middle;
-	}
-}
-
-.textarea-primary {
-	@extend .input-primary;
-	height: 90px;
-	resize: none;
-}
-
-.input-1 {
-	width: 946px;
-	margin-right: 0;
-}
-
-.input-2 {
-	width: 450px;
-}
-
-.input-4 {
-	width: 203px;
-}
-
-.input-date {
-	padding-right: 60px;
-	background-image: url(../img/icon-calendar.png);
-	background-repeat: no-repeat;
-	background-position: 97% center;
-}
-
-.input-time {
-	padding-right: 60px;
-	background-image: url(../img/icon-timer.png);
-	background-repeat: no-repeat;
-	background-position: 94% center;
-}
-
-.input-budget {
-	padding-right: 60px;
-	background-image: url(../img/icon-purse.png);
-	background-repeat: no-repeat;
-	background-position: 94% center;
-	margin-right: 0 !important;
 }
 
 .performers-radios {
@@ -1844,6 +1962,13 @@ img.round-rectangle {
 	width: 25px;
 	height: 27px;
 }
+
+.icon-close {
+	@include inline-block;
+	width: 26px;
+	height: 26px;
+	background-position: -64px -356px;
+} 
 
 /* ==========================================================================
     LISTS

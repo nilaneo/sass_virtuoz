@@ -96,6 +96,21 @@ ul {
   width: 1130px;
   margin: 0 auto; }
 
+.checkbox {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: 0 -22px; }
+  .checkbox.is-checked {
+    background-position: 0 0; }
+
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -272,15 +287,21 @@ ul {
 .text-red {
   color: #ec4f15; }
 
-.lnk-watch-all {
+.lnk-watch-all, .lnk-back {
   display: block;
   color: #407f00;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   text-decoration: underline !important; }
-  .lnk-watch-all:hover {
+  .lnk-watch-all:hover, .lnk-back:hover {
     color: #59b200; }
+
+.lnk-back {
+  text-align: left;
+  color: #bf3f0f; }
+  .lnk-back:hover {
+    color: #ec4f15; }
 
 .filter {
   margin-top: 25px;
@@ -385,6 +406,23 @@ ul {
   .service:hover, .offer:hover, .article-preview:hover {
     border: 1px solid #d93701;
     padding: 14px; }
+  .service .has-checkbox, .offer .has-checkbox, .article-preview .has-checkbox {
+    position: relative; }
+    .service .has-checkbox .checkbox, .offer .has-checkbox .checkbox, .article-preview .has-checkbox .checkbox {
+      position: absolute;
+      top: 60px;
+      right: 14px; }
+
+.services-case .service, .services-case .offer, .services-case .article-preview {
+  cursor: inherit; }
+  .services-case .service:hover, .services-case .offer:hover, .services-case .article-preview:hover {
+    border: none;
+    padding: 15px; }
+
+.btn-close-service {
+  position: absolute;
+  top: -10px;
+  right: 26px; }
 
 .top-service {
   background-color: #fff5e6; }
@@ -770,6 +808,123 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     left: 200px; }
 
 /* ==========================================================================
+    FORMS
+========================================================================== */
+.forms {
+  margin: 30px 0; }
+  .forms > div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 540px;
+    padding: 30px;
+    border: 1px solid #bbb;
+    color: #888; }
+    .forms > div h5 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center; }
+    .forms > div input {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 30px;
+      border: 2px solid #bbb;
+      color: #888; }
+    .forms > div button {
+      display: block;
+      width: 350px;
+      height: 56px;
+      margin: 0 auto;
+      border: none;
+      background-color: #888;
+      color: white;
+      font-size: 24px;
+      font-weight: bold; }
+  .forms > div:hover,
+  .forms > div:focus {
+    background-color: #fff5ea;
+    border: 1px solid #ec4f15; }
+    .forms > div:hover h5,
+    .forms > div:focus h5 {
+      color: #ec4f15; }
+    .forms > div:hover input,
+    .forms > div:focus input {
+      border-color: #ec4f15; }
+    .forms > div:hover button,
+    .forms > div:focus button {
+      background-color: #ec4f15; }
+
+.label {
+  font-style: 18px;
+  font-weight: bold; }
+
+.label-block {
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 10px; }
+
+.input-primary, .textarea-primary {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  height: 50px;
+  padding: 5px 30px;
+  border: 2px solid #78bf2f;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  color: #4c9900;
+  font-size: 22px;
+  font-family: "metapro_condnorm", sans-serif; }
+
+.input-small {
+  font-size: 18px;
+  height: 40px; }
+
+.input-transparent {
+  border: none; }
+
+.input-wrapper {
+  border: 2px solid #78bf2f; }
+  .input-wrapper input {
+    margin: 0;
+    vertical-align: middle; }
+
+.textarea-primary {
+  height: 90px;
+  resize: none; }
+
+.input-1 {
+  width: 946px;
+  margin-right: 0; }
+
+.input-2 {
+  width: 450px; }
+
+.input-4 {
+  width: 203px; }
+
+.input-date {
+  padding-right: 60px;
+  background-image: url(../img/icon-calendar.png);
+  background-repeat: no-repeat;
+  background-position: 97% center; }
+
+.input-time {
+  padding-right: 60px;
+  background-image: url(../img/icon-timer.png);
+  background-repeat: no-repeat;
+  background-position: 94% center; }
+
+.input-budget {
+  padding-right: 60px;
+  background-image: url(../img/icon-purse.png);
+  background-repeat: no-repeat;
+  background-position: 94% center;
+  margin-right: 0 !important; }
+
+/* ==========================================================================
     REQUEST STEPS
 ========================================================================== */
 .request-steps {
@@ -891,66 +1046,6 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     font-size: 24px;
     top: -15px;
     right: -15px; }
-
-.input-primary, .textarea-primary {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: top;
-  height: 50px;
-  padding: 5px 30px;
-  border: 2px solid #78bf2f;
-  margin-right: 40px;
-  margin-bottom: 40px;
-  color: #4c9900;
-  font-size: 22px;
-  font-family: "metapro_condnorm", sans-serif; }
-
-.input-small {
-  font-size: 18px;
-  height: 40px; }
-
-.input-transparent {
-  border: none; }
-
-.input-wrapper {
-  border: 2px solid #78bf2f; }
-  .input-wrapper input {
-    margin: 0;
-    vertical-align: middle; }
-
-.textarea-primary {
-  height: 90px;
-  resize: none; }
-
-.input-1 {
-  width: 946px;
-  margin-right: 0; }
-
-.input-2 {
-  width: 450px; }
-
-.input-4 {
-  width: 203px; }
-
-.input-date {
-  padding-right: 60px;
-  background-image: url(../img/icon-calendar.png);
-  background-repeat: no-repeat;
-  background-position: 97% center; }
-
-.input-time {
-  padding-right: 60px;
-  background-image: url(../img/icon-timer.png);
-  background-repeat: no-repeat;
-  background-position: 94% center; }
-
-.input-budget {
-  padding-right: 60px;
-  background-image: url(../img/icon-purse.png);
-  background-repeat: no-repeat;
-  background-position: 94% center;
-  margin-right: 0 !important; }
 
 .performers-radios p {
   width: 450px;
@@ -1523,6 +1618,17 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   background-position: 0 -358px;
   width: 25px;
   height: 27px; }
+
+.icon-close {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 26px;
+  height: 26px;
+  background-position: -64px -356px; }
 
 /* ==========================================================================
     LISTS
