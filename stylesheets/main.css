@@ -77,6 +77,9 @@ ul {
 .pdt-0 {
   padding-top: 0 !important; }
 
+.pdb-0 {
+  padding-bottom: 0 !important; }
+
 .clearfix:before,
 .clearfix:after {
   content: ".";
@@ -610,7 +613,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 660px;
   padding: 0 20px; }
 .request-info .row {
-  display: tablez; }
+  display: table; }
   .request-info .row .cell-big {
     width: 500px;
     padding-right: 10px; }
@@ -863,6 +866,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   display: block;
   padding-left: 20px;
   margin-bottom: 10px; }
+
+.label-inline {
+  display: inline; }
 
 .input-primary, .textarea-primary {
   -webkit-box-sizing: border-box;
@@ -1295,6 +1301,21 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   -o-border-radius: 50px;
   border-radius: 50px; }
 
+.btn-flat {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 50px;
+  border: none;
+  line-height: 50px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 60px; }
+
 .btn-login span {
   border-bottom: 1px dotted #444444;
   color: #444444;
@@ -1491,9 +1512,15 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   margin: 0 10px 0 5px; }
 
 .icon-info {
-  background-position: 0 -241px;
+  background-position: -152px -201px;
   width: 25px;
   height: 25px;
+  margin-bottom: 5px; }
+
+.icon-info-gray {
+  background-position: -96px -357px;
+  width: 26px;
+  height: 26px;
   margin-bottom: 5px; }
 
 .btn-right-orange, .list-service-steps li:before {
@@ -1802,6 +1829,126 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     width: 120px; }
 
 /* ==========================================================================
+    REGISTRATION
+========================================================================== */
+.account-type-selection > div {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 250px;
+  font-style: italic; }
+.account-type-selection .account-types {
+  width: 560px;
+  padding: 0 30px; }
+  .account-type-selection .account-types a {
+    float: left;
+    width: 275px;
+    height: 52px;
+    color: white;
+    font-size: 24px;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center; }
+  .account-type-selection .account-types .is-chosen {
+    text-decoration: underline;
+    border: none; }
+
+.btn-left {
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px; }
+
+.btn-right {
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 20px; }
+
+.block-left {
+  text-align: right; }
+
+.block-right {
+  text-align: left; }
+
+.form-registration {
+  padding: 30px 0;
+  border-top: 1px solid #ec4f15;
+  background-color: #fff5e6; }
+  .form-registration .before {
+    font-size: 18px;
+    padding-left: 250px;
+    margin-bottom: 30px; }
+  .form-registration .row .label,
+  .form-registration .row .input-container {
+    display: table-cell;
+    vertical-align: top; }
+  .form-registration .row .label {
+    width: 200px;
+    padding-top: 12px;
+    padding-right: 50px;
+    text-align: right; }
+  .form-registration .row .input-container input,
+  .form-registration .row .input-container textarea,
+  .form-registration .row .input-container .select-box {
+    width: 630px;
+    margin-right: 30px;
+    margin-bottom: 20px; }
+  .form-registration .row textarea {
+    height: 210px; }
+  .form-registration .row .checkbox {
+    margin-right: 10px;
+    vertical-align: bottom; }
+  .form-registration button {
+    display: block;
+    width: 350px;
+    margin: 30px auto; }
+  .form-registration .icon-info-gray {
+    margin-top: 12px; }
+
+/* ==========================================================================
+    TABS
+========================================================================== */
+.tabs {
+  margin-top: 15px; }
+  .tabs ul {
+    text-align: center; }
+    .tabs ul li, .tabs ul a {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline; }
+    .tabs ul a {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+      top: 1px;
+      width: 276px;
+      height: 50px;
+      text-align: center;
+      color: #444444;
+      font-size: 24px;
+      line-height: 50px;
+      font-weight: bold; }
+    .tabs ul a.is-open,
+    .tabs ul a:hover {
+      background-color: #fff5e6;
+      color: #ec4f15;
+      border: 1px solid #ec4f15; }
+    .tabs ul a.is-open {
+      border-bottom-color: #fff5e6; }
+
+/* ==========================================================================
     FOOTER
 ========================================================================== */
 .footer {
@@ -1859,7 +2006,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 .select-city {
   width: 210px; }
 
-.select-performer {
+.select-performer, .form-registration .row .select-box {
   margin-right: 40px; }
 
 .sl-button {
@@ -1939,37 +2086,38 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 .sl-open .sl-button {
   border-color: #ff4a0d transparent transparent; }
 
-.select-performer,
+.select-performer, .form-registration .row .select-box,
 .select-category {
   width: 450px;
   margin-bottom: 40px; }
-  .select-performer .sl-button,
+  .select-performer .sl-button, .form-registration .row .select-box .sl-button,
   .select-category .sl-button {
     margin: 22px 15px 0;
     border-color: #59b200 transparent transparent transparent; }
-  .select-performer .sl-placeholder-container,
+  .select-performer .sl-placeholder-container, .form-registration .row .select-box .sl-placeholder-container,
   .select-category .sl-placeholder-container {
     padding: 0 30px;
     border: 2px solid #78bf2f; }
-  .select-performer .sl-placeholder,
+  .select-performer .sl-placeholder, .form-registration .row .select-box .sl-placeholder,
   .select-category .sl-placeholder {
     width: 400px !important;
     color: #4c9900;
     font-family: "metapro_condnorm", sans-serif;
     height: 47px;
     line-height: 47px; }
-  .select-performer .sl-container .sl-options,
+  .select-performer .sl-container .sl-options, .form-registration .row .select-box .sl-container .sl-options,
   .select-category .sl-container .sl-options {
     border: 2px solid #78bf2f; }
-    .select-performer .sl-container .sl-options a,
+    .select-performer .sl-container .sl-options a, .form-registration .row .select-box .sl-container .sl-options a,
     .select-category .sl-container .sl-options a {
       color: #59b200;
       font-family: "metapro_condnorm", sans-serif; }
-    .select-performer .sl-container .sl-options li:hover a,
+    .select-performer .sl-container .sl-options li:hover a, .form-registration .row .select-box .sl-container .sl-options li:hover a,
     .select-category .sl-container .sl-options li:hover a {
       color: #4c9900; }
-  .select-performer .sl-container:hover .sl-button,
+  .select-performer .sl-container:hover .sl-button, .form-registration .row .select-box .sl-container:hover .sl-button,
   .select-performer .sl-open .sl-button,
+  .form-registration .row .select-box .sl-open .sl-button,
   .select-category .sl-container:hover .sl-button,
   .select-category .sl-open .sl-button {
     border-color: #4c9900 transparent transparent; }

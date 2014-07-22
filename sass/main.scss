@@ -107,6 +107,10 @@ ul {
 	padding-top: 0 !important;
 }
 
+.pdb-0 {
+	padding-bottom: 0 !important;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: ".";
@@ -714,7 +718,7 @@ img.round-rectangle {
 	}
 
 	.row {
-		display: tablez;
+		display: table;
 
 		.cell-big {
 			width: 500px;
@@ -1076,6 +1080,10 @@ img.round-rectangle {
 	display: block;
 	padding-left: 20px;
 	margin-bottom: 10px;	
+}
+
+.label-inline {
+	display: inline;
 }
 
 .input-primary {
@@ -1577,6 +1585,18 @@ img.round-rectangle {
 	@include border-radius(50px);
 }
 
+
+.btn-flat {
+	@include inline-block;
+	height: 50px;
+	border: none;
+	line-height: 50px;
+	color: $white;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 60px;
+}
+
 .btn-login {
 	span {
 		border-bottom: 1px dotted $tundora;
@@ -1811,9 +1831,16 @@ img.round-rectangle {
 }
 
 .icon-info {
-	background-position: 0 -241px ;
+	background-position: -152px -201px ;
 	width: 25px;
 	height: 25px;
+	margin-bottom: 5px;
+}
+
+.icon-info-gray {
+	background-position: -96px -357px ;
+	width: 26px;
+	height: 26px;
 	margin-bottom: 5px;
 }
 
@@ -2173,6 +2200,155 @@ img.round-rectangle {
         @include inline-block;
         width: 120px;
     }    
+}
+
+/* ==========================================================================
+    REGISTRATION
+========================================================================== */
+
+.account-type-selection {
+	> div {
+        @include inline-block;
+		width: 250px;
+		font-style: italic;
+	}
+
+	.account-types {
+		width: 560px;
+		padding: 0 30px;
+		a {	
+			float: left;
+			width: 275px;
+			height: 52px;
+			color: $white;
+			font-size: 24px;
+			line-height: 50px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.is-chosen {
+			text-decoration: underline;
+			border: none;
+		}
+	}
+}
+
+.btn-left {
+	@include border-corner-radius(top, left, 20px);
+	@include border-corner-radius(bottom, left, 20px);
+}
+
+.btn-right {
+	@include border-corner-radius(top, right, 20px);
+	@include border-corner-radius(bottom, right, 20px);
+}
+
+.block-left {
+	text-align: right;
+}
+
+.block-right {
+	text-align: left;
+}
+
+.form-registration {
+	padding: 30px 0;
+	border-top: 1px solid $grenadier;
+	background-color: $serenadeapprox;
+
+	.before {
+		font-size: 18px;
+		padding-left: 250px;	
+		margin-bottom: 30px;	
+	}
+
+	.row {
+		.label,
+		.input-container {
+			display: table-cell;
+			vertical-align: top;
+		}
+
+		.label {
+			width: 200px;
+			padding-top: 12px;
+			padding-right: 50px;
+			text-align: right;
+		}
+
+		.input-container {
+			input,
+			textarea,
+			.select-box {
+				width: 630px;
+				margin-right: 30px;
+				margin-bottom: 20px;
+			}
+		}
+
+		.select-box {
+			@extend .select-performer;
+		}
+
+		textarea {
+			height: 210px;
+		}
+
+		.checkbox {
+			margin-right: 10px;
+			vertical-align: bottom;
+		}
+	}
+
+	button {
+		display: block;
+		width: 350px;
+		margin: 30px auto;
+	}
+
+	.icon-info-gray {
+		margin-top: 12px;
+	}
+}
+
+/* ==========================================================================
+    TABS
+========================================================================== */
+
+.tabs {
+	margin-top: 15px;
+	ul {
+		text-align: center;
+
+		li, a {
+			@include inline-block;
+		}
+
+		a {
+			@include box-sizing(border-box);
+			position: relative;
+			top: 1px;
+			width: 276px;
+			height: 50px;
+			text-align: center;
+			color: $tundora;
+			font-size: 24px;
+			line-height: 50px;
+			font-weight: bold;
+		}
+
+		a.is-open,
+		a:hover {
+			background-color: $serenadeapprox;
+			color: $grenadier;
+			border: 1px solid $grenadier;
+		}
+
+		a.is-open {
+			border-bottom-color: $serenadeapprox;
+		}
+	}
 }
 
 /* ==========================================================================
