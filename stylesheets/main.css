@@ -1383,13 +1383,21 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     background-color: #4c9900; }
 
 .btn-wide {
-  width: 100%; }
+  width: 100%;
+  padding: 0;
+  text-align: center; }
 
 .btn-thin {
   height: 36px;
   font-size: 18px;
   line-height: 34px;
   margin: 15px 0 0 !important; }
+
+.btn-default {
+  display: block;
+  width: 350px;
+  padding: 0;
+  margin: 30px auto; }
 
 /* ==========================================================================
     ICONS
@@ -1695,6 +1703,21 @@ a:hover .icon-speaker,
 a.is-open .icon-speaker {
   background-position: -283px -356px; }
 
+.icon-yes {
+  width: 26px;
+  height: 26px;
+  background-position: -89px -395px; }
+
+.icon-yes-white {
+  width: 27px;
+  height: 29px;
+  background-position: -171px -397px; }
+
+.icon-no {
+  width: 24px;
+  height: 24px;
+  background-position: -123px -395px; }
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -1867,6 +1890,39 @@ a.is-open .icon-speaker {
     width: 120px; }
 
 /* ==========================================================================
+    TARIFFS
+========================================================================== */
+.tariff {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ec4f15;
+  width: 262px;
+  padding: 30px;
+  margin-left: 25px; }
+  .tariff h5 {
+    color: #ec4f15;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center; }
+
+.tariff:first-of-type {
+  margin-left: 0; }
+
+.list-tariff {
+  margin: 15px 0; }
+  .list-tariff li {
+    margin-bottom: 5px;
+    color: #444444;
+    font-size: 18px;
+    font-weight: bold; }
+    .list-tariff li span {
+      display: table-cell; }
+    .list-tariff li .icon-wrapper {
+      padding-right: 5px; }
+
+/* ==========================================================================
     REGISTRATION
 ========================================================================== */
 .account-type-selection > div {
@@ -1944,10 +2000,6 @@ a.is-open .icon-speaker {
   .form-registration .row .checkbox {
     margin-right: 10px;
     vertical-align: bottom; }
-  .form-registration button {
-    display: block;
-    width: 350px;
-    margin: 30px auto; }
   .form-registration .icon-info-gray {
     margin-top: 12px; }
 

@@ -1691,6 +1691,8 @@ img.round-rectangle {
 
 .btn-wide {
 	width: 100%;
+	padding: 0;
+	text-align: center;
 }
 
 .btn-thin {
@@ -1698,6 +1700,13 @@ img.round-rectangle {
 	font-size: 18px;
 	line-height: 34px;
 	margin: 15px 0 0 !important;
+}
+
+.btn-default {
+	display: block;
+	width: 350px;
+	padding: 0;
+	margin: 30px auto;
 }
 
 /* ==========================================================================
@@ -2052,6 +2061,24 @@ a.is-open .icon-speaker {
 	background-position: -283px -356px;
 }
 
+.icon-yes {
+	width: 26px;
+	height: 26px;
+	background-position: -89px -395px;
+}
+
+.icon-yes-white {
+	width: 27px;
+	height: 29px;
+	background-position: -171px -397px;
+}
+
+.icon-no {
+	width: 24px;
+	height: 24px;
+	background-position: -123px -395px;
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -2258,6 +2285,47 @@ a.is-open .icon-speaker {
 }
 
 /* ==========================================================================
+    TARIFFS
+========================================================================== */
+
+.tariff {
+	float: left;
+	@include box-sizing(border-box);
+	border: 1px solid $grenadier;
+	width: 262px;
+	padding: 30px;
+	margin-left: 25px;
+
+	h5 {
+		color: $grenadier;
+		font-size: 26px;
+		font-weight: bold;
+		text-align: center;
+	}
+}
+
+.tariff:first-of-type {
+	margin-left: 0;
+}
+
+.list-tariff {
+	margin: 15px 0;
+	li {
+		margin-bottom: 5px;
+		color: $tundora;
+		font-size: 18px;
+		font-weight: bold;
+		span {
+			display: table-cell;
+		}
+
+		.icon-wrapper {
+			padding-right: 5px;
+		}
+	}
+}
+
+/* ==========================================================================
     REGISTRATION
 ========================================================================== */
 
@@ -2354,12 +2422,6 @@ a.is-open .icon-speaker {
 			margin-right: 10px;
 			vertical-align: bottom;
 		}
-	}
-
-	button {
-		display: block;
-		width: 350px;
-		margin: 30px auto;
 	}
 
 	.icon-info-gray {
