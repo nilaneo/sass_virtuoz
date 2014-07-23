@@ -277,6 +277,10 @@ ul {
   font-weight: normal;
   text-align: center;
   margin: 15px 0; }
+  .subtitle-section i, .subtitle-section span {
+    vertical-align: middle; }
+  .subtitle-section i {
+    margin-right: 10px; }
 
 .title-article {
   font-size: 20px;
@@ -1647,15 +1651,49 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   height: 27px; }
 
 .icon-close {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   width: 26px;
   height: 26px;
   background-position: -64px -356px; }
+
+.icon-pencil {
+  width: 26px;
+  height: 28px;
+  background-position: -133px -356px; }
+
+.icon-pencil:hover,
+a:hover .icon-pencil,
+a.is-open .icon-pencil {
+  background-position: -164px -356px; }
+
+.icon-book {
+  width: 23px;
+  height: 26px;
+  background-position: -312px -356px; }
+
+.icon-book:hover,
+a:hover .icon-book,
+a.is-open .icon-book {
+  background-position: -339px -355px; }
+
+.icon-article {
+  width: 26px;
+  height: 26px;
+  background-position: -200px -356px; }
+
+.icon-article:hover,
+a:hover .icon-article,
+a.is-open .icon-article {
+  background-position: -226px -356px; }
+
+.icon-speaker {
+  width: 26px;
+  height: 26px;
+  background-position: -255px -355px; }
+
+.icon-speaker:hover,
+a:hover .icon-speaker,
+a.is-open .icon-speaker {
+  background-position: -283px -356px; }
 
 /* ==========================================================================
     LISTS
@@ -1940,6 +1978,10 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
       font-size: 24px;
       line-height: 50px;
       font-weight: bold; }
+      .tabs ul a i, .tabs ul a span {
+        vertical-align: middle; }
+      .tabs ul a i {
+        margin-right: 5px; }
     .tabs ul a.is-open,
     .tabs ul a:hover {
       background-color: #fff5e6;
