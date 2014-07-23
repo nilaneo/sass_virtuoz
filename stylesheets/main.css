@@ -819,7 +819,7 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 140px;
   height: 70px; }
 .article-preview .cell-1 {
-  width: 200px; }
+  width: 220px; }
 .article-preview .cell-2 {
   width: 620px; }
 .article-preview:hover {
@@ -827,6 +827,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   padding: 15px; }
   .article-preview:hover h3 {
     text-decoration: underline; }
+.article-preview .checkbox {
+  margin: 0 20px; }
 
 .search-box {
   height: 50px;
