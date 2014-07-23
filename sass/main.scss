@@ -296,6 +296,16 @@ ul {
 	background-color: #f6f4f1;
 } 
 
+.bg-light {
+	padding: 30px 0;
+	background-color: $serenadeapprox;
+	border-top: 1px solid $grenadier;
+}
+
+.bg-light.border-bottom {
+	border-bottom: 1px solid $grenadier;
+}
+
 .bg-top-geometr {
 	&:before {
 		display: block;
@@ -415,6 +425,59 @@ ul {
 	text-align: center;
 	.icon {
 		margin: 0 auto;
+	}
+}
+
+.panel {
+	> div {
+		@include inline-block;
+		vertical-align: middle;
+		margin-bottom: 10px;
+	}
+
+	.btn {
+		margin: 0;
+	}
+}
+
+.filter-buttons {
+	margin-right: 50px;
+	a {
+		float: left;
+		width: 122px;
+		height: 36px;
+		border: 1px solid $grenadier;
+		background-color: $white;
+		color: $grenadier;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 34px;
+		text-align: center;
+	}
+
+	.btn-small-left {
+		border-right: none;
+	}
+
+	.btn-small-right {
+		border-left: none;
+	}
+
+	.is-active {
+		background-color: $grenadier;
+		color: $white;
+	}
+}
+
+.options {
+	a {
+		@include inline-block;
+		margin-left: 30px;
+		color: $grenadier;
+
+		i, span {
+			vertical-align: middle;
+		}
 	}
 }
 
@@ -2079,6 +2142,37 @@ a.is-open .icon-speaker {
 	background-position: -123px -395px;
 }
 
+.icon-top {
+	width: 21px;
+	height: 25px;
+	background-position: -212px -396px;
+}
+
+.icon-deactivate {
+	width: 21px;
+	height: 25px;
+	background-position: -240px -396px;
+}
+
+.icon-delete {
+	width: 21px;
+	height: 25px;
+	background-position: -268px -396px;
+}
+
+.icon-edit {
+	width: 26px;
+	height: 25px;
+	background-position: -327px -396px;
+}
+
+.icon-eye {
+	width: 25px;
+	height: 16px;
+	margin-top: -6px !important;
+	background-position: -298px -396px;
+}
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -2189,6 +2283,11 @@ a.is-open .icon-speaker {
 }
 
 .service-performer {
+	font-weight: bold;
+}
+
+.lnk-edit {
+	color: $grenadier;
 	font-weight: bold;
 }
 
@@ -2367,6 +2466,16 @@ a.is-open .icon-speaker {
 	@include border-corner-radius(bottom, right, 20px);
 }
 
+.btn-left-small {
+	@include border-corner-radius(top, left, 10px);
+	@include border-corner-radius(bottom, left, 10px);
+}
+
+.btn-right-small {
+	@include border-corner-radius(top, right, 10px);
+	@include border-corner-radius(bottom, right, 10px);
+}
+
 .block-left {
 	text-align: right;
 }
@@ -2376,9 +2485,6 @@ a.is-open .icon-speaker {
 }
 
 .form-registration {
-	padding: 30px 0;
-	border-top: 1px solid $grenadier;
-	background-color: $serenadeapprox;
 
 	.before {
 		font-size: 18px;
