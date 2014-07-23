@@ -389,10 +389,9 @@ ul {
     font-weight: bold;
     line-height: 34px;
     text-align: center; }
-  .filter-buttons .btn-small-left {
+  .filter-buttons .btn-center {
+    border-left: none;
     border-right: none; }
-  .filter-buttons .btn-small-right {
-    border-left: none; }
   .filter-buttons .is-active {
     background-color: #ec4f15;
     color: white; }
@@ -951,7 +950,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   border: none; }
 
 .input-wrapper {
-  border: 2px solid #78bf2f; }
+  border: 2px solid #78bf2f;
+  background-color: white; }
   .input-wrapper input {
     margin: 0;
     vertical-align: middle; }
@@ -1703,6 +1703,11 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 56px;
   height: 56px; }
 
+.icon-status-chosen {
+  background-position: -374px -274px;
+  width: 56px;
+  height: 56px; }
+
 .icon-done-small {
   background-position: -30px -355px;
   width: 25px;
@@ -2325,6 +2330,12 @@ a.is-open .icon-speaker {
     line-height: 40px; }
   .select-narrow .sl-container .sl-options li a {
     font-size: 18px; }
+
+.select-middle {
+  width: 265px;
+  margin-bottom: 0; }
+  .select-middle .sl-placeholder {
+    width: 230px !important; }
 
 .select-longer {
   width: 300px; }

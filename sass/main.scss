@@ -455,12 +455,9 @@ ul {
 		text-align: center;
 	}
 
-	.btn-small-left {
-		border-right: none;
-	}
-
-	.btn-small-right {
+	.btn-center {
 		border-left: none;
+		border-right: none;
 	}
 
 	.is-active {
@@ -1185,6 +1182,7 @@ img.round-rectangle {
 
 .input-wrapper {
 	border: 2px solid $atlantisapprox;
+	background-color: $white;
 	input {
 		margin: 0;
 		vertical-align: middle;
@@ -2062,6 +2060,12 @@ img.round-rectangle {
 	height: 56px;
 }
 
+.icon-status-chosen {
+	background-position: -374px -274px;
+	width: 56px;
+	height: 56px;
+}
+
 .icon-done-small {
 	background-position: -30px -355px;
 	width: 25px;
@@ -2812,6 +2816,14 @@ a.is-open .icon-speaker {
 
 	.sl-container .sl-options li a {
 		font-size: 18px;
+	}
+}
+
+.select-middle {
+	width: 265px;
+	margin-bottom: 0;
+	.sl-placeholder {
+		width: 230px !important;
 	}
 }
 
