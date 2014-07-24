@@ -1923,6 +1923,12 @@ a.is-open .icon-speaker {
   height: 25px;
   background-position: -152px -429px; }
 
+.icon-attention {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  background-position: -189px -427px; }
+
 /* ==========================================================================
     LISTS
 ========================================================================== */
@@ -2156,6 +2162,57 @@ a.is-open .icon-speaker {
       display: table-cell; }
     .list-tariff li .icon-wrapper {
       padding-right: 5px; }
+
+.blocks-4 > div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 263px;
+  height: 140px;
+  padding: 15px;
+  border: 1px solid #bbb;
+  margin-left: 25px;
+  text-align: center;
+  cursor: pointer; }
+  .blocks-4 > div:first-of-type {
+    margin-left: 0; }
+  .blocks-4 > div:hover {
+    border-color: #ec4f15;
+    background-color: #ffeae3; }
+    .blocks-4 > div:hover .text-big {
+      color: #ec4f15; }
+  .blocks-4 > div .subtitle-section {
+    display: block;
+    margin: 0; }
+  .blocks-4 > div img {
+    margin-top: 5px; }
+.blocks-4 .no-border,
+.blocks-4 .no-border:hover {
+  border: none;
+  background-color: transparent;
+  text-align: right;
+  font-weight: bold; }
+
+.blocks-gray > div {
+  background-color: #eee; }
+
+.blocks-white > div {
+  background-color: white;
+  height: 160px; }
+
+.text-big {
+  font-size: 36px;
+  margin: 5px 0; }
+
+.attention {
+  width: 720px;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 10px;
+  background-color: #eee;
+  border: 1px solid #bbb;
+  margin: 30px auto; }
 
 /* ==========================================================================
     REGISTRATION
