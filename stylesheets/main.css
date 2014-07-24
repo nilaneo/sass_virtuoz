@@ -347,7 +347,9 @@ ul {
     font-weight: normal;
     vertical-align: baseline; }
     .filter > div .icon, .filter > div .has-star:before, .filter > div .article-with-arrows .title-article:before, .article-with-arrows .filter > div .title-article:before, .filter > div .btn-step-prev,
-    .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
+    .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .upload .btn-delete-avatar, .upload .filter > div .btn-delete-avatar,
+    .filter > div .upload .btn-upload-avatar,
+    .upload .filter > div .btn-upload-avatar, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
     .filter > div .jcarousel-control-next span,
     .jcarousel-control-next .filter > div span,
     .filter > div .slider-small .jcarousel-control-next-small span,
@@ -371,7 +373,9 @@ ul {
   margin-right: 5px;
   text-align: center; }
   .icon-wrapper .icon, .icon-wrapper .has-star:before, .icon-wrapper .article-with-arrows .title-article:before, .article-with-arrows .icon-wrapper .title-article:before, .icon-wrapper .btn-step-prev,
-  .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
+  .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .upload .btn-delete-avatar, .upload .icon-wrapper .btn-delete-avatar,
+  .icon-wrapper .upload .btn-upload-avatar,
+  .upload .icon-wrapper .btn-upload-avatar, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
   .icon-wrapper .jcarousel-control-next span,
   .jcarousel-control-next .icon-wrapper span,
   .icon-wrapper .slider-small .jcarousel-control-next-small span,
@@ -1490,7 +1494,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     ICONS
 ========================================================================== */
 .icon, .has-star:before, .article-with-arrows .title-article:before, .btn-step-prev,
-.btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
+.btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .upload .btn-delete-avatar,
+.upload .btn-upload-avatar, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
 .jcarousel-control-next span,
 .slider-small .jcarousel-control-next-small span {
   display: -moz-inline-stack;
@@ -2167,32 +2172,81 @@ a.is-open .icon-speaker {
 .block-right {
   text-align: left; }
 
-.form-registration .before {
+.form-registration .before,
+.form .before {
   font-size: 18px;
   padding-left: 250px;
   margin-bottom: 30px; }
 .form-registration .row .label,
-.form-registration .row .input-container {
+.form-registration .row .input-container,
+.form .row .label,
+.form .row .input-container {
   display: table-cell;
   vertical-align: top; }
-.form-registration .row .label {
+.form-registration .row .label,
+.form .row .label {
   width: 200px;
   padding-top: 12px;
   padding-right: 50px;
   text-align: right; }
 .form-registration .row .input-container input,
 .form-registration .row .input-container textarea,
-.form-registration .row .input-container .select-box {
+.form-registration .row .input-container .select-box,
+.form .row .input-container input,
+.form .row .input-container textarea,
+.form .row .input-container .select-box {
   width: 630px;
   margin-right: 30px;
   margin-bottom: 20px; }
-.form-registration .row textarea {
+.form-registration .row textarea,
+.form .row textarea {
   height: 210px; }
-.form-registration .row .checkbox {
+.form-registration .row .checkbox,
+.form .row .checkbox {
   margin-right: 10px;
   vertical-align: bottom; }
-.form-registration .icon-info-gray {
+.form-registration .icon-info-gray,
+.form .icon-info-gray {
   margin-top: 12px; }
+
+.upload {
+  position: relative; }
+  .upload input {
+    position: absolute;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    cursor: pointer; }
+  .upload .btn-delete-avatar,
+  .upload .btn-upload-avatar {
+    position: absolute;
+    width: 25px;
+    height: 25px; }
+  .upload .btn-delete-avatar {
+    top: 15px;
+    left: 15px;
+    background-position: -86px -429px; }
+  .upload .btn-upload-avatar {
+    right: 15px;
+    bottom: 15px;
+    background-position: -117px -429px;
+    z-index: 1; }
+
+.upload-avavatar {
+  width: 160px;
+  height: 125px;
+  border: 2px solid #59b200;
+  margin-bottom: 20px;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  background-position: center center; }
+  .upload-avavatar input {
+    width: 25px !important;
+    height: 25px;
+    bottom: 15px;
+    margin: 0 !important;
+    right: 15px;
+    z-index: 1000; }
 
 /* ==========================================================================
     TABS
@@ -2299,7 +2353,8 @@ a.is-open .icon-speaker {
 .select-city {
   width: 210px; }
 
-.select-performer, .form-registration .row .select-box {
+.select-performer, .form-registration .row .select-box,
+.form .row .select-box {
   margin-right: 40px; }
 
 .sl-button {
@@ -2380,18 +2435,22 @@ a.is-open .icon-speaker {
   border-color: #ff4a0d transparent transparent; }
 
 .select-performer, .form-registration .row .select-box,
+.form .row .select-box,
 .select-category {
   width: 450px;
   margin-bottom: 40px; }
   .select-performer .sl-button, .form-registration .row .select-box .sl-button,
+  .form .row .select-box .sl-button,
   .select-category .sl-button {
     margin: 22px 15px 0;
     border-color: #59b200 transparent transparent transparent; }
   .select-performer .sl-placeholder-container, .form-registration .row .select-box .sl-placeholder-container,
+  .form .row .select-box .sl-placeholder-container,
   .select-category .sl-placeholder-container {
     padding: 0 30px;
     border: 2px solid #78bf2f; }
   .select-performer .sl-placeholder, .form-registration .row .select-box .sl-placeholder,
+  .form .row .select-box .sl-placeholder,
   .select-category .sl-placeholder {
     width: 400px !important;
     color: #4c9900;
@@ -2399,18 +2458,23 @@ a.is-open .icon-speaker {
     height: 47px;
     line-height: 47px; }
   .select-performer .sl-container .sl-options, .form-registration .row .select-box .sl-container .sl-options,
+  .form .row .select-box .sl-container .sl-options,
   .select-category .sl-container .sl-options {
     border: 2px solid #78bf2f; }
     .select-performer .sl-container .sl-options a, .form-registration .row .select-box .sl-container .sl-options a,
+    .form .row .select-box .sl-container .sl-options a,
     .select-category .sl-container .sl-options a {
       color: #59b200;
       font-family: "metapro_condnorm", sans-serif; }
     .select-performer .sl-container .sl-options li:hover a, .form-registration .row .select-box .sl-container .sl-options li:hover a,
+    .form .row .select-box .sl-container .sl-options li:hover a,
     .select-category .sl-container .sl-options li:hover a {
       color: #4c9900; }
   .select-performer .sl-container:hover .sl-button, .form-registration .row .select-box .sl-container:hover .sl-button,
+  .form .row .select-box .sl-container:hover .sl-button,
   .select-performer .sl-open .sl-button,
   .form-registration .row .select-box .sl-open .sl-button,
+  .form .row .select-box .sl-open .sl-button,
   .select-category .sl-container:hover .sl-button,
   .select-category .sl-open .sl-button {
     border-color: #4c9900 transparent transparent; }

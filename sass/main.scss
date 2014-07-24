@@ -2611,7 +2611,8 @@ a.is-open .icon-speaker {
 	text-align: left;
 }
 
-.form-registration {
+.form-registration,
+.form {
 
 	.before {
 		font-size: 18px;
@@ -2659,6 +2660,56 @@ a.is-open .icon-speaker {
 
 	.icon-info-gray {
 		margin-top: 12px;
+	}
+}
+
+.upload {
+	position: relative;
+	input {
+		position: absolute;
+		@include opacity(0);
+		cursor: pointer;
+	}
+
+	.btn-delete-avatar,
+	.btn-upload-avatar {
+		position: absolute;
+		@extend .icon;
+		width: 25px;
+		height: 25px;
+	}
+
+	.btn-delete-avatar {
+		top: 15px;
+		left: 15px;
+		background-position: -86px -429px;
+	}
+
+	.btn-upload-avatar {
+		right: 15px;
+		bottom: 15px;
+		background-position: -117px -429px;
+		z-index: 1;
+	}
+}
+
+.upload-avavatar {
+	width: 160px;
+	height: 125px;
+	border: 2px solid $limeade;
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-color: $white;
+	background-size: contain;
+	background-position: center center;
+
+	input {
+		width: 25px !important;
+		height: 25px;
+		bottom: 15px;
+		margin: 0 !important;
+		right: 15px;
+		z-index: 1000;
 	}
 }
 
