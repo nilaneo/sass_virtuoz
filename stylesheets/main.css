@@ -1018,6 +1018,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   font-size: 22px;
   font-family: "metapro_condnorm", sans-serif; }
 
+.input-red {
+  border-color: #ec4f15; }
+
 .input-small {
   font-size: 18px;
   height: 40px; }
@@ -2243,7 +2246,7 @@ a.is-open .icon-speaker {
 .form .row .input-container input,
 .form .row .input-container textarea,
 .form .row .input-container .select-box {
-  width: 630px;
+  width: 610px;
   margin-right: 30px;
   margin-bottom: 20px; }
 .form-registration .row textarea,
@@ -2257,8 +2260,24 @@ a.is-open .icon-speaker {
 .form .icon-info-gray {
   margin-top: 12px; }
 
+.input-info {
+  width: 190px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top; }
+  .input-info p {
+    margin-bottom: 10px; }
+
 .upload {
-  position: relative; }
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: auto;
+  background-position: center center; }
   .upload input {
     position: absolute;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -2283,11 +2302,7 @@ a.is-open .icon-speaker {
   width: 160px;
   height: 125px;
   border: 2px solid #59b200;
-  margin-bottom: 20px;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: contain;
-  background-position: center center; }
+  margin-bottom: 20px; }
   .upload-avavatar input {
     width: 25px !important;
     height: 25px;
@@ -2295,6 +2310,41 @@ a.is-open .icon-speaker {
     margin: 0 !important;
     right: 15px;
     z-index: 1000; }
+
+.upload-photo {
+  width: 179px;
+  height: 124px;
+  border: 2px solid #59b200; }
+  .upload-photo input {
+    width: 100% !important;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
+.list-upload-photos {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  width: 640px; }
+  .list-upload-photos li {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 20px; }
+
+.additional-info {
+  position: absolute;
+  bottom: 45px;
+  right: 270px;
+  width: 350px;
+  font-weight: bold; }
+  .additional-info a {
+    display: block;
+    margin-top: 10px;
+    color: #ec4f15;
+    text-decoration: underline; }
 
 /* ==========================================================================
     TABS
