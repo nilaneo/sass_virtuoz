@@ -151,6 +151,10 @@ ul {
 	}
 }
 
+.checkbox-green {
+	background-image: url(../img/checkbox-green.png);
+}
+
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -588,12 +592,21 @@ ul {
 		padding: 14px;
 	}
 
+}
+
+.has-checkbox {
+	position: relative;
+	.checkbox {
+		position: absolute;
+		top: 60px;
+		right: 14px;
+	}
+}
+
+.block-requests {
 	.has-checkbox {
-		position: relative;
 		.checkbox {
-			position: absolute;
-			top: 60px;
-			right: 14px;
+			right: -28px;
 		}
 	}
 }

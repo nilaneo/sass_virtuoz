@@ -117,6 +117,9 @@ ul {
   .checkbox.is-checked {
     background-position: 0 0; }
 
+.checkbox-green {
+  background-image: url(../img/checkbox-green.png); }
+
 /* ==========================================================================
     MAIN
 ========================================================================== */
@@ -485,12 +488,16 @@ ul {
   .service:hover, .offer:hover, .article-preview:hover {
     border: 1px solid #d93701;
     padding: 14px; }
-  .service .has-checkbox, .offer .has-checkbox, .article-preview .has-checkbox {
-    position: relative; }
-    .service .has-checkbox .checkbox, .offer .has-checkbox .checkbox, .article-preview .has-checkbox .checkbox {
-      position: absolute;
-      top: 60px;
-      right: 14px; }
+
+.has-checkbox {
+  position: relative; }
+  .has-checkbox .checkbox {
+    position: absolute;
+    top: 60px;
+    right: 14px; }
+
+.block-requests .has-checkbox .checkbox {
+  right: -28px; }
 
 .services-case .service, .services-case .offer, .services-case .article-preview {
   cursor: inherit; }
