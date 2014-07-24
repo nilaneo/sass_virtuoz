@@ -398,7 +398,8 @@ ul {
   margin-right: 50px; }
   .filter-buttons a {
     float: left;
-    width: 122px;
+    min-width: 102px;
+    padding: 0 10px;
     height: 36px;
     border: 1px solid #ec4f15;
     background-color: white;
@@ -503,9 +504,9 @@ ul {
 .block-requests .has-checkbox .checkbox {
   right: -28px; }
 
-.services-case .service, .services-case .offer, .services-case .article-preview {
+.services-case .service, .block-comments-all .service, .services-case .offer, .block-comments-all .offer, .services-case .article-preview, .block-comments-all .article-preview {
   cursor: inherit; }
-  .services-case .service:hover, .services-case .offer:hover, .services-case .article-preview:hover {
+  .services-case .service:hover, .block-comments-all .service:hover, .services-case .offer:hover, .block-comments-all .offer:hover, .services-case .article-preview:hover, .block-comments-all .article-preview:hover {
     border: none;
     padding: 15px; }
 
@@ -769,9 +770,11 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold; }
-  .comment .rating-stars, .offer-comment .rating-stars {
-    position: static;
-    margin: 15px 0; }
+
+.comment .rating-stars, .offer-comment .rating-stars,
+.block-comments-all .rating-stars {
+  position: static;
+  margin: 15px 0; }
 
 .offer-comment {
   position: relative;
@@ -809,6 +812,43 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   border-bottom-color: #59B200;
   border-width: 16px;
   margin-left: -16px; }
+
+.block-comments-all {
+  margin-bottom: 50px; }
+  .block-comments-all .service, .block-comments-all .offer, .block-comments-all .article-preview {
+    border: 1px solid #bbb; }
+    .block-comments-all .service:hover, .block-comments-all .offer:hover, .block-comments-all .article-preview:hover {
+      border: 1px solid #ec4f15 !important; }
+    .block-comments-all .service h3 a, .block-comments-all .offer h3 a, .block-comments-all .article-preview h3 a {
+      display: -moz-inline-stack;
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      zoom: 1;
+      *display: inline;
+      width: 470px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: underline; }
+    .block-comments-all .service .checkbox, .block-comments-all .offer .checkbox, .block-comments-all .article-preview .checkbox {
+      position: static; }
+    .block-comments-all .service .lnk-edit, .block-comments-all .offer .lnk-edit, .block-comments-all .article-preview .lnk-edit {
+      color: #59b200; }
+    .block-comments-all .service .round-rectangle, .block-comments-all .offer .round-rectangle, .block-comments-all .article-preview .round-rectangle, .block-comments-all .service .list-round-rectangles li .img-service, .list-round-rectangles li .block-comments-all .service .img-service, .block-comments-all .offer .list-round-rectangles li .img-service, .list-round-rectangles li .block-comments-all .offer .img-service, .block-comments-all .article-preview .list-round-rectangles li .img-service, .list-round-rectangles li .block-comments-all .article-preview .img-service {
+      margin-right: 20px; }
+    .block-comments-all .service .cell-1, .block-comments-all .offer .cell-1, .block-comments-all .article-preview .cell-1 {
+      width: 40px;
+      padding-right: 20px;
+      text-align: center;
+      vertical-align: middle; }
+    .block-comments-all .service .cell-2, .block-comments-all .offer .cell-2, .block-comments-all .article-preview .cell-2 {
+      width: 760px;
+      padding-right: 40px; }
+  .block-comments-all .service-request:hover {
+    border: 1px solid #59b200 !important; }
+  .block-comments-all .service-request h3 a {
+    color: #59b200; }
 
 .circle {
   -webkit-border-radius: 50%;
@@ -1846,10 +1886,13 @@ a.is-open .icon-speaker {
   height: 25px;
   background-position: -268px -396px; }
 
-.icon-edit {
+.icon-edit, .icon-edit-green {
   width: 26px;
   height: 25px;
   background-position: -327px -396px; }
+
+.icon-edit-green {
+  background-position: -327px -426px; }
 
 .icon-eye {
   width: 25px;
@@ -1871,6 +1914,11 @@ a.is-open .icon-speaker {
   width: 21px;
   height: 25px;
   background-position: -270px -431px; }
+
+.icon-performer {
+  width: 27px;
+  height: 25px;
+  background-position: -152px -429px; }
 
 /* ==========================================================================
     LISTS

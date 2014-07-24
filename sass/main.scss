@@ -463,7 +463,8 @@ ul {
 	margin-right: 50px;
 	a {
 		float: left;
-		width: 122px;
+		min-width: 102px;
+		padding: 0 10px;
 		height: 36px;
 		border: 1px solid $grenadier;
 		background-color: $white;
@@ -947,8 +948,11 @@ img.round-rectangle {
 		margin-bottom: 10px;
 		font-size: 20px;
 		font-weight: bold;
-	}
+	}	
+}
 
+.comment,
+.block-comments-all {
 	.rating-stars {
 		position: static;
 		margin: 15px 0;
@@ -1002,6 +1006,60 @@ img.round-rectangle {
 	border-bottom-color: #59B200;
 	border-width: 16px;
 	margin-left: -16px;
+}
+
+.block-comments-all {
+	@extend .services-case;
+	margin-bottom: 50px;
+	.service {
+		border: 1px solid #bbb;
+		&:hover {
+			border: 1px solid $grenadier !important;
+		}
+
+		h3 a {
+			@include inline-block;
+			width: 470px;
+			white-space: nowrap;
+	        overflow: hidden;
+	        text-overflow: ellipsis;
+			text-decoration: underline;
+		}
+
+		.checkbox {
+			position: static;
+		}
+
+		.lnk-edit {
+			color: $limeade;
+		}	
+
+		.round-rectangle {
+			margin-right: 20px;
+		}	
+		
+		.cell-1 {
+			width: 40px;
+			padding-right: 20px;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		.cell-2 {
+			width: 760px;
+			padding-right: 40px;
+		}		
+	}
+
+	.service-request {
+		&:hover {
+			border: 1px solid $limeade !important;
+		}
+
+		h3 a {
+		    color: $limeade;
+		}
+	}
 }
 
 .circle {
@@ -2259,6 +2317,11 @@ a.is-open .icon-speaker {
 	background-position: -327px -396px;
 }
 
+.icon-edit-green {
+	@extend .icon-edit;
+	background-position: -327px -426px;
+}
+
 .icon-eye {
 	width: 25px;
 	height: 16px;
@@ -2282,6 +2345,12 @@ a.is-open .icon-speaker {
 	width: 21px;
 	height: 25px;
 	background-position: -270px -431px;
+}
+
+.icon-performer {
+	width: 27px;
+	height: 25px;
+	background-position: -152px -429px;
 }
 
 /* ==========================================================================
