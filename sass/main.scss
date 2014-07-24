@@ -317,6 +317,10 @@ ul {
 	border-bottom: 1px solid $grenadier;
 }
 
+.bg-light-2.border-bottom {
+	border-bottom: 1px solid $limeade;
+}
+
 .bg-top-geometr {
 	&:before {
 		display: block;
@@ -477,6 +481,17 @@ ul {
 	}
 }
 
+.filter-buttons-green {
+	a {
+		border-color: $limeade;
+		color: $limeade;
+	}
+
+	.is-active {
+		background-color: $limeade;
+	}
+}
+
 .options {
 	a {
 		@include inline-block;
@@ -486,6 +501,12 @@ ul {
 		i, span {
 			vertical-align: middle;
 		}
+	}
+}
+
+.options-green {
+	a {
+		color: $limeade;
 	}
 }
 
@@ -859,6 +880,20 @@ img.round-rectangle {
 
 			p:last-of-type {
 				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.block-requests-user {
+	.service {
+		&:hover {
+			border: 1px solid $limeade;
+		}
+		h3 {
+
+			a {
+				color: $limeade;
 			}
 		}
 	}
@@ -2137,10 +2172,36 @@ a.is-open .icon-article {
 	background-position: -255px -355px;
 }
 
+.icon-comment-gray {
+	width: 25px;
+	height: 27px;
+	background-position: -385px -394px;
+}
+
 .icon-speaker:hover,
 a:hover .icon-speaker,
 a.is-open .icon-speaker {
 	background-position: -283px -356px;
+}
+
+.tabs-green {
+	.icon-speaker:hover,
+	a:hover .icon-speaker,
+	a.is-open .icon-speaker {
+		background-position: -394px -356px;
+	}
+
+	.icon-book:hover,
+	a:hover .icon-book,
+	a.is-open .icon-book {
+		background-position: -356px -396px;
+	}
+
+	.icon-comment-gray:hover,
+	a:hover .icon-comment-gray,
+	a.is-open .icon-comment-gray {
+		@extend .icon-comment;
+	}
 }
 
 .icon-yes {
@@ -2196,6 +2257,18 @@ a.is-open .icon-speaker {
 	width: 28px;
 	height: 28px;
 	background-position: -363px -354px;
+}
+
+.icon-close-request {
+	width: 21px;
+	height: 25px;
+	background-position: -240px -431px;
+}
+
+.icon-delete-request {
+	width: 21px;
+	height: 25px;
+	background-position: -270px -431px;
 }
 
 /* ==========================================================================
@@ -2619,6 +2692,21 @@ a.is-open .icon-speaker {
 
 		a.is-open {
 			border-bottom-color: $serenadeapprox;
+		}
+	}
+}
+
+.tabs-green {
+	ul {
+		a.is-open,
+		a:hover {
+			background-color: $chromeWhite;
+			color: $limeade;
+			border: 1px solid $limeade;
+		}
+
+		a.is-open {
+			border-bottom-color: $chromeWhite;
 		}
 	}
 }

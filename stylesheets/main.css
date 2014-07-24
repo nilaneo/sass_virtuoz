@@ -259,6 +259,9 @@ ul {
 .bg-light.border-bottom {
   border-bottom: 1px solid #ec4f15; }
 
+.bg-light-2.border-bottom {
+  border-bottom: 1px solid #59b200; }
+
 .bg-top-geometr:before {
   display: block;
   position: absolute;
@@ -404,6 +407,12 @@ ul {
     background-color: #ec4f15;
     color: white; }
 
+.filter-buttons-green a {
+  border-color: #59b200;
+  color: #59b200; }
+.filter-buttons-green .is-active {
+  background-color: #59b200; }
+
 .options a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -415,6 +424,9 @@ ul {
   color: #ec4f15; }
   .options a i, .options a span {
     vertical-align: middle; }
+
+.options-green a {
+  color: #59b200; }
 
 .breadcrumb {
   margin: 15px 0 30px; }
@@ -716,6 +728,11 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   margin-bottom: 15px; }
 .block-requests .service .cell-4 p:last-of-type, .block-requests .offer .cell-4 p:last-of-type, .block-requests .article-preview .cell-4 p:last-of-type {
   margin-bottom: 0; }
+
+.block-requests-user .service:hover, .block-requests-user .offer:hover, .block-requests-user .article-preview:hover {
+  border: 1px solid #59b200; }
+.block-requests-user .service h3 a, .block-requests-user .offer h3 a, .block-requests-user .article-preview h3 a {
+  color: #59b200; }
 
 .comments {
   display: table;
@@ -1721,7 +1738,9 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 25px;
   height: 25px; }
 
-.icon-comment {
+.icon-comment, .tabs-green .icon-comment-gray:hover,
+.tabs-green a:hover .icon-comment-gray,
+.tabs-green a.is-open .icon-comment-gray {
   background-position: 0 -358px;
   width: 25px;
   height: 27px; }
@@ -1766,10 +1785,24 @@ a.is-open .icon-article {
   height: 26px;
   background-position: -255px -355px; }
 
+.icon-comment-gray {
+  width: 25px;
+  height: 27px;
+  background-position: -385px -394px; }
+
 .icon-speaker:hover,
 a:hover .icon-speaker,
 a.is-open .icon-speaker {
   background-position: -283px -356px; }
+
+.tabs-green .icon-speaker:hover,
+.tabs-green a:hover .icon-speaker,
+.tabs-green a.is-open .icon-speaker {
+  background-position: -394px -356px; }
+.tabs-green .icon-book:hover,
+.tabs-green a:hover .icon-book,
+.tabs-green a.is-open .icon-book {
+  background-position: -356px -396px; }
 
 .icon-yes {
   width: 26px;
@@ -1816,6 +1849,16 @@ a.is-open .icon-speaker {
   width: 28px;
   height: 28px;
   background-position: -363px -354px; }
+
+.icon-close-request {
+  width: 21px;
+  height: 25px;
+  background-position: -240px -431px; }
+
+.icon-delete-request {
+  width: 21px;
+  height: 25px;
+  background-position: -270px -431px; }
 
 /* ==========================================================================
     LISTS
@@ -2182,6 +2225,14 @@ a.is-open .icon-speaker {
       border: 1px solid #ec4f15; }
     .tabs ul a.is-open {
       border-bottom-color: #fff5e6; }
+
+.tabs-green ul a.is-open,
+.tabs-green ul a:hover {
+  background-color: #e1f1d0;
+  color: #59b200;
+  border: 1px solid #59b200; }
+.tabs-green ul a.is-open {
+  border-bottom-color: #e1f1d0; }
 
 /* ==========================================================================
     FOOTER
