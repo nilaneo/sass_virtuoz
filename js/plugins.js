@@ -44,4 +44,8 @@ $(function(){
         $(this).removeClass("inactive");
     });
 
+    $(".block-scrollbar").mCustomScrollbar();
+
+    tinymce.init({selector:".textarea-editable"});
+
 });
