@@ -2774,7 +2774,8 @@ a.is-open .icon-speaker {
 
 	.row {
 		.label,
-		.input-container {
+		.input-container,
+		.text-container {
 			display: table-cell;
 			vertical-align: top;
 		}
@@ -2794,6 +2795,11 @@ a.is-open .icon-speaker {
 				margin-right: 30px;
 				margin-bottom: 20px;
 			}
+		}
+
+		.text-container {
+			padding-top: 12px;
+			padding-bottom: 30px;
 		}
 
 		.select-box {
