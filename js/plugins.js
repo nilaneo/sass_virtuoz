@@ -24,7 +24,7 @@
 $(function(){
     $("select").selectify();
 
-    $( ".datepicker" ).datepicker();
+    $('.datepicker').datepicker();
 
     $('.jcarousel').jcarousel();
 
@@ -36,6 +36,10 @@ $(function(){
 
     $('.jcarousel-control-next-small').jcarouselControl({target: "+=1"});
 
+    $('.jcarousel-control-prev-step').jcarouselControl({target: "-=1"});
+
+    $('.jcarousel-control-next-step').jcarouselControl({target: "+=1"});
+
     $('.jcarousel-control-small').on('jcarouselcontrol:inactive', function() {
         $(this).addClass("inactive");
     });
@@ -45,6 +49,8 @@ $(function(){
     });
 
     $(".block-scrollbar").mCustomScrollbar();
+
+    $( document ).tooltip();
 
     tinymce.init({selector:".textarea-editable"});
 

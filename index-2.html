@@ -17,41 +17,93 @@
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.selectify.js"></script>
+        <script src="js/jquery.jcarousel.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <script src="js/datepicker-ru.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+
+
+        <script src="js/jssor/jssor.core.js"></script>
+        <script src="js/jssor/jssor.utils.js"></script>
+        <script src="js/jssor/jssor.slider.js"></script>
+
+        <script>
+        jQuery(document).ready(function ($) {
+            //Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html
+            //Reference http://www.jssor.com/development/tool-slideshow-transition-viewer.html
+
+            var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 1200, $Opacity: 2 }
+            ];
+
+            var options = {
+                $SlideDuration: 800,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+        });
+    </script>
+
     </head>
     <body>
         <main>
-            <div class="slider">
-                <div class="slide slide-1">
-                    <div class="container">
-                        <div class="logo-container">
-                            <h1 class="logo"><a href="#0"><img src="img/logo-main.png" alt="">виртуоз</a> Сервис ваших грёз</h1>   
-                            <h3>Сервис услуг <span class="icon icon-number-1"></span>в Украине</h3>    
-                        </div> 
-                        <div class="search-container">
-                            <span class="text-1">я хочу...</span>
-                            <span class="text-2">ищу</span>
-                            <span class="text-3">...в городе</span>
-                            <div class="search-box clearfix">
-                                <input type="text" placeholder="Визажиста на дом">
-                                <div class="select-box select-city">
-                                    <select>
-                                        <option selected value="Киев">Киев</option>
-                                        <option value="Львов">Львов</option>
-                                        <option value="Одесса">Одесса</option>
-                                        <option value="Винница">Винница</option>
-                                        <option value="Днепропетровск">Днепропетровск</option>
-                                    </select>
+            <div class="slider" id="slider1_container" style="position: relative; width: 100%;
+        height: 645px;">
+            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 100%; height: 645px;
+            overflow: hidden;">
+                <div>
+                    <div class="slide slide-1" u=image>
+                        <div class="container">
+                            <div class="logo-container">
+                                <h1 class="logo"><a href="#0"><img src="img/logo-main.png" alt="">виртуоз</a> Сервис ваших грёз</h1>   
+                                <h3>Сервис услуг <span class="icon icon-number-1"></span>в Украине</h3>    
+                            </div> 
+                            <div class="search-container">
+                                <span class="text-1">я хочу...</span>
+                                <span class="text-2">ищу</span>
+                                <span class="text-3">...в городе</span>
+                                <div class="search-box clearfix">
+                                    <input type="text" placeholder="Визажиста на дом">
+                                    <div class="select-box select-city">
+                                        <select>
+                                            <option selected value="Киев">Киев</option>
+                                            <option value="Львов">Львов</option>
+                                            <option value="Одесса">Одесса</option>
+                                            <option value="Винница">Винница</option>
+                                            <option value="Днепропетровск">Днепропетровск</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="btn-search"><ins class="icon icon-search"></ins></button>
                                 </div>
-                                <button type="submit" class="btn-search"><ins class="icon icon-search"></ins></button>
                             </div>
-                        </div>
-                        <div class="phone-container">
-                            или звоню по телефону
-                            <p class="phone">+380 (44) 380 80 80</p>
-                            <p class="small-info">После звонка оператор позаботится, чтобы исполнитель<br> сам связался с вами для уточнения всех деталей</p>
-                        </div>
-                    </div><!-- end of container -->            
-                </div><!-- end of slide -->
+                            <div class="phone-container">
+                                или звоню по телефону
+                                <p class="phone">+380 (44) 380 80 80</p>
+                                <p class="small-info">После звонка оператор позаботится, чтобы исполнитель<br> сам связался с вами для уточнения всех деталей</p>
+                            </div>
+                        </div><!-- end of container -->            
+                    </div><!-- end of slide -->
+                </div>
+                <div>
+                    <img u=image src="img/landscape.jpg" />
+                </div>
+            </div>
+                
             </div><!-- end of slider -->
             <nav class="nav-main">
                 <div class="container clearfix">
@@ -124,96 +176,82 @@
                     </ul>
                 </div><!-- end of container -->
             </nav>
-            <section class="section bg-green">
+            <section class="section bg-green zt">
                 <div class="container">
                     <h3 class="title-section">Подайте заявку на услугу</h3>
-
-                    <div class="slider-steps">
-                        <div class="jcarousel-wrapper">
-                            <div class="jcarousel jcarousel-steps">
-                                <ul class="request-steps">
-                                    <li>
-                                        <div class="request-step request-step-1">
-                                            <span class="step-number">1</span>
-                                            <span class="step-count">шаг 2/3</span>
-                                            <div class="select-box select-performer">
-                                                <select>
-                                                    <option selected value="Исполнитель - Частное лицо">Исполнитель - Частное лицо</option>
-                                                    <option value="Исполнитель - компания">Исполнитель - компания</option>
-                                                    <option value="Исполнитель - кто-то">Исполнитель - кто-то</option>
-                                                </select>
-                                            </div>
-                                            <div class="select-box select-category field-required mgr-0">
-                                                <select>
-                                                    <option selected value="Выберите категорию услуг">Выберите категорию услуг</option>
-                                                    <option value="Категория 1">Категория 1</option>
-                                                    <option value="Категория 2">Категория 2</option>
-                                                </select>
-                                            </div>
-                                            <input type="text" class="input-primary input-2 input-date datepicker" placeholder="Назовите дату исполнения...">
-                                            <input type="text" class="input-primary input-4 input-time" placeholder="и время">
-                                            <input type="text" class="input-primary input-4 input-budget" placeholder="Бюджет">
-                                            <div class="clearfix">
-                                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="request-step request-step-2">
-                                            <span class="step-number">2</span>
-                                            <span class="step-count">шаг 3/3</span> 
-                                            <div class="field-required mgr-0">
-                                                <input type="text" class="input-primary input-1" placeholder="Заголовок объявления">
-                                            </div>                           
-                                            <textarea class="textarea-primary input-1" placeholder="Опишите, что необходимо сделать"></textarea>
-                                            <div class="clearfix">
-                                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="request-step request-step-3">
-                                            <span class="step-number">3</span>
-                                            <input type="text" class="input-primary input-2" placeholder="Представтесь, пожалуйста">
-                                            <div class="field-required mgr-0">
-                                                <input type="text" class="input-primary input-2"placeholder="Ваш номер телефона (желательно личный)">                                
-                                            </div>
-                                            <div class="field-required">
-                                                <input type="text" class="input-primary input-2" placeholder="Ваш адрес электронной почты (email)">                                
-                                            </div>
-                                            <input type="text" class="input-primary input-2 mgr-0" placeholder="Почтовый адрес (город, улица, дом, кв.)"> 
-                                            <div class="clearfix">
-                                                <div class="list-radios left">
-                                                    <p>
-                                                        <a href="#0" class="custom-radio" data-name="radios-1">Я хочу открыть контактную информацию для всех</a>
-                                                    </p>
-                                                    <p>
-                                                       <a href="#0" class="custom-radio" data-name="radios-1">Я хочу сам выбрать исполнителя моей заявки</a> 
-                                                    </p>                                    
-                                                </div>
-                                                <div class="left">
-                                                    <p>
-                                                        <i class="icon icon-info"></i>
-                                                    </p>
-                                                    <p>
-                                                        <i class="icon icon-info"></i>
-                                                    </p>
-                                                </div>
-                                                <a href="#0" class="btn-request right"><span class="text">Подать заявку</span></a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                    <div class="request-steps">
+                        <div class="request-steps-control">
+                            <a href="#0" class="btn-step-prev"></a>
+                            <a href="#0" class="btn-step-next"></a>
+                        </div>
+                        <div class="request-step request-step-1">
+                            <span class="step-number">1</span>
+                            <span class="step-count">шаг 2/3</span>
+                            <div class="select-box select-performer">
+                                <select>
+                                    <option selected value="Исполнитель - Частное лицо">Исполнитель - Частное лицо</option>
+                                    <option value="Исполнитель - компания">Исполнитель - компания</option>
+                                    <option value="Исполнитель - кто-то">Исполнитель - кто-то</option>
+                                </select>
                             </div>
-                            <div class="request-steps-control">
-                                <a href="#0" class="jcarousel-control-small jcarousel-control-prev-small inactive btn-step-prev">
-                                    <span><i></i></span>
-                                </a>
-                                <a href="#0" class="jcarousel-control-small jcarousel-control-next-small btn-step-next">
-                                </a>
+                            <div class="select-box select-category field-required mgr-0">
+                                <select>
+                                    <option selected value="Выберите категорию услуг">Выберите категорию услуг</option>
+                                    <option value="Категория 1">Категория 1</option>
+                                    <option value="Категория 2">Категория 2</option>
+                                </select>
+                            </div>
+                            <input type="text" class="input-primary input-2 input-date datepicker" placeholder="Назовите дату исполнения...">
+                            <input type="text" class="input-primary input-4 input-time" placeholder="и время">
+                            <input type="text" class="input-primary input-4 input-budget" placeholder="Бюджет">
+                            <div class="clearfix">
+                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
                             </div>
                         </div>
-                    </div>                    
+
+                        <div class="request-step request-step-2">
+                            <span class="step-number">2</span>
+                            <span class="step-count">шаг 3/3</span> 
+                            <div class="field-required mgr-0">
+                                <input type="text" class="input-primary input-1" placeholder="Заголовок объявления">
+                            </div>                           
+                            <textarea class="textarea-primary input-1" placeholder="Опишите, что необходимо сделать"></textarea>
+                            <div class="clearfix">
+                                <a href="#0" class="btn-next-step right"><span class="text">Далее</span><span class="square"><ins></ins></span></a>
+                            </div>
+                        </div>
+
+                        <div class="request-step request-step-3">
+                            <span class="step-number">3</span>
+                            <input type="text" class="input-primary input-2" placeholder="Представтесь, пожалуйста">
+                            <div class="field-required mgr-0">
+                                <input type="text" class="input-primary input-2"placeholder="Ваш номер телефона (желательно личный)">                                
+                            </div>
+                            <div class="field-required">
+                                <input type="text" class="input-primary input-2" placeholder="Ваш адрес электронной почты (email)">                                
+                            </div>
+                            <input type="text" class="input-primary input-2 mgr-0" placeholder="Почтовый адрес (город, улица, дом, кв.)"> 
+                            <div class="clearfix">
+                                <div class="list-radios left">
+                                    <p>
+                                        <a href="#0" class="custom-radio" data-name="radios-1">Я хочу открыть контактную информацию для всех</a>
+                                    </p>
+                                    <p>
+                                       <a href="#0" class="custom-radio" data-name="radios-1">Я хочу сам выбрать исполнителя моей заявки</a> 
+                                    </p>                                    
+                                </div>
+                                <div class="left">
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                    <p>
+                                        <i class="icon icon-info"></i>
+                                    </p>
+                                </div>
+                                <a href="#0" class="btn-request right"><span class="text">Подать заявку</span></a>
+                            </div>
+                        </div>
+                    </div><!-- end of request-steps -->
                 </div><!-- end of container -->
             </section>
             <section class="section bg-nude bg-bottom-geometr">
@@ -497,19 +535,7 @@
             </div><!-- end of container -->
         </footer>               
 
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/jquery.selectify.js"></script>
-        <script src="js/jquery.jcarousel.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/timepicker.js"></script>
-        <script src="js/datepicker-ru.js"></script>
-        <script>
-            $(function() {
-                $( ".input-time" ).timepicker();
-            });
-        </script>
-        <script src="js/plugins.js"></script>
+        
 
     </body>
 </html>

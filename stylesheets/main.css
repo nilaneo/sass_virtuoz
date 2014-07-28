@@ -353,11 +353,13 @@ ul {
     .filter > div .icon, .filter > div .has-star:before, .filter > div .article-with-arrows .title-article:before, .article-with-arrows .filter > div .title-article:before, .filter > div .btn-step-prev,
     .filter > div .btn-step-next, .filter > div .bag ins, .bag .filter > div ins, .filter > div .btn-registration span, .btn-registration .filter > div span, .filter > div .list-service-steps li:before, .list-service-steps .filter > div li:before, .filter > div .upload .btn-delete-avatar, .upload .filter > div .btn-delete-avatar,
     .filter > div .upload .btn-upload-avatar,
-    .upload .filter > div .btn-upload-avatar, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span,
+    .upload .filter > div .btn-upload-avatar, .filter > div .jcarousel-control-prev span, .jcarousel-control-prev .filter > div span, .filter > div .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .filter > div span, .filter > div .slider-steps .jcarousel-control-prev-step span, .slider-steps .jcarousel-control-prev-step .filter > div span,
     .filter > div .jcarousel-control-next span,
     .jcarousel-control-next .filter > div span,
     .filter > div .slider-small .jcarousel-control-next-small span,
-    .slider-small .jcarousel-control-next-small .filter > div span {
+    .slider-small .jcarousel-control-next-small .filter > div span,
+    .filter > div .slider-steps .jcarousel-control-next-step span,
+    .slider-steps .jcarousel-control-next-step .filter > div span {
       margin: 0 5px; }
   .filter .input-primary, .filter .textarea-primary {
     margin-bottom: 0; }
@@ -379,11 +381,13 @@ ul {
   .icon-wrapper .icon, .icon-wrapper .has-star:before, .icon-wrapper .article-with-arrows .title-article:before, .article-with-arrows .icon-wrapper .title-article:before, .icon-wrapper .btn-step-prev,
   .icon-wrapper .btn-step-next, .icon-wrapper .bag ins, .bag .icon-wrapper ins, .icon-wrapper .btn-registration span, .btn-registration .icon-wrapper span, .icon-wrapper .list-service-steps li:before, .list-service-steps .icon-wrapper li:before, .icon-wrapper .upload .btn-delete-avatar, .upload .icon-wrapper .btn-delete-avatar,
   .icon-wrapper .upload .btn-upload-avatar,
-  .upload .icon-wrapper .btn-upload-avatar, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span,
+  .upload .icon-wrapper .btn-upload-avatar, .icon-wrapper .jcarousel-control-prev span, .jcarousel-control-prev .icon-wrapper span, .icon-wrapper .slider-small .jcarousel-control-prev-small span, .slider-small .jcarousel-control-prev-small .icon-wrapper span, .icon-wrapper .slider-steps .jcarousel-control-prev-step span, .slider-steps .jcarousel-control-prev-step .icon-wrapper span,
   .icon-wrapper .jcarousel-control-next span,
   .jcarousel-control-next .icon-wrapper span,
   .icon-wrapper .slider-small .jcarousel-control-next-small span,
-  .slider-small .jcarousel-control-next-small .icon-wrapper span {
+  .slider-small .jcarousel-control-next-small .icon-wrapper span,
+  .icon-wrapper .slider-steps .jcarousel-control-next-step span,
+  .slider-steps .jcarousel-control-next-step .icon-wrapper span {
     margin: 0 auto; }
 
 .panel > div {
@@ -1117,10 +1121,6 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   position: absolute;
   width: 950px; }
 
-.request-step-2,
-.request-step-3 {
-  display: none; }
-
 .btn-step-prev,
 .btn-step-next {
   position: absolute;
@@ -1128,10 +1128,10 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   top: 60px; }
 
 .btn-step-prev {
-  left: -30px; }
+  left: -100px; }
 
 .btn-step-next {
-  right: -30px; }
+  right: -100px; }
 
 .step-number,
 .step-count {
@@ -1600,9 +1600,10 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
 ========================================================================== */
 .icon, .has-star:before, .article-with-arrows .title-article:before, .btn-step-prev,
 .btn-step-next, .bag ins, .btn-registration span, .list-service-steps li:before, .upload .btn-delete-avatar,
-.upload .btn-upload-avatar, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span,
+.upload .btn-upload-avatar, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span, .slider-steps .jcarousel-control-prev-step span,
 .jcarousel-control-next span,
-.slider-small .jcarousel-control-next-small span {
+.slider-small .jcarousel-control-next-small span,
+.slider-steps .jcarousel-control-next-step span {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -1613,22 +1614,22 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   background-repeat: no-repeat;
   vertical-align: middle; }
 
-.btn-left-gray, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span {
+.btn-left-gray, .jcarousel-control-prev span, .slider-small .jcarousel-control-prev-small span, .slider-steps .jcarousel-control-prev-step span {
   background-position: -2px 0;
   width: 66px;
   height: 65px; }
 
-.btn-right-gray, .jcarousel-control-next span, .slider-small .jcarousel-control-next-small span {
+.btn-right-gray, .jcarousel-control-next span, .slider-small .jcarousel-control-next-small span, .slider-steps .jcarousel-control-next-step span {
   background-position: -99px 0;
   width: 66px;
   height: 65px; }
 
-.btn-left-gray-inactive, .slider-small .jcarousel-control-prev-small.inactive span {
+.btn-left-gray-inactive, .slider-small .jcarousel-control-prev-small.inactive span, .slider-steps .jcarousel-control-prev-step.inactive span {
   background-position: -4px -74px;
   width: 66px;
   height: 65px; }
 
-.btn-right-gray-inactive, .slider-small .jcarousel-control-next-small.inactive span {
+.btn-right-gray-inactive, .slider-small .jcarousel-control-next-small.inactive span, .slider-steps .jcarousel-control-next-step.inactive span {
   background-position: -100px -74px;
   width: 66px;
   height: 65px; }
@@ -2866,7 +2867,7 @@ a.is-open .icon-speaker {
   overflow: hidden; }
 
 .jcarousel ul {
-  width: 3000px;
+  width: 5000px;
   position: relative;
   list-style: none;
   margin: 0;
@@ -2880,9 +2881,10 @@ a.is-open .icon-speaker {
     height: auto !important;
     max-width: 100%; }
 
-.jcarousel-control-prev, .slider-small .jcarousel-control-prev-small,
+.jcarousel-control-prev, .slider-small .jcarousel-control-prev-small, .slider-steps .jcarousel-control-prev-step,
 .jcarousel-control-next,
-.slider-small .jcarousel-control-next-small {
+.slider-small .jcarousel-control-next-small,
+.slider-steps .jcarousel-control-next-step {
   position: absolute;
   display: inline-block;
   margin-top: -54px;
@@ -2890,10 +2892,10 @@ a.is-open .icon-speaker {
   text-decoration: none;
   top: 50%; }
 
-.jcarousel-control-prev, .slider-small .jcarousel-control-prev-small {
+.jcarousel-control-prev, .slider-small .jcarousel-control-prev-small, .slider-steps .jcarousel-control-prev-step {
   left: -142px; }
 
-.jcarousel-control-next, .slider-small .jcarousel-control-next-small {
+.jcarousel-control-next, .slider-small .jcarousel-control-next-small, .slider-steps .jcarousel-control-next-step {
   right: -142px; }
 
 /* Slider-small
@@ -2907,6 +2909,19 @@ a.is-open .icon-speaker {
     width: 270px;
     height: 180px;
     margin-right: 20px; }
+
+/* Slider-steps
+========================================================================== */
+.slider-steps {
+  margin-top: 25px; }
+  .slider-steps .jcarousel-wrapper {
+    width: 1014px;
+    height: 315px; }
+  .slider-steps .jcarousel li {
+    width: 990px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 24px; }
 
 /* ==========================================================================
     TINYMCE
@@ -2999,3 +3014,61 @@ a.is-open .icon-speaker {
   border-color: #ec4f15 transparent transparent; }
 .theme-red .select-big-container {
   color: #ec4f15; }
+
+/* ==========================================================================
+    CALENDAR
+========================================================================== */
+.ui-widget-content {
+  background: white;
+  border: 2px solid #59b200;
+  z-index: 1000 !important; }
+
+.ui-widget-header {
+  background: #59b200;
+  border: none; }
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+  color: #59b200; }
+
+.ui-state-highlight,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  background: #59b200;
+  color: white;
+  border: none; }
+
+.ui-icon-circle-triangle-w {
+  border-width: 4px 10px 4px 0;
+  border-color: transparent #ffffff transparent transparent; }
+
+.ui-icon-circle-triangle-e {
+  border-width: 4px 0 4px 10px;
+  border-color: transparent transparent transparent #ffffff; }
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  cursor: pointer; }
+  .ui-datepicker .ui-datepicker-prev span,
+  .ui-datepicker .ui-datepicker-next span {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -1px; }
+
+.ui-timepicker-div dt {
+  float: left;
+  text-align: left; }
+.ui-timepicker-div dd {
+  margin-left: 90px;
+  margin-bottom: 20px; }

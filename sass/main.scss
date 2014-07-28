@@ -1406,11 +1406,6 @@ img.round-rectangle {
 	width: 950px;
 }
 
-.request-step-2,
-.request-step-3 {
-	display: none;
-}
-
 .btn-step-prev,
 .btn-step-next {
 	position: absolute;
@@ -1420,12 +1415,12 @@ img.round-rectangle {
 }
 
 .btn-step-prev {
-	left: -30px;
+	left: -100px;
 	@extend .btn-left-green;
 }
 
 .btn-step-next {
-	right: -30px;
+	right: -100px;
 	@extend .btn-right-green;
 }
 
@@ -3435,7 +3430,7 @@ a.is-open .icon-speaker {
 }
 
 .jcarousel ul {
-    width: 3000px;
+    width: 5000px;
     position: relative;
     list-style: none;
     margin: 0;
@@ -3517,6 +3512,49 @@ a.is-open .icon-speaker {
     }
 
     .jcarousel-control-next-small.inactive {
+    	span {
+			@extend .btn-right-gray-inactive;
+    	}
+    }
+}
+
+/* Slider-steps
+========================================================================== */
+
+.slider-steps {
+	margin-top: 25px;
+
+    .jcarousel-wrapper {
+        width: 1014px;
+        height: 315px;
+    }
+
+    .jcarousel {
+    	
+        li {
+            width: 990px;
+            height: 300px;
+            margin-top: 20px;
+            margin-left: 24px;
+        }
+    }
+
+    .jcarousel-control-prev-step {
+    	@extend .jcarousel-control-prev;
+
+    }
+
+    .jcarousel-control-next-step {
+    	@extend .jcarousel-control-next;
+    }
+
+    .jcarousel-control-prev-step.inactive {
+    	span {
+			@extend .btn-left-gray-inactive;
+    	}
+    }
+
+    .jcarousel-control-next-step.inactive {
     	span {
 			@extend .btn-right-gray-inactive;
     	}
@@ -3660,5 +3698,75 @@ a.is-open .icon-speaker {
 
 	.select-big-container {
 		color: $grenadier;
+	}
+}
+
+/* ==========================================================================
+    CALENDAR
+========================================================================== */
+
+.ui-widget-content {
+	background: $white;
+	border: 2px solid $limeade;
+	z-index: 1000 !important;
+}
+
+.ui-widget-header {
+	background: $limeade;
+	border: none;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	color: $limeade;
+}
+
+.ui-state-highlight,
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+	background: $limeade;
+	color: $white;
+	border: none;
+}
+
+.ui-icon-circle-triangle-w {
+	border-width: 4px 10px 4px 0;
+	border-color: transparent #ffffff transparent transparent;
+}
+
+.ui-icon-circle-triangle-e {	
+	border-width: 4px 0 4px 10px;
+	border-color: transparent transparent transparent #ffffff;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	cursor: pointer;
+	span {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		margin-top: -1px;
+	}
+}
+
+.ui-timepicker-div {
+	dt {
+		float: left;
+		text-align: left;
+	}
+	dd {
+		margin-left: 90px;
+		margin-bottom: 20px;
 	}
 }

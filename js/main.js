@@ -41,4 +41,19 @@ $(document).ready(function(){
 	$(".select-big-container").on("click", function (e) {
 		$(".select-big-dropdown").slideToggle("fast");
 	});	
+
+	/* Tooltips
+	========================================================================== */
+
+	$(".tooltip-open-all").on("hover", function () {
+		$(this).tooltip({
+				content: "lallala",
+                position:{
+                    at:"center bottom+10",
+                    my:"center top"
+                }
+        }).tooltip('open');
+        setTimeout(function(){ $(".btn-want").tooltip('disable'); }, 2000);
+	});	
+
 })
