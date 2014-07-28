@@ -10,6 +10,14 @@ $(document).ready(function(){
 		$this.toggleClass("is-checked");
 	});
 
+	/* Custom checkbox
+	========================================================================== */
+
+	$(".checkbox").on("click", function (e) {
+		e.preventDefault();
+		$(this).toggleClass("is-checked");
+	});
+
 	/* Catalogue dropdown
 	========================================================================== */
 
@@ -24,13 +32,5 @@ $(document).ready(function(){
 
 	$(".select-big-container").on("click", function (e) {
 		$(".select-big-dropdown").slideToggle("fast");
-	});
-
-	/* Custom checkbox
-	========================================================================== */
-
-	$(".custom-checkbox").on("click", function (e) {
-		e.preventDefault();
-		$(this).toggleClass("is-checked");
-	});
+	});	
 })
