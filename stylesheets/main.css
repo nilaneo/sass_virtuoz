@@ -1,3 +1,4 @@
+@charset "IBM866";
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,700italic,700,200,200italic,400italic&subset=latin,cyrillic);
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
@@ -120,7 +121,7 @@ ul {
   .checkbox.is-checked {
     background-position: 0 0; }
 
-.checkbox-green {
+.checkbox-green, .theme-green .checkbox {
   background-image: url(../img/checkbox-green.png); }
 
 /* ==========================================================================
@@ -313,10 +314,10 @@ ul {
   font-weight: bold;
   margin-bottom: 30px; }
 
-.text-green {
+.text-green, .theme-green .title-section {
   color: #59b200; }
 
-.text-red {
+.text-red, .theme-red .title-section {
   color: #ec4f15; }
 
 .lnk-watch-all, .lnk-back {
@@ -398,7 +399,7 @@ ul {
   margin: 0; }
 
 .filter-buttons {
-  margin-right: 50px; }
+  margin-right: 35px; }
   .filter-buttons a {
     float: left;
     min-width: 102px;
@@ -418,11 +419,12 @@ ul {
     background-color: #ec4f15;
     color: white; }
 
-.filter-buttons-green a {
+.filter-buttons-green a, .theme-green .filter-buttons a {
   border-color: #59b200;
   color: #59b200; }
-.filter-buttons-green .is-active {
-  background-color: #59b200; }
+.filter-buttons-green .is-active, .theme-green .filter-buttons .is-active {
+  background-color: #59b200;
+  color: white; }
 
 .options a {
   display: -moz-inline-stack;
@@ -436,7 +438,7 @@ ul {
   .options a i, .options a span {
     vertical-align: middle; }
 
-.options-green a {
+.options-green a, .theme-green .options a {
   color: #59b200; }
 
 .breadcrumb {
@@ -512,6 +514,22 @@ ul {
   .services-case .service:hover, .block-comments-all .service:hover, .services-case .offer:hover, .block-comments-all .offer:hover, .services-case .article-preview:hover, .block-comments-all .article-preview:hover {
     border: none;
     padding: 15px; }
+.services-case .is-sent, .block-comments-all .is-sent {
+  position: relative; }
+  .services-case .is-sent:after, .block-comments-all .is-sent:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "Заявка отправлена!";
+    color: white;
+    font-size: 26px;
+    line-height: 170px;
+    font-weight: bold;
+    background-color: rgba(217, 56, 0, 0.6);
+    text-align: center; }
 
 .btn-close-service {
   position: absolute;
@@ -994,17 +1012,21 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
       font-size: 24px;
       font-weight: bold; }
   .forms > div:hover,
-  .forms > div:focus {
+  .forms > div:focus,
+  .forms > div.active {
     background-color: #fff5ea;
     border: 1px solid #ec4f15; }
     .forms > div:hover h5,
-    .forms > div:focus h5 {
+    .forms > div:focus h5,
+    .forms > div.active h5 {
       color: #ec4f15; }
     .forms > div:hover input,
-    .forms > div:focus input {
+    .forms > div:focus input,
+    .forms > div.active input {
       border-color: #ec4f15; }
     .forms > div:hover button,
-    .forms > div:focus button {
+    .forms > div:focus button,
+    .forms > div.active button {
       background-color: #ec4f15; }
 
 .label {
@@ -1495,6 +1517,26 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .btn-make-request:hover {
     background-color: #f0c000; }
 
+.registration-menu {
+  position: relative; }
+
+.registration-menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 14px;
+  padding: 15px;
+  border: 1px solid #ec4f15;
+  background-color: white;
+  z-index: 1000; }
+  .registration-menu-dropdown p {
+    text-align: center;
+    font-style: italic;
+    margin: 5px 0; }
+  .registration-menu-dropdown .btn {
+    width: 102px;
+    text-align: center; }
+
 .btn-registration {
   background-color: #ec4f15;
   text-shadow: rgba(217, 54, 0, 0.64) 0 -1px 0; }
@@ -1526,14 +1568,14 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   line-height: 50px;
   text-align: center; }
 
-.btn-red {
+.btn-red, .theme-red .btn-flat {
   background-color: #ec4f15; }
-  .btn-red:hover {
+  .btn-red:hover, .theme-red .btn-flat:hover {
     background-color: #d64611; }
 
-.btn-green {
+.btn-green, .theme-green .btn-flat {
   background-color: #59b200; }
-  .btn-green:hover {
+  .btn-green:hover, .theme-green .btn-flat:hover {
     background-color: #4c9900; }
 
 .btn-wide {
@@ -1813,9 +1855,11 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 25px;
   height: 25px; }
 
-.icon-comment, .tabs-green .icon-comment-gray:hover,
+.icon-comment, .tabs-green .icon-comment-gray:hover, .theme-green .tabs .icon-comment-gray:hover,
 .tabs-green a:hover .icon-comment-gray,
-.tabs-green a.is-open .icon-comment-gray {
+.theme-green .tabs a:hover .icon-comment-gray,
+.tabs-green a.is-open .icon-comment-gray,
+.theme-green .tabs a.is-open .icon-comment-gray {
   background-position: 0 -358px;
   width: 25px;
   height: 27px; }
@@ -1824,6 +1868,8 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   width: 26px;
   height: 26px;
   background-position: -64px -356px; }
+  .icon-close:hover {
+    background-position: -355px -426px; }
 
 .icon-pencil {
   width: 26px;
@@ -1870,13 +1916,17 @@ a:hover .icon-speaker,
 a.is-open .icon-speaker {
   background-position: -283px -356px; }
 
-.tabs-green .icon-speaker:hover,
+.tabs-green .icon-speaker:hover, .theme-green .tabs .icon-speaker:hover,
 .tabs-green a:hover .icon-speaker,
-.tabs-green a.is-open .icon-speaker {
+.theme-green .tabs a:hover .icon-speaker,
+.tabs-green a.is-open .icon-speaker,
+.theme-green .tabs a.is-open .icon-speaker {
   background-position: -394px -356px; }
-.tabs-green .icon-book:hover,
+.tabs-green .icon-book:hover, .theme-green .tabs .icon-book:hover,
 .tabs-green a:hover .icon-book,
-.tabs-green a.is-open .icon-book {
+.theme-green .tabs a:hover .icon-book,
+.tabs-green a.is-open .icon-book,
+.theme-green .tabs a.is-open .icon-book {
   background-position: -356px -396px; }
 
 .icon-yes {
@@ -2496,12 +2546,13 @@ a.is-open .icon-speaker {
     .tabs ul a.is-open {
       border-bottom-color: #fff5e6; }
 
-.tabs-green ul a.is-open,
-.tabs-green ul a:hover {
+.tabs-green ul a.is-open, .theme-green .tabs ul a.is-open,
+.tabs-green ul a:hover,
+.theme-green .tabs ul a:hover {
   background-color: #e1f1d0;
   color: #59b200;
   border: 1px solid #59b200; }
-.tabs-green ul a.is-open {
+.tabs-green ul a.is-open, .theme-green .tabs ul a.is-open {
   border-bottom-color: #e1f1d0; }
 
 /* ==========================================================================
@@ -2869,3 +2920,82 @@ a.is-open .icon-speaker {
 /* ==========================================================================
     THEME-GREEN
 ========================================================================== */
+.theme-green .service:hover, .theme-green .offer:hover, .theme-green .article-preview:hover,
+.theme-green .offer:hover,
+.theme-green .article-preview:hover {
+  border-color: #59b200;
+  background-color: #e1f1d0; }
+.theme-green .service h3 a, .theme-green .offer h3 a, .theme-green .article-preview h3 a,
+.theme-green .offer h3 a,
+.theme-green .block-requests .service h3 a,
+.theme-green .block-requests .offer h3 a,
+.theme-green .block-requests .article-preview h3 a,
+.theme-green .article-preview h3 a {
+  color: #59b200; }
+.theme-green .pagination a:hover,
+.theme-green .pagination li.is-current a {
+  border: 1px solid #59b200;
+  color: #59b200; }
+.theme-green .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.theme-green .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.theme-green .mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background-color: #59b200; }
+.theme-green .mCSB_scrollTools .mCSB_draggerRail {
+  border-color: #59b200; }
+.theme-green .list-small-links a:hover {
+  color: #59b200; }
+  .theme-green .list-small-links a:hover:after {
+    border-color: transparent transparent transparent #59b200; }
+
+/* ==========================================================================
+    THEME-RED
+========================================================================== */
+.theme-red .input-primary, .theme-red .textarea-primary,
+.theme-red .textarea-primary {
+  color: #ec4f15;
+  border-color: #ec4f15; }
+.theme-red .select-performer .sl-placeholder-container, .theme-red .form-registration .row .select-box .sl-placeholder-container, .form-registration .row .theme-red .select-box .sl-placeholder-container,
+.theme-red .form .row .select-box .sl-placeholder-container,
+.form .row .theme-red .select-box .sl-placeholder-container,
+.theme-red .form-registration .row .select-box .sl-placeholder-container,
+.theme-red .form .row .select-box .sl-placeholder-container,
+.theme-red .select-category .sl-placeholder-container,
+.theme-red .select-performer .sl-container .sl-options,
+.theme-red .form-registration .row .select-box .sl-container .sl-options,
+.form-registration .row .theme-red .select-box .sl-container .sl-options,
+.theme-red .form .row .select-box .sl-container .sl-options,
+.form .row .theme-red .select-box .sl-container .sl-options,
+.theme-red .form-registration .row .select-box .sl-container .sl-options,
+.theme-red .form .row .select-box .sl-container .sl-options,
+.theme-red .select-category .sl-container .sl-options {
+  border-color: #ec4f15; }
+.theme-red .select-performer .sl-placeholder, .theme-red .form-registration .row .select-box .sl-placeholder, .form-registration .row .theme-red .select-box .sl-placeholder,
+.theme-red .form .row .select-box .sl-placeholder,
+.form .row .theme-red .select-box .sl-placeholder,
+.theme-red .form-registration .row .select-box .sl-placeholder,
+.theme-red .form .row .select-box .sl-placeholder,
+.theme-red .select-category .sl-placeholder,
+.theme-red .select-performer .sl-container .sl-options a,
+.theme-red .form-registration .row .select-box .sl-container .sl-options a,
+.form-registration .row .theme-red .select-box .sl-container .sl-options a,
+.theme-red .form .row .select-box .sl-container .sl-options a,
+.form .row .theme-red .select-box .sl-container .sl-options a,
+.theme-red .form-registration .row .select-box .sl-container .sl-options a,
+.theme-red .form .row .select-box .sl-container .sl-options a,
+.theme-red .select-category .sl-container .sl-options a {
+  color: #ec4f15; }
+.theme-red .select-performer .sl-button, .theme-red .form-registration .row .select-box .sl-button, .form-registration .row .theme-red .select-box .sl-button,
+.theme-red .form .row .select-box .sl-button,
+.form .row .theme-red .select-box .sl-button,
+.theme-red .form-registration .row .select-box .sl-button,
+.theme-red .form .row .select-box .sl-button,
+.theme-red .select-category .sl-button {
+  border-color: #ec4f15 transparent transparent; }
+.theme-red .upload-photo,
+.theme-red .select-big,
+.theme-red .select-big-dropdown {
+  border-color: #ec4f15; }
+.theme-red .select-big:after {
+  border-color: #ec4f15 transparent transparent; }
+.theme-red .select-big-container {
+  color: #ec4f15; }

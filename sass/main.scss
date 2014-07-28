@@ -464,7 +464,7 @@ ul {
 }
 
 .filter-buttons {
-	margin-right: 50px;
+	margin-right: 35px;
 	a {
 		float: left;
 		min-width: 102px;
@@ -498,6 +498,7 @@ ul {
 
 	.is-active {
 		background-color: $limeade;
+		color: $white;
 	}
 }
 
@@ -622,6 +623,25 @@ ul {
 		&:hover {
 			border: none;
 			padding: 15px;
+		}
+	}
+
+	.is-sent {
+		position: relative;
+		&:after {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			content: "Заявка отправлена!";
+			color: $white;
+			font-size: 26px;
+			line-height: 170px;
+			font-weight: bold;
+			background-color: rgba(217, 56, 0, .6);
+			text-align: center;
 		}
 	}
 }
@@ -1261,7 +1281,8 @@ img.round-rectangle {
 	}
 
 	> div:hover,
-	> div:focus {
+	> div:focus,
+	> div.active {
 		background-color: #fff5ea;
 		border: 1px solid $grenadier;
 
@@ -1849,6 +1870,31 @@ img.round-rectangle {
 	}
 }
 
+.registration-menu {
+	position: relative;
+}
+
+.registration-menu-dropdown {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 14px;
+	padding: 15px;
+	border: 1px solid $grenadier;
+	background-color: $white;
+	z-index: 1000;
+	p {
+		text-align: center;
+		font-style: italic;
+		margin: 5px 0;
+	}
+
+	.btn {
+		width: 102px;
+		text-align: center;
+	}
+}
+
 .btn-registration {
 	background-color: $grenadier;
 	@include text-shadow(rgba(217, 54, 0, .64) 0 -1px 0);
@@ -2229,6 +2275,10 @@ img.round-rectangle {
 	width: 26px;
 	height: 26px;
 	background-position: -64px -356px;
+
+	&:hover {
+		background-position: -355px -426px;
+	}
 } 
 
 .icon-pencil {
@@ -3488,3 +3538,127 @@ a.is-open .icon-speaker {
     THEME-GREEN
 ========================================================================== */
 
+.theme-green {
+	.title-section {
+		@extend .text-green;
+	}
+
+	.filter-buttons {
+		@extend .filter-buttons-green;
+	}
+
+	.service:hover,
+	.offer:hover,
+	.article-preview:hover {
+		border-color: $limeade;
+		background-color: $chromeWhite;
+	}
+
+	.service h3 a,
+	.offer h3 a,
+	.block-requests .service h3 a,
+	.article-preview h3 a {
+		color: $limeade;
+	}
+
+	.pagination a:hover,
+	.pagination li.is-current a {
+	    border: 1px solid $limeade;
+	    color: $limeade;
+	}
+
+	.tabs {
+		@extend .tabs-green;
+	}
+
+	.checkbox {
+		@extend .checkbox-green;
+	}
+
+	.btn-flat {
+		@extend .btn-green;
+	}
+
+	.options {
+		@extend .options-green;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+	.mCSB_dragger_onDrag .mCSB_dragger_bar {
+		background-color: $limeade;
+	}
+
+	.mCSB_scrollTools .mCSB_draggerRail {
+		border-color: $limeade;
+	}
+
+	.list-small-links a:hover {
+		color: $limeade;
+		&:after {
+			border-color: transparent transparent transparent $limeade;
+		}
+	}
+}
+
+/* ==========================================================================
+    THEME-RED
+========================================================================== */
+
+.theme-red {
+	.title-section {
+		@extend .text-red;
+	}
+
+	.input-primary,
+	.textarea-primary {
+		color: $grenadier;
+		border-color: $grenadier;
+	}
+	.select-performer .sl-placeholder-container,
+	.form-registration .row .select-box .sl-placeholder-container,
+	.form .row .select-box .sl-placeholder-container,
+	.select-category .sl-placeholder-container,
+	.select-performer .sl-container .sl-options,
+	.form-registration .row .select-box .sl-container .sl-options,
+	.form .row .select-box .sl-container .sl-options,
+	.select-category .sl-container .sl-options {
+		border-color: $grenadier;
+	}
+
+	.select-performer .sl-placeholder,
+	.form-registration .row .select-box .sl-placeholder,
+	.form .row .select-box .sl-placeholder,
+	.select-category .sl-placeholder,
+	.select-performer .sl-container .sl-options a,
+	.form-registration .row .select-box .sl-container .sl-options a,
+	.form .row .select-box .sl-container .sl-options a,
+	.select-category .sl-container .sl-options a {
+		color: $grenadier;
+	}
+
+	.select-performer .sl-button,
+	.form-registration .row .select-box .sl-button,
+	.form .row .select-box .sl-button,
+	.select-category .sl-button {
+		border-color: $grenadier transparent transparent;
+	}
+
+	.btn-flat {
+		@extend .btn-red;
+	}
+
+	.upload-photo,
+	.select-big,
+	.select-big-dropdown {
+		border-color: $grenadier;
+	}
+
+	.select-big:after {
+		border-color: $grenadier transparent transparent;
+	}
+
+	.select-big-container {
+		color: $grenadier;
+	}
+}

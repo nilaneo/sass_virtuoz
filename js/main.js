@@ -18,6 +18,14 @@ $(document).ready(function(){
 		$(this).toggleClass("is-checked");
 	});
 
+	/* Registration dropdown
+	========================================================================== */
+
+	$(".j-registration-menu").on("click", function (e) {
+		e.preventDefault();
+		$(".registration-menu-dropdown").slideToggle("fast");
+	});
+
 	/* Catalogue dropdown
 	========================================================================== */
 
