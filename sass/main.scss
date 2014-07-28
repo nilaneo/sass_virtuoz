@@ -112,6 +112,10 @@ ul {
 	padding-bottom: 0 !important;
 }
 
+.mr-30	{
+	margin-right: 30px;
+}
+
 .clearfix:before,
 .clearfix:after {
     content: ".";
@@ -744,6 +748,11 @@ img.round-rectangle {
 	}
 }
 
+.rating-inline {
+	position: static;
+	margin: 0;
+}
+
 .service-info {
 	display: table;
 	width: 100%;
@@ -862,6 +871,16 @@ img.round-rectangle {
 	text-decoration: underline;
 	&:hover {
 		color: darken($limeade, 5%);
+	}
+}
+
+.lnk-red {
+	color: $grenadier;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: underline;
+	&:hover {
+		color: darken($grenadier, 5%);
 	}
 }
 
@@ -2812,6 +2831,10 @@ a.is-open .icon-speaker {
 		.text-container {
 			padding-top: 12px;
 			padding-bottom: 30px;
+
+			.icon-wrapper {
+				vertical-align: bottom;
+			}
 		}
 
 		.select-box {

@@ -24,7 +24,7 @@
 $(function(){
     $("select").selectify();
 
-    $( "#datepicker" ).datepicker();
+    $( ".datepicker" ).datepicker();
 
     $('.jcarousel').jcarousel();
 

@@ -80,6 +80,9 @@ ul {
 .pdb-0 {
   padding-bottom: 0 !important; }
 
+.mr-30 {
+  margin-right: 30px; }
+
 .clearfix:before,
 .clearfix:after {
   content: ".";
@@ -627,6 +630,10 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   .rating-stars ins {
     margin-right: 5px; }
 
+.rating-inline {
+  position: static;
+  margin: 0; }
+
 .service-info, .request-info {
   display: table;
   width: 100%; }
@@ -723,6 +730,14 @@ img.round-rectangle, .list-round-rectangles li img.img-service {
   text-decoration: underline; }
   .lnk-green:hover {
     color: #4c9900; }
+
+.lnk-red {
+  color: #ec4f15;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: underline; }
+  .lnk-red:hover {
+    color: #d64611; }
 
 .block-requests .service .cell-1, .block-requests .offer .cell-1, .block-requests .article-preview .cell-1 {
   width: 100px;
@@ -2321,6 +2336,9 @@ a.is-open .icon-speaker {
 .form .row .text-container {
   padding-top: 12px;
   padding-bottom: 30px; }
+  .form-registration .row .text-container .icon-wrapper,
+  .form .row .text-container .icon-wrapper {
+    vertical-align: bottom; }
 .form-registration .row textarea,
 .form .row textarea {
   height: 210px; }
