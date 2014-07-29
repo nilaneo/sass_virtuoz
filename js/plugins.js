@@ -54,4 +54,6 @@ $(function(){
 
     tinymce.init({selector:".textarea-editable"});
 
+    $( ".input-time" ).timepicker();
+
 });

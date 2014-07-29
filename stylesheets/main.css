@@ -2879,19 +2879,18 @@ a.is-open .icon-speaker {
   position: relative;
   overflow: hidden; }
 
-.jcarousel ul {
+.jcarousel > ul {
   width: 5000px;
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0; }
-  .jcarousel ul li {
+  .jcarousel > ul > li {
     float: left;
     width: 932px;
     height: 370px; }
-  .jcarousel ul a {
+  .jcarousel > ul a {
     display: block;
-    height: auto !important;
     max-width: 100%; }
 
 .jcarousel-control-prev, .slider-small .jcarousel-control-prev-small, .slider-steps .jcarousel-control-prev-step,
@@ -2930,7 +2929,7 @@ a.is-open .icon-speaker {
   .slider-steps .jcarousel-wrapper {
     width: 1014px;
     height: 315px; }
-  .slider-steps .jcarousel li {
+  .slider-steps .jcarousel > ul > li {
     width: 990px;
     height: 300px;
     margin-top: 20px;
