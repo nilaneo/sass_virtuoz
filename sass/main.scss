@@ -2463,9 +2463,24 @@ a.is-open .icon-speaker {
 }
 
 .list-benefits {
+	margin-top: 35px;
 	li {
 		float: left;
 		margin-left: 85px;
+		.circle-with-number {
+			width: 200px;
+			height: 200px;
+		}
+
+		p {
+			width: 130px;
+			margin: 10px auto 0;
+			text-transform: uppercase;
+			color: $tundora;
+			font-size: 18px;
+			font-family: "metapro_condnorm", sans-serif;
+			text-align: center;
+		}
 	}
 
 	li:first-child {
