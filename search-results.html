@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
 
         <!--[if IE]>
@@ -54,8 +55,8 @@
                 <div class="container clearfix">
                     <ul class="nav nav-menu nav-left clearfix">
                         <li class="catalogue">
-                            <a href="#0" class="nav-link j-catalogue">Каталог</a>
-                            <div class="catalogue-container clearfix">
+                            <a href="#0" class="nav-link j-menu">Каталог</a>
+                            <div class="menu-container clearfix">
                                 <div class="col">
                                     <ul>
                                         <li><a href="#0">Авто-мото-вело- услуги</a></li>
@@ -149,7 +150,7 @@
                             </div>
                         </div>
                         <div class="input-wrapper">
-                            <input type="text" class="input-primary input-transparent input-4 input-small" placeholder="по ключевому слову">
+                            <input type="text" class="input-primary input-transparent input-4 input-small" placeholder="по ключевому слову" title="Введите ключевое слово для уточнения результатов поиска">
                             <a href="" class="icon icon-search-small"></a>
                         </div>
                     </div><!-- end of filter -->
@@ -357,6 +358,15 @@
         <script src="js/main.js"></script>
         <script src="js/jquery.selectify.js"></script>
         <script src="js/jquery.jcarousel.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/timepicker.js"></script>
+        <script src="js/datepicker-ru.js"></script>
+        <script>
+            $(function() {
+                $( ".input-time" ).timepicker();
+            });
+        </script>
         <script src="js/plugins.js"></script>
 
     </body>

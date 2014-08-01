@@ -12,20 +12,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,700italic,700,200,200italic,400italic&subset=latin,cyrillic);
 
-@font-face {
-    font-family: 'metapro';
-    src: url('../fonts/metapro.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'metapro_condnorm';
-    src: url('../fonts/MetaPro-CondNorm.ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* ==========================================================================
 	VARIABLES
 ========================================================================== */
@@ -37,10 +23,11 @@ $mineShaft: #222;
 $limeade: #59B200;
 $brownRust: #B0543C;
 $vividTangerine: #FF9673;
-$atlantisapprox: #78BF2F;
+$atlantis: #78BF2F;
 $tundora: #444;
-$serenadeapprox: #FFF5E6;
+$serenade: #FFF5E6;
 $chromeWhite: #E1F1D0;
+$quillGray: #DCDBD8;
 
 /* ==========================================================================
     GENERAL STYLES
@@ -52,6 +39,7 @@ body {
     height: 100%;
     min-width: 1200px;
     color: $tundora;
+    font-size: 16px;
 	font-family: 'Exo 2', sans-serif;
 }
 
@@ -263,7 +251,6 @@ ul {
 		color: $black;
 		font-size: 15px;
 		line-height: 22px;
-		font-family: "metapro_condnorm", sans-serif;
 	}	
 }
 
@@ -310,8 +297,8 @@ ul {
 } 
 
 .bg-light {
-	padding: 30px 0;
-	background-color: $serenadeapprox;
+	padding: 20px 0;
+	background-color: $serenade;
 	border-top: 1px solid $grenadier;
 }
 
@@ -356,9 +343,9 @@ ul {
 }
 
 .title-section {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	color: $white;
-	font-size: 44px;
+	font-size: 36px;
 	line-height: 44px;
 	font-weight: 200;
 	text-align: center;
@@ -366,8 +353,8 @@ ul {
 
 .subtitle-section {
 	color: #444;
-	font-size: 24px;
-	font-weight: normal;
+	font-size: 20px;
+	font-weight: bold;
 	text-align: center;
 	margin: 15px 0;
 
@@ -398,7 +385,7 @@ ul {
 .lnk-watch-all {
 	display: block;
 	color: darken($limeade, 10%);
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
 	text-align: center;
 	text-decoration: underline !important;
@@ -455,7 +442,7 @@ ul {
 	> div {
 		@include inline-block;
 		vertical-align: middle;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 	}
 
 	.btn {
@@ -524,7 +511,7 @@ ul {
 	margin: 15px 0 30px;
 	li {
 		display: inline;
-		font-size: 24px;
+		font-size: 18px;
 		margin-left: 10px;
 		&:before {
 			@include inline-block;
@@ -589,7 +576,7 @@ ul {
 
 		a {
 			color: $grenadier;
-			font-size: 24px;
+			font-size: 20px;
 		}
 	}
 
@@ -635,7 +622,7 @@ ul {
 			display: block;
 			width: 100%;
 			height: 100%;
-			content: "Çàÿâêà îòïðàâëåíà!";
+			content: "Ã‡Ã Ã¿Ã¢ÃªÃ  Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã !";
 			color: $white;
 			font-size: 26px;
 			line-height: 170px;
@@ -653,7 +640,7 @@ ul {
 }
 
 .top-service {
-	background-color: $serenadeapprox;
+	background-color: $serenade;
 }
 
 .offer {
@@ -696,7 +683,7 @@ ul {
 	@include border-radius(65px);
 	width: 262px;
 	height: 130px;
-	border: 2px solid #dcdbd8;
+	border: 2px solid $quillGray;
 	background-position: center center;
 	background-size: cover;
 }
@@ -720,9 +707,9 @@ img.round-rectangle {
 	position: relative;
 	@include inline-block;
 	@include border-radius(50%);
-	width: 280px;
-	height: 280px;
-	border: 2px solid #dcdbd8;
+	width: 250px;
+	height: 250px;
+	border: 2px solid $quillGray;
 	background-position: center center;
 	background-size: cover;
 
@@ -755,6 +742,11 @@ img.round-rectangle {
 
 .has-rating {
 	position: relative;
+
+	.rating-stars {
+		background-color: rgba(0, 0, 0, .1);
+		@include border-radius(50px);
+	}
 }
 
 .rating-stars {
@@ -1117,9 +1109,20 @@ img.round-rectangle {
 
 	p {
 		margin-bottom: 30px;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 24px;
 		font-weight: 200;
+	}
+}
+
+.article-top {
+	position: relative;
+	.subtitle-section {
+		margin: 0;
+		position: absolute;
+		right: 0;
+		font-size: 16px;
+		font-weight: bold;
 	}
 }
 
@@ -1320,12 +1323,11 @@ img.round-rectangle {
 	vertical-align: top;
 	height: 50px;
 	padding: 5px 30px;
-	border: 2px solid $atlantisapprox;
 	margin-right: 40px;
 	margin-bottom: 40px;
 	color: darken($limeade, 5%);
-	font-size: 22px;
-	font-family: "metapro_condnorm", sans-serif;
+	font-size: 18px;
+	border: 2px solid $limeade;
 }
 
 .input-red {
@@ -1342,7 +1344,7 @@ img.round-rectangle {
 }
 
 .input-wrapper {
-	border: 2px solid $atlantisapprox;
+	border: 2px solid $atlantis;
 	background-color: $white;
 	input {
 		margin: 0;
@@ -1353,6 +1355,7 @@ img.round-rectangle {
 .textarea-primary {
 	@extend .input-primary;
 	height: 90px;
+	line-height: 26px;
 	resize: none;
 }
 
@@ -1606,9 +1609,8 @@ img.round-rectangle {
 		@include inline-block;
 		padding: 5px 10px;
 		color: $mineShaft;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 18px;
-		font-family: "metapro_condnorm", sans-serif;
 		text-transform: uppercase;
 		text-decoration: none;
 	}
@@ -1654,11 +1656,12 @@ img.round-rectangle {
 	}
 }
 
-.catalogue {
+.catalogue,
+.all-requests {
 	position: relative;
 }
 
-.catalogue-container {
+.menu-container {
 	display: none;
 	position: absolute;
 	top: 134%;
@@ -1684,7 +1687,6 @@ img.round-rectangle {
 		color: $limeade;
 		font-size: 16px;
 		line-height: 25px;
-		font-family: "metapro_condnorm", sans-serif;
 		text-transform: none;
 		border-bottom: none;
 		&:hover {
@@ -1757,6 +1759,8 @@ img.round-rectangle {
 
 	.service-type {
 		position: absolute;
+		top: 0;
+		left: 0;
 		z-index: 10;
 	}
 
@@ -1768,7 +1772,7 @@ img.round-rectangle {
 		z-index: 11;
 		padding: 180px 20px 20px;
 		width: 266px;
-		border: 2px solid #dcdbd8;
+		border: 2px solid $quillGray;
 		@include box-sizing(border-box);
 		@include border-radius(65px);
 		background-color: $white;
@@ -1837,9 +1841,8 @@ img.round-rectangle {
 	span {
 		border-bottom: 1px dotted $tundora;
 		color: $tundora;
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 60px;
-		font-family: "metapro_condnorm", sans-serif;
 		text-decoration: none;
 	}
 
@@ -2028,42 +2031,42 @@ img.round-rectangle {
 }
 
 .icon-clock-small{
-	background-position: 0 -200px ;
+	background-position: -1px -198px ;
 	width: 25px;
 	height: 30px;
 	margin-right: 6px;
 }
 
 .icon-date-small{
-	background-position: -50px -202px ;
-	width: 23px;
-	height: 25px;
-	margin-right: 6px;
-	margin-top: -4px;
+    width: 28px;
+    height: 26px;
+	background-position: -44px -199px;
+    margin-right: 6px;
+    margin-top: -4px;
 }
 
 .icon-money-small{
-	background-position: -99px -205px ;
-	width: 25px;
+	background-position: -84px -205px ;
+	width: 29px;
 	height: 18px;
 	margin-right: 6px;
 	vertical-align: baseline;
 }
 
 .icon-mail{
-	background-position: -301px -2px ;
+	background-position: -281px -4px ;
 	width: 42px;
 	height: 30px;
 }
 
 .icon-map{
-	background-position: -200px 0;
+	background-position: -195px -1px;
 	width: 38px;
 	height: 30px;
 }
 
 .icon-phone{
-	background-position: -250px 0;
+	background-position: -239px 0;
 	width: 34px;
 	height: 32px;
 }
@@ -2213,45 +2216,42 @@ img.round-rectangle {
 }
 
 .star-big{
-	background-position: -151px -240px;
+	background-position: -146px -237px;
 	width: 39px;
-	height: 36px;
+	height: 38px;
 }
 
 .star-small{
-	background-position: -201px -240px;
+	background-position: -193px -244px;
 	width: 26px;
 	height: 24px;
 }
 
 .star-small-empty{
-	background-position: -249px -240px;
+	background-position: -251px -243px;
 	width: 26px;
 	height: 24px;
 }
 
+.icon-status {
+	width: 50px;
+	height: 50px;
+}
+
 .icon-status-waiting {
-	background-position: -315px -274px;
-	width: 56px;
-	height: 56px;
+	background-position: -311px -277px;
 }
 
 .icon-status-done {
-	background-position: -199px -274px;
-	width: 56px;
-	height: 56px;
+	background-position: -195px -277px;
 }
 
 .icon-status-closed {
-	background-position: -257px -274px;
-	width: 56px;
-	height: 56px;
+	background-position: -255px -277px;
 }
 
 .icon-status-chosen {
-	background-position: -374px -274px;
-	width: 56px;
-	height: 56px;
+	background-position: -368px -277px;
 }
 
 .icon-done-small {
@@ -2279,13 +2279,13 @@ img.round-rectangle {
 .icon-pencil {
 	width: 26px;
 	height: 28px;
-	background-position: -133px -356px;	
+	background-position: -131px -353px;	
 }
 
 .icon-pencil:hover,
 a:hover .icon-pencil,
 a.is-open .icon-pencil {
-	background-position: -164px -356px;
+	background-position: -160px -355px;
 }
 
 .icon-book {
@@ -2301,21 +2301,21 @@ a.is-open .icon-book {
 }
 
 .icon-article {
-	width: 26px;
+	width: 28px;
 	height: 26px;
-	background-position: -200px -356px;
+	background-position: -195px -353px;
 }
 
 .icon-article:hover,
 a:hover .icon-article,
 a.is-open .icon-article {
-	background-position: -226px -356px;
+	background-position: -225px -353px;
 }
 
 .icon-speaker {
 	width: 26px;
 	height: 26px;
-	background-position: -255px -355px;
+	background-position: -255px -353px;
 }
 
 .icon-comment-gray {
@@ -2327,14 +2327,14 @@ a.is-open .icon-article {
 .icon-speaker:hover,
 a:hover .icon-speaker,
 a.is-open .icon-speaker {
-	background-position: -283px -356px;
+	background-position: -284px -353px;
 }
 
 .tabs-green {
 	.icon-speaker:hover,
 	a:hover .icon-speaker,
 	a.is-open .icon-speaker {
-		background-position: -394px -356px;
+		background-position: -396px -355px;
 	}
 
 	.icon-book:hover,
@@ -2347,6 +2347,20 @@ a.is-open .icon-speaker {
 	a:hover .icon-comment-gray,
 	a.is-open .icon-comment-gray {
 		@extend .icon-comment;
+	}
+
+	.icon-pencil:hover,
+	a:hover .icon-pencil,
+	a.is-open .icon-pencil {
+		@extend .icon-pencil;
+		background-position: -333px -238px;
+	}
+
+	.icon-article:hover,
+	a:hover .icon-article,
+	a.is-open .icon-article {
+		@extend .icon-article;
+		background-position: -366px -238px;
 	}
 }
 
@@ -2474,11 +2488,10 @@ a.is-open .icon-speaker {
 
 		p {
 			width: 130px;
-			margin: 10px auto 0;
+			margin: 20px auto 0;
 			text-transform: uppercase;
 			color: $tundora;
-			font-size: 18px;
-			font-family: "metapro_condnorm", sans-serif;
+			font-size: 15px;
 			text-align: center;
 		}
 	}
@@ -2520,10 +2533,9 @@ a.is-open .icon-speaker {
 		
 		h4 {
 			color: $tundora;
-			font-size: 24px;
+			font-size: 20px;
 			line-height: 32px;
 			font-weight: bold;
-			font-family: "metapro_condnorm", sans-serif;
 		}
 	}
 
@@ -2550,7 +2562,7 @@ a.is-open .icon-speaker {
 }
 
 .budget-sum {
-	font-size: 32px;
+	font-size: 26px;
 	line-height: 16px;
 }
 
@@ -2603,7 +2615,6 @@ a.is-open .icon-speaker {
 			font-size: 18px;
 			line-height: 20px;
 			padding-left: 20px;
-			font-family: "metapro_condnorm", sans-serif;
 			color: #202020;
 			text-transform: uppercase;
 			span {
@@ -2687,12 +2698,17 @@ a.is-open .icon-speaker {
 	width: 262px;
 	padding: 30px;
 	margin-left: 25px;
+	background-color: $white;
 
 	h5 {
 		color: $grenadier;
 		font-size: 26px;
 		font-weight: bold;
 		text-align: center;
+	}
+
+	.icon-money-small {
+		vertical-align: middle;
 	}
 }
 
@@ -2703,9 +2719,10 @@ a.is-open .icon-speaker {
 .list-tariff {
 	margin: 15px 0;
 	li {
-		margin-bottom: 5px;
+		margin-bottom: 12px;
 		color: $tundora;
-		font-size: 18px;
+		font-size: 16px;
+		line-height: 20px;
 		font-weight: bold;
 		span {
 			display: table-cell;
@@ -2853,7 +2870,7 @@ a.is-open .icon-speaker {
 .form {
 
 	.before {
-		font-size: 18px;
+		font-size: 16px;
 		padding-left: 250px;	
 		margin-bottom: 30px;	
 	}
@@ -2978,7 +2995,7 @@ a.is-open .icon-speaker {
 .upload-avavatar {
 	width: 160px;
 	height: 125px;
-	border: 2px solid $limeade;
+	border: 2px solid $quillGray;
 	margin-bottom: 20px;
 
 	input {
@@ -3048,7 +3065,7 @@ a.is-open .icon-speaker {
 			height: 50px;
 			text-align: center;
 			color: $tundora;
-			font-size: 24px;
+			font-size: 20px;
 			line-height: 50px;
 			font-weight: bold;
 
@@ -3063,13 +3080,13 @@ a.is-open .icon-speaker {
 
 		a.is-open,
 		a:hover {
-			background-color: $serenadeapprox;
+			background-color: $serenade;
 			color: $grenadier;
 			border: 1px solid $grenadier;
 		}
 
 		a.is-open {
-			border-bottom-color: $serenadeapprox;
+			border-bottom-color: $serenade;
 		}
 	}
 }
@@ -3173,7 +3190,7 @@ a.is-open .icon-speaker {
 	height: 0 !important;
 	border-style: solid;
 	border-width: 10px 6px 0 6px;
-	border-color: $vividTangerine transparent transparent transparent;
+	border-color: $grenadier transparent transparent transparent;
     font-size: 0;
     line-height: 0;
 }
@@ -3200,7 +3217,7 @@ a.is-open .icon-speaker {
     height: 50px;
     background: $white;
     color: $vividTangerine;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
     line-height: 50px;
     white-space: nowrap;
@@ -3267,22 +3284,20 @@ a.is-open .icon-speaker {
 
 	.sl-placeholder-container {
 		padding: 0 30px;
-		border: 2px solid $atlantisapprox;
+		border: 2px solid $limeade;
 	}
 
 	.sl-placeholder {
 		width: 400px !important;
 		color: darken($limeade, 5%);
-		font-family: "metapro_condnorm", sans-serif;
 		height: 47px;
 		line-height: 47px;
 	}
 
 	.sl-container .sl-options {
-		border: 2px solid $atlantisapprox;
+		border: 2px solid $limeade;
 		a {
 			color: $limeade;
-			font-family: "metapro_condnorm", sans-serif;
 		}
 
 		li:hover a {		        
@@ -3343,13 +3358,12 @@ a.is-open .icon-speaker {
     width: 610px;
     height: 50px;
     padding: 5px 30px;
-    border: 2px solid #78bf2f;
+    border: 2px solid $quillGray;
 	margin-bottom: 20px;
     margin-right: 30px;
     background-color: $white;
-    color: #4c9900;
-    font-family: "metapro_condnorm",sans-serif;
-    font-size: 22px;
+    color: $limeade;
+    font-size: 18px;
     vertical-align: top;
 
 	&:after {
@@ -3363,7 +3377,7 @@ a.is-open .icon-speaker {
 	    width: 0;
 		border-style: solid;
 		border-width: 10px 6px 0 6px;
-		border-color: $limeade transparent transparent transparent;
+		border-color: $quillGray transparent transparent transparent;
 	    font-size: 0;
 	    line-height: 0;
 	    content: "";
@@ -3374,6 +3388,7 @@ a.is-open .icon-speaker {
 	width: 100%;
 	height: 100%;
     cursor: pointer;
+    line-height: 38px;
 }
 
 .select-big-dropdown {
@@ -3385,7 +3400,7 @@ a.is-open .icon-speaker {
 	width: 820px;
 	height: 280px;
 	padding: 25px;
-    border: 2px solid #78bf2f;
+    border: 2px solid $quillGray;
 	background-color: $white;
 
 }
@@ -3408,8 +3423,9 @@ a.is-open .icon-speaker {
 	}
 	a {
 		color: $tundora;
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 14px;
+		line-height: 18px;
+		line-height: 23px;
 		font-weight: bold;
 
 		&:hover {
@@ -3596,6 +3612,22 @@ a.is-open .icon-speaker {
 		@extend .text-green;
 	}
 
+	.input-primary,
+	.textarea-primary {
+		color: $limeade;
+	}
+
+	.select-performer .sl-placeholder,
+	.form-registration .row .select-box .sl-placeholder,
+	.form .row .select-box .sl-placeholder,
+	.select-category .sl-placeholder,
+	.select-performer .sl-container .sl-options a,
+	.form-registration .row .select-box .sl-container .sl-options a,
+	.form .row .select-box .sl-container .sl-options a,
+	.select-category .sl-container .sl-options a {
+		color: $limeade;
+	}
+
 	.filter-buttons {
 		@extend .filter-buttons-green;
 	}
@@ -3658,15 +3690,11 @@ a.is-open .icon-speaker {
     THEME-RED
 ========================================================================== */
 
-.theme-red {
-	.title-section {
-		@extend .text-red;
-	}
-
+.theme-red,
+.theme-green {
 	.input-primary,
 	.textarea-primary {
-		color: $grenadier;
-		border-color: $grenadier;
+		border-color: $quillGray;
 	}
 	.select-performer .sl-placeholder-container,
 	.form-registration .row .select-box .sl-placeholder-container,
@@ -3676,7 +3704,54 @@ a.is-open .icon-speaker {
 	.form-registration .row .select-box .sl-container .sl-options,
 	.form .row .select-box .sl-container .sl-options,
 	.select-category .sl-container .sl-options {
-		border-color: $grenadier;
+		border-color: $quillGray;
+	}	
+
+	.select-performer .sl-button,
+	.form-registration .row .select-box .sl-button,
+	.form .row .select-box .sl-button,
+	.select-category .sl-button {
+		border-color: $quillGray transparent transparent;
+	}
+}
+
+.theme-red {
+
+	.input-primary,
+	.textarea-primary {
+		color: $grenadier;
+	}
+
+	.select-performer .sl-placeholder,
+	.form-registration .row .select-box .sl-placeholder,
+	.form .row .select-box .sl-placeholder,
+	.select-category .sl-placeholder,
+	.select-performer .sl-container .sl-options a,
+	.form-registration .row .select-box .sl-container .sl-options a,
+	.form .row .select-box .sl-container .sl-options a,
+	.select-category .sl-container .sl-options a {
+		color: $grenadier;
+	}
+
+	.title-section {
+		@extend .text-red;
+	}
+
+	.input-primary,
+	.textarea-primary {
+		color: $grenadier;
+		border-color: $quillGray;
+	}
+
+	.select-performer .sl-placeholder-container,
+	.form-registration .row .select-box .sl-placeholder-container,
+	.form .row .select-box .sl-placeholder-container,
+	.select-category .sl-placeholder-container,
+	.select-performer .sl-container .sl-options,
+	.form-registration .row .select-box .sl-container .sl-options,
+	.form .row .select-box .sl-container .sl-options,
+	.select-category .sl-container .sl-options {
+		border-color: $quillGray;
 	}
 
 	.select-performer .sl-placeholder,
@@ -3694,7 +3769,7 @@ a.is-open .icon-speaker {
 	.form-registration .row .select-box .sl-button,
 	.form .row .select-box .sl-button,
 	.select-category .sl-button {
-		border-color: $grenadier transparent transparent;
+		border-color: $quillGray transparent transparent;
 	}
 
 	.btn-flat {
@@ -3704,11 +3779,11 @@ a.is-open .icon-speaker {
 	.upload-photo,
 	.select-big,
 	.select-big-dropdown {
-		border-color: $grenadier;
+		border-color: $quillGray;
 	}
 
 	.select-big:after {
-		border-color: $grenadier transparent transparent;
+		border-color: $quillGray transparent transparent;
 	}
 
 	.select-big-container {

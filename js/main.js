@@ -26,13 +26,16 @@ $(document).ready(function(){
 		$(".registration-menu-dropdown").slideToggle("fast");
 	});
 
-	/* Catalogue dropdown
+	/* Menu dropdown
 	========================================================================== */
 
-	$(".j-catalogue").on("click", function (e) {
+	$(".j-menu").on("click", function (e) {
 		e.preventDefault();
 		$(this).toggleClass("is-open");
-		$(".catalogue-container").slideToggle("fast");
+		var $menuItem = $(this).parent("li").siblings("li");
+		$menuItem.find(".nav-link").removeClass("is-open");
+		$menuItem.find(".menu-container").slideUp("fast");
+		$(this).parent("li").find(".menu-container").slideToggle("fast");
 	});
 
 	/* Scrollbar
@@ -55,5 +58,23 @@ $(document).ready(function(){
         }).tooltip('open');
         setTimeout(function(){ $(".btn-want").tooltip('disable'); }, 2000);
 	});	
+
+	/* Services
+	========================================================================== */
+
+	$(".j-btn-close-service").on("click", function (e) {
+		e.preventDefault();
+		console.log("lalala")
+		$(this).closest(".service").fadeOut("fast");
+	});
+
+	/* Filter buttons
+	========================================================================== */
+
+	$(".filter-buttons a").on("click", function (e) {
+		e.preventDefault();
+		$(".filter-buttons a").removeClass("is-active");
+		$(this).addClass("is-active");
+	});
 
 })

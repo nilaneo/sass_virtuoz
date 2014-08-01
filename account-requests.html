@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheets/normalize.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="stylesheets/main.css">
 
         <!--[if IE]>
@@ -54,8 +55,8 @@
                 <div class="container clearfix">
                     <ul class="nav nav-menu nav-left clearfix">
                         <li class="catalogue">
-                            <a href="#0" class="nav-link j-catalogue">Каталог</a>
-                            <div class="catalogue-container clearfix">
+                            <a href="#0" class="nav-link j-menu">Каталог</a>
+                            <div class="menu-container clearfix">
                                 <div class="col">
                                     <ul>
                                         <li><a href="#0">Авто-мото-вело- услуги</a></li>
@@ -173,7 +174,7 @@
                     <div class="block-requests">
                         <div class="service">
                             <div class="cell cell-1">
-                                <i class="icon icon-status icon-status-waiting"></i>
+                                <a href="#0" class="icon icon-status icon-status-waiting"></a>
                             </div>
                             <div class="cell cell-2">
                                 <span class="round-rectangle round-rectangle-small" style="background-image: url(img/service-1.jpg);"></span>
@@ -201,7 +202,7 @@
                         </div><!-- end of service -->
                         <div class="service">
                             <div class="cell cell-1">
-                                <i class="icon icon-status icon-status-done"></i>
+                                <a href="#0" class="icon icon-status icon-status-done"></a>
                             </div>
                             <div class="cell cell-2">
                                 <span class="round-rectangle round-rectangle-small" style="background-image: url(img/service-2.jpg);"></span>
@@ -229,7 +230,7 @@
                         </div><!-- end of service -->
                         <div class="service">
                             <div class="cell cell-1">
-                                <i class="icon icon-status icon-status-chosen"></i>
+                                <a href="#0" class="icon icon-status icon-status-chosen" title="Вас выбрали!"></a>
                             </div>
                             <div class="cell cell-2">
                                 <span class="round-rectangle round-rectangle-small" style="background-image: url(img/service-3.jpg);"></span>
@@ -257,7 +258,7 @@
                         </div><!-- end of service -->
                         <div class="service">
                             <div class="cell cell-1">
-                                <i class="icon icon-status icon-status-closed"></i>
+                                <a href="#0" class="icon icon-status icon-status-closed"></a>
                             </div>
                             <div class="cell cell-2">
                                 <span class="round-rectangle round-rectangle-small" style="background-image: url(img/service-3.jpg);"></span>
@@ -338,6 +339,15 @@
         <script src="js/main.js"></script>
         <script src="js/jquery.selectify.js"></script>
         <script src="js/jquery.jcarousel.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="js/timepicker.js"></script>
+        <script src="js/datepicker-ru.js"></script>
+        <script>
+            $(function() {
+                $( ".input-time" ).timepicker();
+            });
+        </script>
         <script src="js/plugins.js"></script>
 
     </body>
